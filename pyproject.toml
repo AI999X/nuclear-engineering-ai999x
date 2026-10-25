@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nuclear-engineering-ai999x"
+version = "1.0.0"
+description = "Offline nuclear engineering solver: activity and decay chains of real radionuclides, shielding and dose, detectors and counting statistics, neutron physics, reactor criticality and kinetics, xenon and samarium poisoning, fuel depletion, enrichment and fuel-rod heat transfer, with steps, LaTeX and honest refusals"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Ibnul Jaif Farabi"}]
+maintainers = [{name = "AI999X"}]
+keywords = ["nuclear engineering", "radioactive decay", "decay chains", "Bateman equations", "specific activity", "radiation shielding", "buildup factor", "dosimetry", "radiation detectors", "dead time", "counting statistics", "neutron moderation", "critical size", "k-effective", "two-group diffusion", "point kinetics", "inhour equation", "xenon poisoning", "samarium", "uranium enrichment", "SWU", "decay heat", "fuel temperature", "ai999x", "offline", "cpu", "stem", "education", "step-by-step", "latex", "solver"]
+classifiers = ["License :: OSI Approved :: Apache Software License", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only", "Operating System :: OS Independent", "Intended Audience :: Education", "Intended Audience :: Science/Research", "Intended Audience :: Developers", "Topic :: Scientific/Engineering", "Topic :: Education", "Development Status :: 5 - Production/Stable"]
+dependencies = ["sympy>=1.12", "mpmath>=1.3"]
+
+[project.optional-dependencies]
+search = ["onnxruntime>=1.17", "tokenizers>=0.15", "numpy>=1.24"]
+plot = ["matplotlib>=3.7"]
+all = ["matplotlib>=3.7", "numpy>=1.24", "onnxruntime>=1.17", "tokenizers>=0.15"]
+reader = ["onnxruntime>=1.17", "tokenizers>=0.15", "numpy>=1.24"]
+
+[project.scripts]
+nuclear-engineering-ai999x = "nuclear_engineering_ai999x.cli:main"
+
+[project.urls]
+"Source" = "https://github.com/AI999X/nuclear-engineering-ai999x"
+"Issues" = "https://github.com/AI999X/nuclear-engineering-ai999x/issues"
+"Homepage" = "https://ai999x.com"
+"Hugging Face" = "https://huggingface.co/AI999X/nuclear-engineering-ai999x"
+"Funding" = "https://buymeacoffee.com/ibnuljaiffarabi"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+nuclear_engineering_ai999x = ["pack/*.json", "pack/*/*.json", "pack/*.sqlite", "pack/capabilities/*.py", "pack/search/*.onnx", "pack/reader/*.onnx"]

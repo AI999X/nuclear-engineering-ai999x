@@ -1,0 +1,276 @@
+{
+ "mass": {
+  "unit": "kg"
+ },
+ "length": {
+  "unit": "m"
+ },
+ "time": {
+  "unit": "s"
+ },
+ "speed": {
+  "unit": "m/s"
+ },
+ "acceleration": {
+  "unit": "m/s^2"
+ },
+ "force": {
+  "unit": "N"
+ },
+ "energy": {
+  "unit": "J",
+  "spellings": [
+   "J",
+   "eV",
+   "Wh"
+  ]
+ },
+ "torque": {
+  "unit": "N*m"
+ },
+ "power": {
+  "unit": "W"
+ },
+ "momentum": {
+  "unit": "kg*m/s",
+  "spellings": [
+   "kg*m/s"
+  ]
+ },
+ "impulse": {
+  "unit": "N*s",
+  "spellings": [
+   "N*s"
+  ]
+ },
+ "pressure": {
+  "unit": "Pa"
+ },
+ "density": {
+  "unit": "kg/m^3"
+ },
+ "area": {
+  "unit": "m^2"
+ },
+ "volume": {
+  "unit": "m^3"
+ },
+ "frequency": {
+  "unit": "Hz"
+ },
+ "angular_frequency": {
+  "unit": "rad/s"
+ },
+ "angle": {
+  "unit": "rad"
+ },
+ "voltage": {
+  "unit": "V"
+ },
+ "current": {
+  "unit": "A"
+ },
+ "resistance": {
+  "unit": "ohm"
+ },
+ "charge": {
+  "unit": "C"
+ },
+ "spring_constant": {
+  "unit": "N/m"
+ },
+ "temperature": {
+  "unit": "K"
+ },
+ "temperature_difference": {
+  "unit": "K",
+  "difference": true
+ },
+ "specific_heat": {
+  "unit": "J/(kg*K)"
+ },
+ "friction_coefficient": {
+  "unit": "1"
+ },
+ "electric_field": {
+  "unit": "N/C",
+  "spellings": [
+   "N/C",
+   "V/m"
+  ]
+ },
+ "capacitance": {
+  "unit": "F"
+ },
+ "magnetic_field": {
+  "unit": "T"
+ },
+ "magnetic_flux": {
+  "unit": "Wb"
+ },
+ "resistivity": {
+  "unit": "ohm*m"
+ },
+ "amount": {
+  "unit": "mol"
+ },
+ "moment_of_inertia": {
+  "unit": "kg*m^2"
+ },
+ "angular_momentum": {
+  "unit": "kg*m^2/s"
+ },
+ "angular_acceleration": {
+  "unit": "rad/s^2"
+ },
+ "expansion_coefficient": {
+  "unit": "1/K"
+ },
+ "latent_heat": {
+  "unit": "J/kg"
+ },
+ "turn_density": {
+  "unit": "1/m"
+ },
+ "magnification": {
+  "unit": "1"
+ },
+ "coulomb_constant": {
+  "unit": "N*m^2/C^2"
+ },
+ "gravitational_constant": {
+  "unit": "N*m^2/kg^2"
+ },
+ "permittivity": {
+  "unit": "C^2/(N*m^2)"
+ },
+ "permeability": {
+  "unit": "T*m/A"
+ },
+ "planck_constant": {
+  "unit": "J*s"
+ },
+ "gas_constant": {
+  "unit": "J/(mol*K)"
+ },
+ "inductance": {
+  "unit": "H"
+ },
+ "flow_rate": {
+  "unit": "m^3/s"
+ },
+ "intensity": {
+  "unit": "W/m^2"
+ },
+ "efficiency": {
+  "unit": "1"
+ },
+ "refractive_index": {
+  "unit": "1"
+ },
+ "decay_constant": {
+  "unit": "1/s"
+ },
+ "dose": {
+  "unit": "J/kg"
+ },
+ "dose_rate": {
+  "unit": "J/(kg*s)"
+ },
+ "dose_rate_constant": {
+  "unit": "J*m^2/kg"
+ },
+ "energy_mev": {
+  "unit": "MeV"
+ },
+ "equivalent_dose": {
+  "unit": "J/kg"
+ },
+ "linear_attenuation_coefficient": {
+  "unit": "1/m"
+ },
+ "linear_source_strength": {
+  "unit": "1/(m*s)"
+ },
+ "microscopic_cross_section": {
+  "unit": "m^2"
+ },
+ "molar_mass": {
+  "unit": "kg/mol"
+ },
+ "neutron_flux": {
+  "unit": "1/(m^2*s)"
+ },
+ "particle_flux": {
+  "unit": "1/(m^2*s)"
+ },
+ "radioactivity": {
+  "unit": "1/s"
+ },
+ "specific_activity": {
+  "unit": "1/(kg*s)"
+ },
+ "surface_source_strength": {
+  "unit": "1/(m^2*s)"
+ },
+ "number": {
+  "unit": "1"
+ },
+ "count_rate": {
+  "unit": "1/s"
+ },
+ "buckling": {
+  "unit": "1/m^2"
+ },
+ "emission_rate": {
+  "unit": "1/s"
+ },
+ "inverse_length": {
+  "unit": "1/m"
+ },
+ "macroscopic_cross_section": {
+  "unit": "1/m"
+ },
+ "neutron_diffusion_coefficient": {
+  "unit": "m"
+ },
+ "number_density": {
+  "unit": "1/m^3"
+ },
+ "inverse_period": {
+  "unit": "1/s"
+ },
+ "heat_transfer_coefficient": {
+  "unit": "W/(m^2*K)"
+ },
+ "linear_heat_rate": {
+  "unit": "W/m"
+ },
+ "mass_flow_rate": {
+  "unit": "kg/s"
+ },
+ "separative_work": {
+  "unit": "kg"
+ },
+ "thermal_conductivity": {
+  "unit": "W/(m*K)"
+ },
+ "thermal_resistivity": {
+  "unit": "m*K/W"
+ },
+ "thermal_resistivity_slope": {
+  "unit": "m/W"
+ },
+ "absorbed_dose": {
+  "unit": "J/kg"
+ },
+ "dose_coefficient": {
+  "unit": "J*s/kg"
+ },
+ "volumetric_reaction_rate": {
+  "unit": "1/(m^3*s)"
+ },
+ "volumetric_heat_generation": {
+  "unit": "W/m^3"
+ }
+}
