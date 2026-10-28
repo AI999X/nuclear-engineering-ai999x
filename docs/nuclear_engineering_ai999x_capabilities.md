@@ -375,6 +375,14 @@ $$
 - **Assumes:** every decay of 1 gives 2 and of 2 gives 3 (no branching); the half-lives differ; $t  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![A three-member decay chain (half-lives 100 s → 10 s → 1 s) with the activities the package computes at t = 50 s from a pure parent of 1000 Bq: parent 707](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-three-member-chain-diagram.svg)
+
+*A three-member decay chain (half-lives 100 s → 10 s → 1 s) with the activities the package computes at t = 50 s from a pure parent of 1000 Bq: parent 707.107 Bq, daughter 750.952 Bq, granddaughter 755.03 Bq, total 2213.09 Bq.*
+
+![Activities of the three members (parent / daughter / granddaughter) at five times, each from the package — the daughters overtake the parent and then decay with it in transient equilibrium: t = 10 s: 933](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-three-member-chain-bars.svg)
+
+*Activities of the three members (parent / daughter / granddaughter) at five times, each from the package — the daughters overtake the parent and then decay with it in transient equilibrium: t = 10 s: 933.033 / 481.148 / 430.001 Bq; t = 50 s: 707.107 / 750.952 / 755.03 Bq; t = 100 s: 500 / 554.47 / 559.962 Bq; t = 200 s: 250 / 277.777 / 280.582 Bq; t = 400 s: 62.5 / 69.4444 / 70.1459 Bq.*
+
 ```python
 nuclear_engineering_ai999x.solve('nuc_three_member_chain', T1=100.0, T2=10.0, T3=1.0, A10=1000.0, A20=0.0, A30=0.0, t=50.0)
 # -> A1 = 707.107 1/s, A2 = 750.952 1/s, A3 = 755.03 1/s, A_total = 2213.09 1/s   (SOLVED)
@@ -515,6 +523,10 @@ $$
 - **Method:** A_D(t) = b A_P0 lambda_D/(lambda_D - lambda_P) (e^(-lambda_P $t) - e^(-lambda_D$ t)) (40 digits); t_max = ln(lambda_D/lambda_P)/(lambda_D - lambda_P)
 - **Assumes:** daughter fully removed at the elution; $0 < b  \leq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![A Mo-99/Tc-99m generator: parent half-life 65](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-generator-daughter-activity-curve.svg)
+
+*A Mo-99/Tc-99m generator: parent half-life 65.94 h, daughter 6.015 h, branching 0.8773, parent 37 GBq at t = 0; activities at 120 hourly times from the package; marked: the daughter's maximum 25.5251 GBq at t = 22.8646 h.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_generator_daughter_activity', A_P0=37000000000.0, T_P=237384.0, T_D=21654.0, b=0.8773, t=86400.0)
@@ -2901,6 +2913,10 @@ $$
 - **Assumes:** point kinetics, steady state before the step; $\rho < \beta$ (sum of the groups), $\rho  \neq  0$; distinct decay constants
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Relative reactor power P/P₀ after a step of reactivity (six delayed-neutron groups, β = 0](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-power-after-step-six-group-heatmap.svg)
+
+*Relative reactor power P/P₀ after a step of reactivity (six delayed-neutron groups, β = 0.006502, Λ = 5.0000e-05 s): rows are the reactivities ρ = 0.0005, 0.001, 0.002, 0.003 (top to bottom), columns the times t = 0.1, 1, 5, 10, 30 s, every cell computed by the package (shaded by size); ρ = 0.0005: stable period 136.947 s; ρ = 0.001: stable period 54.964 s; ρ = 0.002: stable period 17.355 s; ρ = 0.003: stable period 7.1042 s; at ρ = 0.003 the power is 172.212 times its start after 30 s.*
+
 ```python
 nuclear_engineering_ai999x.solve('nuc_power_after_step_six_group', rho=0.001, beta=[0.000215, 0.001424, 0.001274, 0.002568, 0.000748, 0.000273], lam=[0.0124, 0.0305, 0.111, 0.301, 1.14, 3.01], Lambda=5e-05, t=10.0)
 # -> P = 1.61699, omega = 0.0181937 1/s, T = 54.964 s   (SOLVED)
@@ -3140,6 +3156,10 @@ $$
 - **Method:** X(t) = X0 e^(-lambda_X t) + I0 lambda_I/(lambda_X - lambda_I)(e^(-lambda_I $t) - e^(-lambda_X$ t)); $dX/dt = 0$ for the peak
 - **Assumes:** equilibrium before shutdown; no flux after shutdown
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Xenon-135 after a shutdown from a flux of 3](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-xenon-after-shutdown-curve.svg)
+
+*Xenon-135 after a shutdown from a flux of 3.0000e+17 n/(m² s) (Σ_f = 10 1/m), relative to its equilibrium, at 144 times computed by the package: iodine decay builds xenon up before it decays away; marked: peak 1.90155 times equilibrium at t = 8.37973 h.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_xenon_after_shutdown', Sigma_f=10.0, phi=3e+17, gamma_I=0.0639, gamma_X=0.00237, sigma_X=2.65e-22, t=36000.0)
@@ -3574,6 +3594,10 @@ $$
 - **Method:** least squares of ln $I = ln$ $I_{0} - mu$ x; HVL = ln $2/mu$, TVL = ln $10/mu$
 - **Assumes:** narrow-beam geometry (no buildup); background already subtracted; unweighted least squares of ln I
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Narrow-beam attenuation on a logarithmic intensity axis, where the exponential law is a straight line: the five measured intensities and the fit by the package, μ = 65](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-attenuation-coefficient-fit-fit.svg)
+
+*Narrow-beam attenuation on a logarithmic intensity axis, where the exponential law is a straight line: the five measured intensities and the fit by the package, μ = 65.3966 1/m with I₀ = 1000.02, drawn as I₀ times the transmission it computes at 51 thicknesses; half-value layer 1.05991 cm, tenth-value layer 3.52096 cm.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_attenuation_coefficient_fit', x=[0.0, 1.0, 2.0, 3.0, 4.0], I=[1000.0, 520.0, 270.0, 141.0, 73.0])

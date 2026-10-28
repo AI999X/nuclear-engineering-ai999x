@@ -4,7 +4,7 @@
 
 **[Install](https://pypi.org/project/nuclear-engineering-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/nuclear-engineering-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/nuclear-engineering-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.0
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.1
 
 Field: **Engineering** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
 
@@ -27,7 +27,7 @@ nuclear-engineering-ai999x is an offline, deterministic Python solver that answe
 
 | Property | Value |
 |---|---|
-| Package | `nuclear-engineering-ai999x` 1.0.0 (import `nuclear_engineering_ai999x`) |
+| Package | `nuclear-engineering-ai999x` 1.0.1 (import `nuclear_engineering_ai999x`) |
 | Type | Deterministic neuro-symbolic nuclear engineering engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 83 certified procedures |
 | Knowledge pack | version 1.0.1 |
@@ -61,7 +61,18 @@ nuclear_engineering.ask("Who created you?").message
 # -> nuclear-engineering-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `nuclear-engineering-ai999x "<question>"`, `nuclear-engineering-ai999x --capabilities`. The outputs above were produced by running this exact code on nuclear-engineering-ai999x 1.0.0.
+Command line: `nuclear-engineering-ai999x "<question>"`, `nuclear-engineering-ai999x --capabilities`. The outputs above were produced by running this exact code on nuclear-engineering-ai999x 1.0.1.
+
+## Find the right capability, and draw it
+
+`nuclear_engineering.search()` finds which certified capability a question is about — across **every** AI999X model, so a question for another model points you to it. It runs **[ai999x-encoder](https://huggingface.co/AI999X/ai999x-encoder)**, AI999X's own capability encoder (4.7M parameters, a 4.9 MB ONNX model, offline; the root `model.safetensors` of this repository): `pip install "nuclear-engineering-ai999x[search]"`. `ask(question, suggest=True)` adds the same pointers to a question it does not answer; an answer itself never changes.
+
+```python
+import nuclear_engineering_ai999x as nuclear_engineering
+
+nuclear_engineering.search("Solve x^2 - 5x + 6 = 0", k=2)
+# -> Roots of a quadratic equation (math-foundations-ai999x, 0.63); Roots of a cubic equation (math-foundations-ai999x, 0.59)
+```
 
 ## How every answer is verified
 
@@ -71,6 +82,122 @@ Command line: `nuclear-engineering-ai999x "<question>"`, `nuclear-engineering-ai
 4. **Checking** — dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
+
+## Worked examples
+
+Each question was put to `nuclear-engineering-ai999x`; the answer is the one it returned, with the steps it took.
+
+**Activity and specific activity of a mass of a radionuclide** · _Decay and activity_
+
+> Specific activity: nuclide = Co-60, m = 1 g
+
+→ **A = 4.18689443e+13 1/s, A_Ci = 1131.593089, a = 4.18689443e+16 1/(kg*s), a_Ci_per_g = 1131.593089, N = 1.004798494e+22**
+
+<details><summary>Steps</summary>
+
+- Activity and specific activity of a mass of a radionuclide: nuclide = Co-60, m = 1 g → A = 4.18689443e+13 1/s, A_Ci = 1131.593089 1/s, a = 4.18689443e+16 1/(kg*s), a_Ci_per_g = 1131.593089 1/s, N = 1.004798494e+22 1/s
+
+</details>
+
+**Dose rate from a shielded point gamma source with buildup** · _Shielding and dose_
+
+> Point source dose rate: Gamma = 0.351 uSv*m^2/(MBq*h), A = 10 Ci, r = 2 m, mu = 0.0656 1/cm, x = 10 cm, buildup = linear
+
+→ **H_dot = 7.750139161e-06 J/(kg*s), H_uSv_h = 27900.50098, B = 1.656, T = 0.8593362895**
+
+<details><summary>Steps</summary>
+
+- Dose rate from a shielded point gamma source with buildup: Gamma = 3.51e-13 (J/kg)*m^2/((1/s)*h), A = 3.7e+11 (1/s), r = 2 m, mu = 0.0656 1/cm, x = 10 cm, buildup = linear → H_dot = 7.750139161e-06 J/(kg*s), H_uSv_h = 27900.50098 J/(kg*s), B = 1.656 J/(kg*s), T = 0.8593362895 J/(kg*s)
+
+</details>
+
+**Critical radius of a bare spherical reactor (one group)** · _Reactor physics_
+
+> Critical sphere: D = 0.9 cm, Sigma_a = 0.15 1/cm, nuSigma_f = 0.18 1/cm, extrapolation = 2.13D
+
+→ **R = 0.1528913163 m, R_ext = 0.1720721163 m, V = 0.01497052629 m^3**
+
+<details><summary>Steps</summary>
+
+- Critical radius of a bare spherical reactor (one group): D = 0.9 cm, Sigma_a = 0.15 1/cm, nuSigma_f = 0.18 1/cm, extrapolation = 2.13D → R = 0.1528913163 m, R_ext = 0.1720721163 m, V = 0.01497052629 m^3
+
+</details>
+
+**Xenon-135 after shutdown: concentration and peak** · _Reactor physics_
+
+> Xenon after shutdown: Sigma_f = 0.1 1/cm, phi = 3e13 1/(cm^2*s), gamma_I = 0.0639, gamma_X = 0.00237, sigma_X = 2.65e6 b, t = 10 h
+
+→ **X = 3.723382215e+21 1/m^3, ratio = 1.883429887, t_peak = 30167.01507 s, peak_ratio = 1.901549197, I = 2.277591284e+21 1/m^3**
+
+<details><summary>Steps</summary>
+
+- Xenon-135 after shutdown: concentration and peak: Sigma_f = 0.1 1/cm, phi = 3e+13 1/(cm^2*s), gamma_I = 0.0639, gamma_X = 0.00237, sigma_X = 2.65e-22 m^2, t = 10 h → X = 3.723382215e+21 1/m^3, ratio = 1.883429887 1/m^3, t_peak = 30167.01507 s, peak_ratio = 1.901549197 1/m^3, I = 2.277591284e+21 1/m^3
+
+</details>
+
+**Uranium enrichment: feed, tails and separative work (SWU)** · _Fuel cycle_
+
+`m.solve("nuc_enrichment_swu", x_p=0.045, x_f=0.00711, x_w=0.0025, P="1 kg")`
+
+→ **F = 9.219088937 kg, W = 8.219088937 kg, SWU = 6.871112989 kg, F_per_P = 9.219088937, SWU_per_P = 6.871112989**
+
+<details><summary>Steps</summary>
+
+- Uranium enrichment: feed, tails and separative work (SWU): x_p = 0.045, x_f = 0.00711, x_w = 0.0025, P = 1 kg → F = 9.219088937 kg, W = 8.219088937 kg, SWU = 6.871112989 kg, F_per_P = 9.219088937 kg, SWU_per_P = 6.871112989 kg
+
+</details>
+
+**Compton edge and backscatter peak of a gamma line** · _Detectors and counting_
+
+> Compton edge: E = 662 keV
+
+→ **T_max = 0.4776504094 MeV, E_bs = 0.1843495906 MeV**
+
+<details><summary>Steps</summary>
+
+- Compton edge and backscatter peak of a gamma line: E = 662 keV → T_max = 0.4776504094 MeV, E_bs = 0.1843495906 MeV
+
+</details>
+
+## Figures
+
+Every point was computed by `nuclear-engineering-ai999x`.
+
+**A three-member decay chain**
+
+![A three-member decay chain — computed by nuclear-engineering-ai999x](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-three-member-chain-diagram.svg)
+
+_A three-member decay chain (half-lives 100 s → 10 s → 1 s) with the activities the package computes at t = 50 s from a pure parent of 1000 Bq: parent 707.107 Bq, daughter 750.952 Bq, granddaughter 755.03 Bq, total 2213.09 Bq._
+
+**Decay-chain activities at five times**
+
+![Decay-chain activities at five times — computed by nuclear-engineering-ai999x](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-three-member-chain-bars.svg)
+
+_Activities of the three members (parent / daughter / granddaughter) at five times, each from the package — the daughters overtake the parent and then decay with it in transient equilibrium: t = 10 s: 933.033 / 481.148 / 430.001 Bq; t = 50 s: 707.107 / 750.952 / 755.03 Bq; t = 100 s: 500 / 554.47 / 559.962 Bq; t = 200 s: 250 / 277.777 / 280.582 Bq; t = 400 s: 62.5 / 69.4444 / 70.1459 Bq._
+
+**The xenon transient after shutdown**
+
+![The xenon transient after shutdown — computed by nuclear-engineering-ai999x](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-xenon-after-shutdown-curve.svg)
+
+_Xenon-135 after a shutdown from a flux of 3.0000e+17 n/(m² s) (Σ_f = 10 1/m), relative to its equilibrium, at 144 times computed by the package: iodine decay builds xenon up before it decays away; marked: peak 1.90155 times equilibrium at t = 8.37973 h._
+
+**Generator ingrowth: parent and daughter activity**
+
+![Generator ingrowth: parent and daughter activity — computed by nuclear-engineering-ai999x](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-generator-daughter-activity-curve.svg)
+
+_A Mo-99/Tc-99m generator: parent half-life 65.94 h, daughter 6.015 h, branching 0.8773, parent 37 GBq at t = 0; activities at 120 hourly times from the package; marked: the daughter's maximum 25.5251 GBq at t = 22.8646 h._
+
+**Attenuation measurements and their exponential fit**
+
+![Attenuation measurements and their exponential fit — computed by nuclear-engineering-ai999x](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-attenuation-coefficient-fit-fit.svg)
+
+_Narrow-beam attenuation on a logarithmic intensity axis, where the exponential law is a straight line: the five measured intensities and the fit by the package, μ = 65.3966 1/m with I₀ = 1000.02, drawn as I₀ times the transmission it computes at 51 thicknesses; half-value layer 1.05991 cm, tenth-value layer 3.52096 cm._
+
+**Reactor power after a reactivity step: a table**
+
+![Reactor power after a reactivity step: a table — computed by nuclear-engineering-ai999x](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-power-after-step-six-group-heatmap.svg)
+
+_Relative reactor power P/P₀ after a step of reactivity (six delayed-neutron groups, β = 0.006502, Λ = 5.0000e-05 s): rows are the reactivities ρ = 0.0005, 0.001, 0.002, 0.003 (top to bottom), columns the times t = 0.1, 1, 5, 10, 30 s, every cell computed by the package (shaded by size); ρ = 0.0005: stable period 136.947 s; ρ = 0.001: stable period 54.964 s; ρ = 0.002: stable period 17.355 s; ρ = 0.003: stable period 7.1042 s; at ρ = 0.003 the power is 172.212 times its start after 30 s._
 
 ## Capabilities
 
@@ -95,10 +222,10 @@ Capabilities are certified before they ship: each must reproduce hand-worked ref
 ## Citation
 
 ```bibtex
-@software{nuclear_engineering_ai999x_1_0_0,
+@software{nuclear_engineering_ai999x_1_0_1,
   title  = {nuclear-engineering-ai999x: an offline, verified nuclear engineering solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.0},
+  year   = {2026}, version = {1.0.1},
   url    = {https://huggingface.co/AI999X/nuclear-engineering-ai999x}
 }
 ```
