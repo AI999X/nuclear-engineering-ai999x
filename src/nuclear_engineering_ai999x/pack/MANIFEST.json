@@ -1,5 +1,5 @@
 {
- "package": "1.0.2",
+ "package": "1.0.3",
  "pack": "1.0.1",
  "knowledge_db": null,
  "files": {
@@ -9,7 +9,7 @@
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
   "capabilities/procedures.py": "bc26478631127ce372bde6a052d03bf8883e02fe9708eaca3f8ec1ced58f6c64",
   "capabilities/procedures_certified.json": "c15178295534fa3c912f151a38492a47b4d57b25fb8727e252b734313f37cb7b",
-  "nuclear_engineering_knowledge_public.sqlite": "d3d50570a37d153f262cd4591ffbe3fec0dbeff99386717c2f5d61703506ace2",
+  "nuclear_engineering_knowledge_public.sqlite": "9dbfeab5ad8d7295b566ed8701645e5dcbc18951e96b85aa6545abe28a16d9f7",
   "search/encoder.int8.onnx": "521452d928a72da4d241b1835ab0f46b0e81ff58ffff0367b9a7029bd129fbd9",
   "search/tokenizer.json": "b2f2deb461e6ad672b8e42aac29773e7a9be77d582cdf58808113ea43fda565e",
   "search/index.json": "d8f81d9706c9a0efa7d9643bcec3d39a6c3500766ce0f44937d85ad90f772507",
@@ -19,6 +19,7 @@
  },
  "engine": [
   "__init__.py",
+  "_lazy.py",
   "answer.py",
   "compiler.py",
   "decision_reader.py",
