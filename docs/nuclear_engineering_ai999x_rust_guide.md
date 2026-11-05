@@ -1,4 +1,4 @@
-# nuclear-engineering: the Nuclear Engineering program — user guide
+# nuclear-engineering: the Nuclear Engineering program, user guide
 
 **nuclear-engineering-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
@@ -17,63 +17,63 @@ Nuclear Engineering covers radioactive decay and decay chains, binding energy, r
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Nuclear Engineering | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-nuclear-engineering-1.4.0-windows-x86_64.zip |
-| Desktop app: Nuclear Engineering | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-nuclear-engineering-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Nuclear Engineering | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-nuclear-engineering-1.5.0-windows-x86_64.zip |
+| Desktop app: Nuclear Engineering | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-nuclear-engineering-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Nuclear Engineering in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-nuclear-engineering-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-nuclear-engineering.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Nuclear Engineering in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-nuclear-engineering-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-nuclear-engineering.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-nuclear-engineering-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-nuclear-engineering-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-nuclear-engineering-1.4.0-linux-x86_64.tar.gz
-./ai999x-nuclear-engineering-1.4.0-linux-x86_64/ai999x-nuclear-engineering
+tar xzf ai999x-nuclear-engineering-1.5.0-linux-x86_64.tar.gz
+./ai999x-nuclear-engineering-1.5.0-linux-x86_64/ai999x-nuclear-engineering
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
-./ai999x-1.4.0-linux-x86_64/ai999x
+tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
+./ai999x-1.5.0-linux-x86_64/ai999x
 ```
 
-### Command line — Linux
+### Command line: Linux
 
 The bundle holds one program per model; `nuclear-engineering` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 nuclear-engineering --version
 ```
 
-### Command line — Windows (PowerShell)
+### Command line: Windows (PowerShell)
 
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 nuclear-engineering --version
 ```
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ nuclear-engineering --version
-nuclear-engineering-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
+nuclear-engineering-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
 ```
 
 ### 2.2 Ask in words
@@ -203,29 +203,7 @@ $ nuclear-engineering solve nuc_specific_activity nuclide=Co-60
 NEEDS_INPUT: nuc_specific_activity needs m (mass of the radionuclide (the pure nuclide, not the compound)). Example: solve('nuc_specific_activity', nuclide='Co-60', m='0.001 kg').
 ```
 
-### 2.9 Draw the figures
-
-The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```shell
-$ nuclear-engineering figures nuc_specific_activity nuclide=Co-60 "m=1 g" --out .
-[
-  {
-    "slug": "nuc-specific-activity-live-1",
-    "title": "Activity (Bq) as mass of the radionuclide (the pure nuclide, not... varies",
-    "caption": "Activity (Bq) as m runs from 0.25 to 1.75 g, every other input as you entered it (41 solutions). Marked: your m = 1 g gives A = 4.187e+13. Your inputs: nuclide = Co-60, m = 1 g.",
-    "file": ".\\nuc-specific-activity-live-1.svg"
-  },
-  {
-    "slug": "nuc-specific-activity-live-2",
-    "title": "The computed values side by side",
-    "caption": "Every answer of one unit for your inputs: A_Ci (activity in curies) = 1132; a_Ci_per_g (specific activity in Ci/g) = 1132; N (number of atoms) = 1.005e+22. Your inputs: nuclide = Co-60, m = 1 g.",
-    "file": ".\\nuc-specific-activity-live-2.svg"
-  }
-]
-```
-
-### 2.10 Many questions at once
+### 2.9 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | nuclear-engineering batch
 
@@ -298,24 +276,6 @@ answers = [json.loads(line) for line in out.splitlines()]
 
 `nuclear-engineering figures <capability> name=value ... --out DIR` draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without `--out` the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.
 
-```shell
-$ nuclear-engineering figures nuc_specific_activity nuclide=Co-60 "m=1 g" --out .
-[
-  {
-    "slug": "nuc-specific-activity-live-1",
-    "title": "Activity (Bq) as mass of the radionuclide (the pure nuclide, not... varies",
-    "caption": "Activity (Bq) as m runs from 0.25 to 1.75 g, every other input as you entered it (41 solutions). Marked: your m = 1 g gives A = 4.187e+13. Your inputs: nuclide = Co-60, m = 1 g.",
-    "file": ".\\nuc-specific-activity-live-1.svg"
-  },
-  {
-    "slug": "nuc-specific-activity-live-2",
-    "title": "The computed values side by side",
-    "caption": "Every answer of one unit for your inputs: A_Ci (activity in curies) = 1132; a_Ci_per_g (specific activity in Ci/g) = 1132; N (number of atoms) = 1.005e+22. Your inputs: nuclide = Co-60, m = 1 g.",
-    "file": ".\\nuc-specific-activity-live-2.svg"
-  }
-]
-```
-
 ## 7. In a web page or Node.js: WebAssembly
 
 The same model is a WebAssembly module, `nuclear_engineering_ai999x.wasm` (https://www.ai999x.com/compute/rust/nuclear_engineering_ai999x.wasm), with a small loader, `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.
@@ -339,7 +299,7 @@ By topic. For each: what it does, what it needs and gives, when it applies, and 
 
 <a id="nuc_activation_with_burnup"></a>
 
-#### Activation with target depletion and product burn-up — `nuc_activation_with_burnup`
+#### Activation with target depletion and product burn-up, `nuc_activation_with_burnup`
 
 The product activity when a high flux both depletes the target nuclide and burns up the product by its own absorption, the fraction of target left, and the time and value of the maximum product activity.
 
@@ -349,14 +309,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `N_T0` | in | initial number of target atoms | — |
+| `N_T0` | in | initial number of target atoms | - |
 | `sigma_T` | in | target capture cross section (barns) | m^2 |
 | `sigma_P` | in | product absorption cross section (barns) | m^2 |
 | `phi` | in | neutron flux | 1/(m^2*s) |
 | `T_half` | in | half-life of the product | s |
 | `t` | in | irradiation time | s |
 | `A_P` | out | product activity at t | 1/s |
-| `f_T` | out | fraction of target atoms left | — |
+| `f_T` | out | fraction of target atoms left | - |
 | `t_max` | out | irradiation time of maximum product activity | s |
 | `A_max` | out | maximum product activity | 1/s |
 
@@ -382,7 +342,7 @@ In the worked example, N_T0 = 1e+22, sigma_T = 3.718e-27 m^2, sigma_P = 2e-28 m^
 
 <a id="nuc_specific_activity"></a>
 
-#### Activity and specific activity of a mass of a radionuclide — `nuc_specific_activity`
+#### Activity and specific activity of a mass of a radionuclide, `nuc_specific_activity`
 
 The activity of a stated mass of a named radionuclide, its specific activity (activity per unit mass) and the number of atoms, from its tabulated half-life and atomic mass.
 
@@ -392,13 +352,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `nuclide` | in | the radionuclide, written like Co-60, Cs-137, Tc-99m, U-235 | — |
+| `nuclide` | in | the radionuclide, written like Co-60, Cs-137, Tc-99m, U-235 | - |
 | `m` | in | mass of the radionuclide (the pure nuclide, not the compound) | kg |
 | `A` | out | activity (Bq) | 1/s |
-| `A_Ci` | out | activity in curies | — |
+| `A_Ci` | out | activity in curies | - |
 | `a` | out | specific activity (Bq/kg) | 1/(kg*s) |
-| `a_Ci_per_g` | out | specific activity in Ci/g | — |
-| `N` | out | number of atoms | — |
+| `a_Ci_per_g` | out | specific activity in Ci/g | - |
+| `N` | out | number of atoms | - |
 
 **Applies when:** the nuclide is in the table (ICRP-107 half-lives, radioactivedecay 0.6.1); m > 0.
 
@@ -419,7 +379,7 @@ N = 1.004798494e+22
 
 <a id="nuc_chain_activity"></a>
 
-#### Activity of a radionuclide and its progeny after a decay time — `nuc_chain_activity`
+#### Activity of a radionuclide and its progeny after a decay time, `nuc_chain_activity`
 
 Starting from a pure parent of stated activity, the activities of the parent, of its first daughter and of the whole chain (all radioactive progeny) after a time t, with the real branching fractions (Sr-90/Y-90, Mo-99/Tc-99m, Cs-137/Ba-137m, Ge-68/Ga-68, ...).
 
@@ -429,13 +389,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `nuclide` | in | the parent nuclide (Sr-90, Cs-137, Mo-99, Ge-68, W-188, Ru-106, Ce-144, Ba-140, Te-132, Sn-113, Sr-82, Zr-95, Sb-125, Pb-212, Te-131m, I-133, Pd-103, Ce-134, Ba-131, Hg-195m, Sr-91) | — |
+| `nuclide` | in | the parent nuclide (Sr-90, Cs-137, Mo-99, Ge-68, W-188, Ru-106, Ce-144, Ba-140, Te-132, Sn-113, Sr-82, Zr-95, Sb-125, Pb-212, Te-131m, I-133, Pd-103, Ce-134, Ba-131, Hg-195m, Sr-91) | - |
 | `A0` | in | activity of the pure parent at t = 0 | 1/s |
 | `t` | in | decay time | s |
 | `A_parent` | out | activity of the parent at t | 1/s |
 | `A_daughter` | out | activity of the first daughter at t (Y-90, Ba-137m, Tc-99m, Ga-68, Re-188, Rh-106, Pr-144, La-140, I-132, In-113m, Rb-82, Nb-95, Te-125m, Bi-212, I-131, Xe-133, Rh-103m, La-134, Cs-131, Hg-195, Y-91m) | 1/s |
 | `A_total` | out | total activity of the parent and all radioactive progeny | 1/s |
-| `ratio` | out | daughter-to-parent activity ratio | — |
+| `ratio` | out | daughter-to-parent activity ratio | - |
 
 **Applies when:** pure parent at t = 0; t >= 0; branching fractions and half-lives of radioactivedecay 0.6.1.
 
@@ -456,7 +416,7 @@ ratio = 0.8871719766
 
 <a id="nuc_irradiation_time_for_saturation"></a>
 
-#### Irradiation time to reach a fraction of saturation activity — `nuc_irradiation_time_for_saturation`
+#### Irradiation time to reach a fraction of saturation activity, `nuc_irradiation_time_for_saturation`
 
 How long a target must be irradiated (constant flux) for the induced activity to reach a stated fraction of its saturation value, in time and in product half-lives.
 
@@ -467,9 +427,9 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `T_half` | in | half-life of the product | s |
-| `f` | in | fraction of the saturation activity (0 < f < 1) | — |
+| `f` | in | fraction of the saturation activity (0 < f < 1) | - |
 | `t_irr` | out | irradiation time | s |
-| `n_half` | out | irradiation time in half-lives | — |
+| `n_half` | out | irradiation time in half-lives | - |
 
 **Applies when:** constant flux; 0 < f < 1.
 
@@ -487,7 +447,7 @@ n_half = 3.321928095
 
 <a id="nuc_mass_for_activity"></a>
 
-#### Mass and number of atoms of a radionuclide with a given activity — `nuc_mass_for_activity`
+#### Mass and number of atoms of a radionuclide with a given activity, `nuc_mass_for_activity`
 
 The mass and the number of atoms of a named radionuclide that has a stated activity (how much material a source of that strength contains).
 
@@ -497,11 +457,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `nuclide` | in | the radionuclide, written like Co-60, Cs-137, Tc-99m, U-235 | — |
+| `nuclide` | in | the radionuclide, written like Co-60, Cs-137, Tc-99m, U-235 | - |
 | `A` | in | activity (Bq, or Ci) | 1/s |
 | `m` | out | mass of the nuclide | kg |
-| `m_ug` | out | mass in micrograms | — |
-| `N` | out | number of atoms | — |
+| `m_ug` | out | mass in micrograms | - |
+| `N` | out | number of atoms | - |
 
 **Applies when:** the nuclide is in the table; A > 0.
 
@@ -520,7 +480,7 @@ N = 1.155884381e+13
 
 <a id="nuc_activation_activity"></a>
 
-#### Neutron activation: activity after irradiation and decay — `nuc_activation_activity`
+#### Neutron activation: activity after irradiation and decay, `nuc_activation_activity`
 
 The activity induced in a target by a neutron flux: at the end of irradiation, after a decay time, at saturation, and the saturation fraction reached (target depletion neglected).
 
@@ -532,7 +492,7 @@ $$
 |---|---|---|---|
 | `m` | in | mass of the target element | kg |
 | `M` | in | molar mass of the target element | kg/mol |
-| `theta` | in | isotopic abundance of the target nuclide | — |
+| `theta` | in | isotopic abundance of the target nuclide | - |
 | `sigma` | in | activation cross section (barns) | m^2 |
 | `phi` | in | neutron flux | 1/(m^2*s) |
 | `T_half` | in | half-life of the product | s |
@@ -541,7 +501,7 @@ $$
 | `A_eoi` | out | activity at the end of irradiation | 1/s |
 | `A_d` | out | activity after the decay time | 1/s |
 | `A_sat` | out | saturation activity N sigma phi | 1/s |
-| `S` | out | saturation fraction 1 - e^(-lambda t_irr) | — |
+| `S` | out | saturation fraction 1 - e^(-lambda t_irr) | - |
 
 **Applies when:** constant flux; target depletion and product burn-up neglected; 0 < theta <= 1.
 
@@ -566,7 +526,7 @@ S = 0.01074248663
 
 <a id="nuc_generator_daughter_activity"></a>
 
-#### Radionuclide generator: daughter activity after elution (with branching) — `nuc_generator_daughter_activity`
+#### Radionuclide generator: daughter activity after elution (with branching), `nuc_generator_daughter_activity`
 
 The daughter activity available in a generator (Mo-99/Tc-99m, Ge-68/Ga-68, Sr-82/Rb-82 ...) a time t after the last complete elution, with the branching fraction to the daughter, plus when the daughter activity peaks and its peak value.
 
@@ -579,11 +539,11 @@ $$
 | `A_P0` | in | parent activity at the elution | 1/s |
 | `T_P` | in | half-life of the parent | s |
 | `T_D` | in | half-life of the daughter | s |
-| `b` | in | fraction of parent decays that produce the daughter (0 < b <= 1, e.g. 0.8773 for Mo-99 -> Tc-99m) | — |
+| `b` | in | fraction of parent decays that produce the daughter (0 < b <= 1, e.g. 0.8773 for Mo-99 -> Tc-99m) | - |
 | `t` | in | time since the elution | s |
 | `A_D` | out | daughter activity at t | 1/s |
 | `A_P` | out | parent activity at t | 1/s |
-| `ratio` | out | A_D / A_P | — |
+| `ratio` | out | A_D / A_P | - |
 | `t_max` | out | time of maximum daughter activity | s |
 | `A_D_max` | out | maximum daughter activity | 1/s |
 
@@ -609,7 +569,7 @@ A_D_max = 2.552513612e+10 1/s
 
 <a id="nuc_three_member_chain"></a>
 
-#### Three-member decay chain with initial activities (Bateman) — `nuc_three_member_chain`
+#### Three-member decay chain with initial activities (Bateman), `nuc_three_member_chain`
 
 Activities of the three radioactive members of a chain 1 -> 2 -> 3 after a time t, from their half-lives and the initial activity of every member (the daughters need not start at zero).
 
@@ -654,7 +614,7 @@ A_total = 2213.088818 1/s
 
 <a id="nuc_daughter_max_activity_time"></a>
 
-#### Time of maximum daughter activity — `nuc_daughter_max_activity_time`
+#### Time of maximum daughter activity: `nuc_daughter_max_activity_time`
 
 When the activity of a radioactive daughter, growing from a pure parent, reaches its maximum, and how large it is then (it equals the parent's activity at that moment).
 
@@ -668,8 +628,8 @@ $$
 | `T_D` | in | half-life of the daughter | s |
 | `A_P0` | in | initial parent activity (optional: gives the maximum daughter activity) (optional) | 1/s |
 | `t_max` | out | time of maximum daughter activity | s |
-| `ratio_max` | out | maximum daughter activity / initial parent activity | — |
-| `t_max_half_lives` | out | t_max in daughter half-lives | — |
+| `ratio_max` | out | maximum daughter activity / initial parent activity | - |
+| `t_max_half_lives` | out | t_max in daughter half-lives | - |
 | `A_D_max` | out | maximum daughter activity (when A_P0 is given) | 1/s |
 
 **Applies when:** pure parent at t = 0; every parent decay gives the daughter.
@@ -689,7 +649,7 @@ t_max_half_lives = 3.801266034
 
 <a id="nuc_equilibrium_ratio"></a>
 
-#### Transient and secular equilibrium: activity ratio and approach — `nuc_equilibrium_ratio`
+#### Transient and secular equilibrium: activity ratio and approach, `nuc_equilibrium_ratio`
 
 The daughter-to-parent activity and atom ratios once equilibrium is reached (transient; close to 1 in secular equilibrium) and the time after which the activity ratio is within 1 % of it, starting from pure parent.
 
@@ -701,8 +661,8 @@ $$
 |---|---|---|---|
 | `T_P` | in | half-life of the parent | s |
 | `T_D` | in | half-life of the daughter (shorter than the parent's) | s |
-| `ratio_A` | out | equilibrium activity ratio A_D/A_P = T_P/(T_P - T_D) | — |
-| `ratio_N` | out | equilibrium atom ratio N_D/N_P | — |
+| `ratio_A` | out | equilibrium activity ratio A_D/A_P = T_P/(T_P - T_D) | - |
+| `ratio_N` | out | equilibrium atom ratio N_D/N_P | - |
 | `t_99` | out | time to reach 99 % of the equilibrium activity ratio | s |
 
 **Applies when:** T_P > T_D; pure parent at t = 0; every parent decay gives the daughter.
@@ -724,7 +684,7 @@ t_99 = 158306.6854 s
 
 <a id="nuc_compton_edge"></a>
 
-#### Compton edge and backscatter peak of a gamma line — `nuc_compton_edge`
+#### Compton edge and backscatter peak of a gamma line, `nuc_compton_edge`
 
 Where a gamma line's Compton edge (maximum electron energy) and backscatter peak (energy of a photon scattered through 180 degrees) appear in a detector's spectrum.
 
@@ -753,7 +713,7 @@ E_bs = 0.1843495906 MeV
 
 <a id="nuc_count_time_for_precision"></a>
 
-#### Counting time for a target precision of the net count rate — `nuc_count_time_for_precision`
+#### Counting time for a target precision of the net count rate, `nuc_count_time_for_precision`
 
 The total counting time (optimally split between sample and background) needed for the net count rate to have a stated relative standard deviation, and the two counting times.
 
@@ -765,7 +725,7 @@ $$
 |---|---|---|---|
 | `Rg` | in | gross count rate | 1/s |
 | `Rb` | in | background count rate | 1/s |
-| `r` | in | target relative standard deviation of the net count rate (e.g. 1%) | — |
+| `r` | in | target relative standard deviation of the net count rate (e.g. 1%) | - |
 | `T` | out | total counting time | s |
 | `tg` | out | gross counting time | s |
 | `tb` | out | background counting time | s |
@@ -788,7 +748,7 @@ tb = 133.3333333 s
 
 <a id="nuc_counts_during_decay"></a>
 
-#### Counts recorded from a decaying source (decay during counting) — `nuc_counts_during_decay`
+#### Counts recorded from a decaying source (decay during counting), `nuc_counts_during_decay`
 
 The expected number of counts recorded from a source that decays during the count, the mean activity during the count and the decay-correction factor that converts the mean activity to the activity at the start of counting.
 
@@ -801,12 +761,12 @@ $$
 | `A0` | in | activity at the reference time | 1/s |
 | `T_half` | in | half-life | s |
 | `tc` | in | counting time | s |
-| `eff` | in | detection efficiency (fraction of emitted radiations counted) | — |
-| `y` | in | emission probability per decay (1 when every decay is counted) | — |
+| `eff` | in | detection efficiency (fraction of emitted radiations counted) | - |
+| `y` | in | emission probability per decay (1 when every decay is counted) | - |
 | `td` | in | delay from the reference time to the start of counting (0 when omitted) (optional) | s |
-| `N` | out | expected counts | — |
+| `N` | out | expected counts | - |
 | `A_mean` | out | mean activity during the count | 1/s |
-| `F` | out | decay-correction factor: activity at the start of counting / mean activity | — |
+| `F` | out | decay-correction factor: activity at the start of counting / mean activity | - |
 
 **Applies when:** 0 < eff <= 1; 0 < y <= 1; no dead-time losses.
 
@@ -828,7 +788,7 @@ F = 1.201369742
 
 <a id="nuc_currie_detection_limits"></a>
 
-#### Currie critical level, detection limit and minimum detectable activity — `nuc_currie_detection_limits`
+#### Currie critical level, detection limit and minimum detectable activity, `nuc_currie_detection_limits`
 
 Currie's (1968) decision threshold L_C = k sqrt(2B) and detection limit L_D = k^2 + 2 L_C (net counts, paired blank, alpha = beta = 0.05, k = 1.645) from the background counts B, and with the counting time, efficiency and emission yield the minimum detectable activity L_D/(eff y t).
 
@@ -838,12 +798,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `B` | in | background counts in the counting time | — |
+| `B` | in | background counts in the counting time | - |
 | `t` | in | counting time (optional, for the MDA) (optional) | s |
-| `eff` | in | counting efficiency (optional, with t) (optional) | — |
-| `y` | in | emission yield per decay (default 1) (optional) | — |
-| `L_C` | out | critical level (net counts) | — |
-| `L_D` | out | detection limit (net counts) | — |
+| `eff` | in | counting efficiency (optional, with t) (optional) | - |
+| `y` | in | emission yield per decay (default 1) (optional) | - |
+| `L_C` | out | critical level (net counts) | - |
+| `L_D` | out | detection limit (net counts) | - |
 | `MDA` | out | minimum detectable activity (Bq) | 1/s |
 
 **Applies when:** paired blank (same counting time); alpha = beta = 0.05; Gaussian approximation of the counts.
@@ -861,7 +821,7 @@ In the worked example, B = 100 go through the equation above and give L_C = 23.2
 
 <a id="nuc_dead_time_nonparalyzable"></a>
 
-#### Dead-time correction, non-paralyzable detector — `nuc_dead_time_nonparalyzable`
+#### Dead-time correction, non-paralyzable detector, `nuc_dead_time_nonparalyzable`
 
 The true event rate from the observed count rate of a non-paralyzable (non-extendable) detector with a stated dead time, the fraction of events lost and the correction factor.
 
@@ -874,8 +834,8 @@ $$
 | `m` | in | observed count rate (cps, cpm) | 1/s |
 | `tau` | in | dead time (e.g. us) | s |
 | `n` | out | true event rate | 1/s |
-| `loss` | out | fraction of events lost | — |
-| `corr` | out | correction factor n/m | — |
+| `loss` | out | fraction of events lost | - |
+| `corr` | out | correction factor n/m | - |
 
 **Applies when:** non-paralyzable (non-extendable) dead time; m tau < 1.
 
@@ -894,7 +854,7 @@ corr = 1.333333333
 
 <a id="nuc_dead_time_paralyzable"></a>
 
-#### Dead-time correction, paralyzable detector — `nuc_dead_time_paralyzable`
+#### Dead-time correction, paralyzable detector, `nuc_dead_time_paralyzable`
 
 The true event rate from the observed count rate of a paralyzable (extendable) detector, on the stated branch of the rate curve (below or above the maximum), with the fraction lost and the largest observable count rate.
 
@@ -906,9 +866,9 @@ $$
 |---|---|---|---|
 | `m` | in | observed count rate | 1/s |
 | `tau` | in | dead time | s |
-| `branch` | in | branch of the rate curve: low (true rate below 1/tau) or high (above it) | — |
+| `branch` | in | branch of the rate curve: low (true rate below 1/tau) or high (above it) | - |
 | `n` | out | true event rate | 1/s |
-| `loss` | out | fraction of events lost | — |
+| `loss` | out | fraction of events lost | - |
 | `m_max` | out | largest observable count rate 1/(e tau) | 1/s |
 
 **Applies when:** paralyzable (extendable) dead time; m tau <= 1/e; the branch is stated (two true rates give the same m).
@@ -929,7 +889,7 @@ m_max = 73575.88823 1/s
 
 <a id="nuc_count_rate_point_source"></a>
 
-#### Expected count rate from a point source on a detector's axis — `nuc_count_rate_point_source`
+#### Expected count rate from a point source on a detector's axis, `nuc_count_rate_point_source`
 
 The count rate a detector of stated intrinsic efficiency records from a point source on its axis, from the activity, the emission probability per decay and the geometric efficiency of the detector face.
 
@@ -940,13 +900,13 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `A` | in | source activity | 1/s |
-| `y` | in | emission probability of the counted radiation per decay | — |
+| `y` | in | emission probability of the counted radiation per decay | - |
 | `d` | in | source-to-face distance | m |
 | `a` | in | radius of the detector face | m |
-| `eps_int` | in | intrinsic efficiency (counts per radiation reaching the face) | — |
+| `eps_int` | in | intrinsic efficiency (counts per radiation reaching the face) | - |
 | `R` | out | expected count rate | 1/s |
-| `g` | out | geometric efficiency | — |
-| `R_cpm` | out | expected count rate in counts per minute | — |
+| `g` | out | geometric efficiency | - |
+| `R_cpm` | out | expected count rate in counts per minute | - |
 
 **Applies when:** point source on the axis; no dead time, no attenuation between source and detector.
 
@@ -968,7 +928,7 @@ R_cpm = 17443.11464
 
 <a id="nuc_decay_curve_fit"></a>
 
-#### Half-life from a measured decay curve (weighted log-linear fit) — `nuc_decay_curve_fit`
+#### Half-life from a measured decay curve (weighted log-linear fit), `nuc_decay_curve_fit`
 
 The decay constant, half-life, initial count and the standard error of the half-life from counts measured at several times (equal counting intervals), by a Poisson-weighted least-squares fit of ln C against t.
 
@@ -978,12 +938,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `t` | in | measurement times, in the unit t_unit | — |
-| `C` | in | counts recorded at those times (equal counting intervals) | — |
-| `t_unit` | in | unit of the times in the list: s, min, h, d or y | — |
+| `t` | in | measurement times, in the unit t_unit | - |
+| `C` | in | counts recorded at those times (equal counting intervals) | - |
+| `t_unit` | in | unit of the times in the list: s, min, h, d or y | - |
 | `lambda_` | out | fitted decay constant | 1/s |
 | `T_half` | out | fitted half-life | s |
-| `C0` | out | fitted count at t = 0 | — |
+| `C0` | out | fitted count at t = 0 | - |
 | `sigma_T` | out | standard error of the half-life (Poisson weights) | s |
 
 **Applies when:** a single radionuclide; counts positive and decreasing overall; weights w_i = C_i (Var ln C = 1/C).
@@ -1003,7 +963,7 @@ sigma_T = 94.40471674 s
 
 <a id="nuc_flux_from_foil_activation"></a>
 
-#### Neutron flux from a measured foil activation — `nuc_flux_from_foil_activation`
+#### Neutron flux from a measured foil activation, `nuc_flux_from_foil_activation`
 
 The neutron flux that irradiated an activation foil, from the foil's measured activity a decay time after an irradiation of known length, its mass, molar mass, isotopic abundance and activation cross section; with the saturation activity and the reaction rate per atom.
 
@@ -1016,7 +976,7 @@ $$
 | `A_d` | in | foil activity measured at the count | 1/s |
 | `m` | in | foil mass (target element) | kg |
 | `M` | in | molar mass of the target element | kg/mol |
-| `theta` | in | isotopic abundance of the target nuclide | — |
+| `theta` | in | isotopic abundance of the target nuclide | - |
 | `sigma` | in | activation cross section (barns) | m^2 |
 | `T_half` | in | half-life of the product | s |
 | `t_irr` | in | irradiation time | s |
@@ -1048,7 +1008,7 @@ R_atom = 6.169866876e-15 1/s
 
 <a id="nuc_count_time_split"></a>
 
-#### Optimal division of counting time between sample and background — `nuc_count_time_split`
+#### Optimal division of counting time between sample and background, `nuc_count_time_split`
 
 How to split a fixed total counting time between the sample (gross) count and the background count to minimise the standard deviation of the net count rate, and that minimum standard deviation.
 
@@ -1064,7 +1024,7 @@ $$
 | `tg` | out | time for the gross count | s |
 | `tb` | out | time for the background count | s |
 | `sigma` | out | minimum standard deviation of the net count rate | 1/s |
-| `rel` | out | relative standard deviation of the net count rate | — |
+| `rel` | out | relative standard deviation of the net count rate | - |
 
 **Applies when:** Poisson counting statistics; Rg > Rb > 0.
 
@@ -1085,7 +1045,7 @@ rel = 0.003333333333
 
 <a id="nuc_escape_peaks"></a>
 
-#### Single and double escape peaks of a gamma ray — `nuc_escape_peaks`
+#### Single and double escape peaks of a gamma ray, `nuc_escape_peaks`
 
 The energies of the single- and double-escape peaks (E - m_e c^2 and E - 2 m_e c^2) that pair production by a gamma ray above 1.022 MeV produces in a detector.
 
@@ -1096,10 +1056,10 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `E` | in | gamma-ray energy (MeV, keV) | J |
-| `single_escape_keV` | out | single-escape peak in keV | — |
-| `double_escape_keV` | out | double-escape peak in keV | — |
-| `annihilation_keV` | out | annihilation photon energy in keV | — |
-| `E_keV` | out | full-energy peak in keV | — |
+| `single_escape_keV` | out | single-escape peak in keV | - |
+| `double_escape_keV` | out | double-escape peak in keV | - |
+| `annihilation_keV` | out | annihilation photon energy in keV | - |
+| `E_keV` | out | full-energy peak in keV | - |
 
 **Applies when:** E > 2 m_e c^2 = 1.022 MeV.
 
@@ -1118,7 +1078,7 @@ E_keV = 2614
 
 <a id="nuc_solid_angle_on_axis"></a>
 
-#### Solid angle and geometric efficiency of a disk detector (source on axis) — `nuc_solid_angle_on_axis`
+#### Solid angle and geometric efficiency of a disk detector (source on axis), `nuc_solid_angle_on_axis`
 
 The solid angle subtended by a circular detector face (or aperture) at a point source on its axis and the geometric efficiency (fraction of isotropic emissions that hit it).
 
@@ -1130,8 +1090,8 @@ $$
 |---|---|---|---|
 | `d` | in | distance from the source to the detector face | m |
 | `a` | in | radius of the detector face | m |
-| `Omega` | out | solid angle (sr) | — |
-| `g` | out | geometric efficiency Omega/(4 pi) | — |
+| `Omega` | out | solid angle (sr) | - |
+| `g` | out | geometric efficiency Omega/(4 pi) | - |
 
 **Applies when:** point isotropic source on the axis.
 
@@ -1149,7 +1109,7 @@ g = 0.01538828603
 
 <a id="nuc_solid_angle_off_axis"></a>
 
-#### Solid angle of a disk detector for an off-axis point source — `nuc_solid_angle_off_axis`
+#### Solid angle of a disk detector for an off-axis point source, `nuc_solid_angle_off_axis`
 
 The solid angle subtended by a circular detector face at a point source displaced sideways from its axis, and the geometric efficiency.
 
@@ -1162,8 +1122,8 @@ $$
 | `d` | in | distance from the source to the plane of the detector face | m |
 | `a` | in | radius of the detector face | m |
 | `rho0` | in | lateral offset of the source from the detector axis | m |
-| `Omega` | out | solid angle (sr) | — |
-| `g` | out | geometric efficiency Omega/(4 pi) | — |
+| `Omega` | out | solid angle (sr) | - |
+| `g` | out | geometric efficiency Omega/(4 pi) | - |
 
 **Applies when:** point isotropic source; flat circular face.
 
@@ -1182,7 +1142,7 @@ g = 0.05069473979
 
 <a id="nuc_detector_efficiency_point_source"></a>
 
-#### Total and intrinsic efficiency of a slab detector for a point source on axis — `nuc_detector_efficiency_point_source`
+#### Total and intrinsic efficiency of a slab detector for a point source on axis, `nuc_detector_efficiency_point_source`
 
 The total detection efficiency of a flat detector of given thickness and attenuation coefficient for a point source on its axis (every photon entering the front face crosses the thickness along its slant path), the geometric efficiency and the intrinsic efficiency.
 
@@ -1196,9 +1156,9 @@ $$
 | `a` | in | radius of the detector face | m |
 | `t` | in | detector thickness | m |
 | `mu` | in | total linear attenuation coefficient of the detector material | 1/m |
-| `eff` | out | total efficiency (interacting photons per emitted photon) | — |
-| `g` | out | geometric efficiency | — |
-| `intrinsic` | out | intrinsic efficiency eff/g | — |
+| `eff` | out | total efficiency (interacting photons per emitted photon) | - |
+| `g` | out | geometric efficiency | - |
+| `intrinsic` | out | intrinsic efficiency eff/g | - |
 
 **Applies when:** point source on the axis; path length t/cos(theta) for every ray through the front face (side escape neglected).
 
@@ -1219,7 +1179,7 @@ intrinsic = 0.8898360029
 
 <a id="nuc_two_component_decay_fit"></a>
 
-#### Two-component decay curve: amplitudes of two known half-lives — `nuc_two_component_decay_fit`
+#### Two-component decay curve: amplitudes of two known half-lives, `nuc_two_component_decay_fit`
 
 Resolve a decay curve that is the sum of two radionuclides of known half-lives into the initial count of each component (Poisson-weighted linear least squares).
 
@@ -1229,14 +1189,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `t` | in | measurement times, in the unit t_unit | — |
-| `C` | in | counts recorded at those times (equal intervals) | — |
+| `t` | in | measurement times, in the unit t_unit | - |
+| `C` | in | counts recorded at those times (equal intervals) | - |
 | `T1` | in | half-life of component 1 | s |
 | `T2` | in | half-life of component 2 | s |
-| `t_unit` | in | unit of the times in the list: s, min, h, d or y | — |
-| `C1` | out | component 1 count at t = 0 | — |
-| `C2` | out | component 2 count at t = 0 | — |
-| `frac1` | out | fraction of the initial count due to component 1 | — |
+| `t_unit` | in | unit of the times in the list: s, min, h, d or y | - |
+| `C1` | out | component 1 count at t = 0 | - |
+| `C2` | out | component 2 count at t = 0 | - |
+| `frac1` | out | fraction of the initial count due to component 1 | - |
 
 **Applies when:** two components with known, different half-lives; weights 1/C_i (Poisson).
 
@@ -1258,7 +1218,7 @@ frac1 = 0.8409726009
 
 <a id="nuc_committed_dose_coefficient"></a>
 
-#### Committed effective dose from a dose coefficient — `nuc_committed_dose_coefficient`
+#### Committed effective dose from a dose coefficient, `nuc_committed_dose_coefficient`
 
 The committed effective dose E(50) = e(50) I of an intake I of a radionuclide with the dose coefficient e(50) (Sv/Bq, from ICRP tables for the route and chemical form).
 
@@ -1271,7 +1231,7 @@ $$
 | `I` | in | activity taken in (Bq, kBq, MBq, Ci ...) | 1/s |
 | `e` | in | dose coefficient e(50) (Sv/Bq) | J*s/kg |
 | `E` | out | committed effective dose (Sv) | J/kg |
-| `E_mSv` | out | committed effective dose in mSv | — |
+| `E_mSv` | out | committed effective dose in mSv | - |
 | `I_Bq` | out | intake in Bq | 1/s |
 
 **Applies when:** dose coefficient for the route, particle size and chemical form of the intake; e <= 1e-3 Sv/Bq.
@@ -1291,7 +1251,7 @@ I_Bq = 1000000 1/s
 
 <a id="nuc_committed_dose_retention"></a>
 
-#### Committed equivalent dose to an organ from an intake (retention compartments) — `nuc_committed_dose_retention`
+#### Committed equivalent dose to an organ from an intake (retention compartments), `nuc_committed_dose_retention`
 
 The number of decays in an organ over the commitment period after an intake retained in exponential compartments, and the committed equivalent dose from the energy absorbed per decay, the radiation weighting factor and the organ mass.
 
@@ -1302,17 +1262,17 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `I` | in | activity taken into the organ (intake reaching it) | 1/s |
-| `f` | in | fractions of the intake retained in each compartment (sum <= 1) | — |
-| `Tb` | in | biological half-lives of the compartments, in the unit t_unit | — |
-| `t_unit` | in | unit of the times in the list: s, min, h, d or y | — |
+| `f` | in | fractions of the intake retained in each compartment (sum <= 1) | - |
+| `Tb` | in | biological half-lives of the compartments, in the unit t_unit | - |
+| `t_unit` | in | unit of the times in the list: s, min, h, d or y | - |
 | `T_p` | in | physical half-life | s |
 | `E` | in | energy absorbed in the organ per decay (e.g. MeV) | J |
-| `w_R` | in | radiation weighting factor (1 for photons and electrons, 20 for alpha particles) | — |
+| `w_R` | in | radiation weighting factor (1 for photons and electrons, 20 for alpha particles) | - |
 | `m` | in | organ mass | kg |
 | `tau` | in | commitment period (50 y for adults) | s |
-| `U` | out | number of decays in the organ during tau | — |
+| `U` | out | number of decays in the organ during tau | - |
 | `H` | out | committed equivalent dose (Sv) | J/kg |
-| `H_mSv` | out | committed equivalent dose in mSv | — |
+| `H_mSv` | out | committed equivalent dose in mSv | - |
 
 **Applies when:** instantaneous intake; retention R(t) = sum f_i e^(-lambda_b,i t); all energy per decay absorbed in the organ as stated.
 
@@ -1336,7 +1296,7 @@ H_mSv = 393.0790347
 
 <a id="nuc_effective_dose"></a>
 
-#### Effective dose from organ equivalent doses and tissue weighting factors — `nuc_effective_dose`
+#### Effective dose from organ equivalent doses and tissue weighting factors, `nuc_effective_dose`
 
 The effective dose E = sum w_T H_T from the equivalent doses of the irradiated tissues and their tissue weighting factors (stated; ICRP 103: 0.12 for red marrow, colon, lung, stomach, breast and the remainder, 0.08 gonads, 0.04 bladder, oesophagus, liver, thyroid, 0.01 bone surface, brain, salivary glands, skin).
 
@@ -1346,11 +1306,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `H` | in | equivalent dose of each tissue in mSv | — |
-| `w` | in | tissue weighting factor of each tissue (as stated) | — |
-| `E_mSv` | out | effective dose in mSv | — |
+| `H` | in | equivalent dose of each tissue in mSv | - |
+| `w` | in | tissue weighting factor of each tissue (as stated) | - |
+| `E_mSv` | out | effective dose in mSv | - |
 | `E` | out | effective dose (Sv) | J/kg |
-| `w_sum` | out | sum of the weighting factors given | — |
+| `w_sum` | out | sum of the weighting factors given | - |
 
 **Applies when:** one weighting factor per tissue, 0 < w_T <= 1, sum at most 1; tissues not listed received no dose.
 
@@ -1367,7 +1327,7 @@ w_sum = 0.17
 
 <a id="nuc_effective_half_life"></a>
 
-#### Effective half-life (physical and biological removal) — `nuc_effective_half_life`
+#### Effective half-life (physical and biological removal), `nuc_effective_half_life`
 
 The effective half-life of a radionuclide in the body or another system that removes it biologically while it decays, the effective decay constant and (with the initial activity) the total number of decays.
 
@@ -1382,7 +1342,7 @@ $$
 | `A0` | in | initial activity in the body (optional) (optional) | 1/s |
 | `T_eff` | out | effective half-life | s |
 | `lambda_eff` | out | effective removal constant | 1/s |
-| `N_decays` | out | total number of decays in the body (cumulated activity, when A0 is given) | — |
+| `N_decays` | out | total number of decays in the body (cumulated activity, when A0 is given) | - |
 
 **Applies when:** single-exponential biological removal.
 
@@ -1400,7 +1360,7 @@ In the worked example, T_p = 692988.48 s, T_b = 6912000 s go through the equatio
 
 <a id="nuc_radiation_unit_conversion"></a>
 
-#### Radiation unit conversion (Bq and Ci, Gy and rad, Sv and rem) — `nuc_radiation_unit_conversion`
+#### Radiation unit conversion (Bq and Ci, Gy and rad, Sv and rem), `nuc_radiation_unit_conversion`
 
 An activity, absorbed dose or equivalent dose written in any of the SI or traditional units, expressed in both systems (1 Ci = 3.7e10 Bq, 1 rad = 0.01 Gy, 1 rem = 0.01 Sv).
 
@@ -1413,14 +1373,14 @@ $$
 | `A` | in | an activity (Bq, kBq, MBq, Ci, mCi, uCi ...) (optional) | 1/s |
 | `D` | in | an absorbed dose (Gy, mGy, rad, mrad) (optional) | J/kg |
 | `H` | in | an equivalent or effective dose (Sv, mSv, rem, mrem) (optional) | J/kg |
-| `SI_value` | out | value in the SI unit (Bq, Gy or Sv) | — |
-| `traditional_value` | out | value in the traditional unit (Ci, rad or rem) | — |
-| `si_unit` | out | the SI unit | — |
-| `traditional_unit` | out | the traditional unit | — |
-| `value_mCi` | out | activity in mCi | — |
-| `value_MBq` | out | activity in MBq | — |
-| `value_mSv_or_mGy` | out | dose in mSv or mGy | — |
-| `value_mrem_or_mrad` | out | dose in mrem or mrad | — |
+| `SI_value` | out | value in the SI unit (Bq, Gy or Sv) | - |
+| `traditional_value` | out | value in the traditional unit (Ci, rad or rem) | - |
+| `si_unit` | out | the SI unit | - |
+| `traditional_unit` | out | the traditional unit | - |
+| `value_mCi` | out | activity in mCi | - |
+| `value_MBq` | out | activity in MBq | - |
+| `value_mSv_or_mGy` | out | dose in mSv or mGy | - |
+| `value_mrem_or_mrad` | out | dose in mrem or mrad | - |
 
 **Applies when:** exactly one of A, D, H.
 
@@ -1443,7 +1403,7 @@ In the worked example, A = 370000000 (1/s) go through the equation above and giv
 
 <a id="nuc_enrichment_swu"></a>
 
-#### Uranium enrichment: feed, tails and separative work (SWU) — `nuc_enrichment_swu`
+#### Uranium enrichment: feed, tails and separative work (SWU), `nuc_enrichment_swu`
 
 The natural-uranium feed and tails masses and the separative work (kg SWU) needed to produce a mass of enriched uranium from stated product, feed and tails assays, per kg of product too.
 
@@ -1453,15 +1413,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x_p` | in | U-235 assay of the product (weight fraction, e.g. 4.5%) | — |
-| `x_f` | in | U-235 assay of the feed (0.711% for natural uranium) | — |
-| `x_w` | in | U-235 assay of the tails (e.g. 0.25%) | — |
+| `x_p` | in | U-235 assay of the product (weight fraction, e.g. 4.5%) | - |
+| `x_f` | in | U-235 assay of the feed (0.711% for natural uranium) | - |
+| `x_w` | in | U-235 assay of the tails (e.g. 0.25%) | - |
 | `P` | in | mass of product | kg |
 | `F` | out | feed mass | kg |
 | `W` | out | tails mass | kg |
 | `SWU` | out | separative work (kg SWU) | kg |
-| `F_per_P` | out | feed per unit product | — |
-| `SWU_per_P` | out | kg SWU per kg of product | — |
+| `F_per_P` | out | feed per unit product | - |
+| `SWU_per_P` | out | kg SWU per kg of product | - |
 
 **Applies when:** tails < feed < product assays; value function V(x) = (2x - 1) ln(x/(1 - x)).
 
@@ -1486,7 +1446,7 @@ In the worked example, x_p = 0.045, x_f = 0.00711, x_w = 0.0025, P = 1 kg go thr
 
 <a id="nuc_logarithmic_energy_decrement"></a>
 
-#### Average logarithmic energy decrement and mean scattering cosine — `nuc_logarithmic_energy_decrement`
+#### Average logarithmic energy decrement and mean scattering cosine, `nuc_logarithmic_energy_decrement`
 
 For elastic scattering from a nucleus of mass ratio A (isotropic in the centre of mass): the minimum energy ratio alpha, the average logarithmic energy loss per collision xi and the average cosine of the laboratory scattering angle.
 
@@ -1496,10 +1456,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `A` | in | mass of the nucleus in neutron masses (mass number) | — |
-| `alpha` | out | minimum E'/E, ((A - 1)/(A + 1))^2 | — |
-| `xi` | out | average logarithmic energy decrement | — |
-| `mu_bar` | out | average cosine of the lab scattering angle, 2/(3A) | — |
+| `A` | in | mass of the nucleus in neutron masses (mass number) | - |
+| `alpha` | out | minimum E'/E, ((A - 1)/(A + 1))^2 | - |
+| `xi` | out | average logarithmic energy decrement | - |
+| `mu_bar` | out | average cosine of the lab scattering angle, 2/(3A) | - |
 
 **Applies when:** isotropic scattering in the centre-of-mass frame; A >= 1.
 
@@ -1517,7 +1477,7 @@ In the worked example, A = 12 go through the equation above and give alpha = 0.7
 
 <a id="nuc_collisions_to_thermalize"></a>
 
-#### Average number of collisions to slow a neutron down — `nuc_collisions_to_thermalize`
+#### Average number of collisions to slow a neutron down, `nuc_collisions_to_thermalize`
 
 The average number of elastic collisions with nuclei of mass ratio A needed to slow a neutron from E0 to Ef (for example from 2 MeV to 0.025 eV), from the lethargy change and xi.
 
@@ -1527,11 +1487,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `A` | in | mass of the moderator nucleus in neutron masses | — |
+| `A` | in | mass of the moderator nucleus in neutron masses | - |
 | `E0` | in | initial neutron energy | J |
 | `Ef` | in | final neutron energy | J |
-| `n` | out | average number of collisions | — |
-| `xi` | out | average logarithmic energy decrement | — |
+| `n` | out | average number of collisions | - |
+| `xi` | out | average logarithmic energy decrement | - |
 
 **Applies when:** isotropic CM scattering; E0 > Ef; a single nuclide moderator.
 
@@ -1550,7 +1510,7 @@ xi = 0.1577689898
 
 <a id="nuc_exponential_pile"></a>
 
-#### Diffusion length from an exponential pile measurement — `nuc_exponential_pile`
+#### Diffusion length from an exponential pile measurement, `nuc_exponential_pile`
 
 The thermal diffusion length of a moderator from fluxes measured along the axis of an exponential pile (a source at the bottom of a prism of extrapolated sides a and b): least-squares relaxation constant gamma, then L from gamma^2 = 1/L^2 + (pi/a)^2 + (pi/b)^2.
 
@@ -1560,8 +1520,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `z` | in | heights of the measurements along the axis, in cm (far from the source and the top) | — |
-| `phi` | in | measured fluxes or detector readings at those heights (any consistent unit) | — |
+| `z` | in | heights of the measurements along the axis, in cm (far from the source and the top) | - |
+| `phi` | in | measured fluxes or detector readings at those heights (any consistent unit) | - |
 | `a` | in | first extrapolated transverse side | m |
 | `b` | in | second extrapolated transverse side | m |
 | `gamma` | out | fitted relaxation constant | 1/m |
@@ -1585,7 +1545,7 @@ L2 = 1.309272345 m^2
 
 <a id="nuc_plane_source_slab_flux"></a>
 
-#### Flux from a plane neutron source at the centre of a slab — `nuc_plane_source_slab_flux`
+#### Flux from a plane neutron source at the centre of a slab, `nuc_plane_source_slab_flux`
 
 The one-group thermal flux at a position in a non-multiplying slab of stated (extrapolated) thickness with a plane source of neutrons at its mid-plane, the flux at the source plane and the fraction of neutrons that leak from the two faces.
 
@@ -1602,7 +1562,7 @@ $$
 | `x` | in | distance from the source plane | m |
 | `phi` | out | flux at x | 1/(m^2*s) |
 | `phi0` | out | flux at the source plane | 1/(m^2*s) |
-| `leak` | out | fraction of source neutrons leaking from the two faces | — |
+| `leak` | out | fraction of source neutrons leaking from the two faces | - |
 
 **Applies when:** one-group diffusion in a non-multiplying medium; flux zero at the extrapolated faces.
 
@@ -1624,7 +1584,7 @@ leak = 4.803005487e-08
 
 <a id="nuc_point_source_sphere_flux"></a>
 
-#### Flux from a point neutron source at the centre of a sphere — `nuc_point_source_sphere_flux`
+#### Flux from a point neutron source at the centre of a sphere, `nuc_point_source_sphere_flux`
 
 The one-group thermal flux at a radius in a non-multiplying sphere (extrapolated radius R) with an isotropic point source at its centre, the fraction of neutrons that leak out, and the flux the same source would give in an infinite medium.
 
@@ -1640,7 +1600,7 @@ $$
 | `R` | in | extrapolated radius of the sphere | m |
 | `r` | in | distance from the source | m |
 | `phi` | out | flux at r | 1/(m^2*s) |
-| `leak` | out | fraction of source neutrons leaking out | — |
+| `leak` | out | fraction of source neutrons leaking out | - |
 | `phi_inf` | out | flux at r in an infinite medium | 1/(m^2*s) |
 
 **Applies when:** one-group diffusion in a non-multiplying medium; 0 < r < R.
@@ -1663,7 +1623,7 @@ phi_inf = 1.488561461e+10 1/(m^2*s)
 
 <a id="nuc_maxwellian_average_cross_section"></a>
 
-#### Maxwellian-averaged 1/v cross section — `nuc_maxwellian_average_cross_section`
+#### Maxwellian-averaged 1/v cross section: `nuc_maxwellian_average_cross_section`
 
 The effective thermal cross section of a 1/v absorber averaged over a Maxwellian neutron flux at a stated neutron temperature, from its tabulated 2200 m/s value.
 
@@ -1676,8 +1636,8 @@ $$
 | `sigma0` | in | cross section at 2200 m/s (barns) | m^2 |
 | `T` | in | neutron temperature | K |
 | `sigma_avg` | out | flux-averaged cross section | m^2 |
-| `sigma_avg_b` | out | the same in barns | — |
-| `g` | out | ratio sigma_avg/sigma0 = (sqrt(pi)/2) sqrt(E0/kT) | — |
+| `sigma_avg_b` | out | the same in barns | - |
+| `g` | out | ratio sigma_avg/sigma0 = (sqrt(pi)/2) sqrt(E0/kT) | - |
 
 **Applies when:** 1/v cross section; Maxwellian flux spectrum phi(E) ~ E e^(-E/kT); E0 = m_n (2200 m/s)^2/2.
 
@@ -1696,7 +1656,7 @@ In the worked example, sigma0 = 6.809e-26 m^2, T = 293.6 K go through the equati
 
 <a id="nuc_moderator_mixture"></a>
 
-#### Moderating power and ratio of a compound moderator — `nuc_moderator_mixture`
+#### Moderating power and ratio of a compound moderator, `nuc_moderator_mixture`
 
 The macroscopic scattering and absorption cross sections of a compound moderator (water, heavy water, graphite, beryllium oxide, ...), its average logarithmic energy decrement (weighted by scattering), moderating power and moderating ratio.
 
@@ -1706,15 +1666,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | atoms of each element per molecule | — |
-| `A` | in | mass ratio (mass number) of each element | — |
-| `sigma_s` | in | scattering cross section of each element, in barns | — |
-| `sigma_a` | in | absorption cross section of each element, in barns | — |
+| `n` | in | atoms of each element per molecule | - |
+| `A` | in | mass ratio (mass number) of each element | - |
+| `sigma_s` | in | scattering cross section of each element, in barns | - |
+| `sigma_a` | in | absorption cross section of each element, in barns | - |
 | `rho` | in | density of the moderator | kg/m^3 |
 | `M` | in | molar mass of the molecule | kg/mol |
-| `xi` | out | average logarithmic energy decrement of the mixture | — |
+| `xi` | out | average logarithmic energy decrement of the mixture | - |
 | `MP` | out | moderating power xi Sigma_s | 1/m |
-| `MR` | out | moderating ratio xi Sigma_s/Sigma_a (when Sigma_a > 0) | — |
+| `MR` | out | moderating ratio xi Sigma_s/Sigma_a (when Sigma_a > 0) | - |
 
 **Applies when:** isotropic CM scattering for every element; constant cross sections.
 
@@ -1733,7 +1693,7 @@ MR = 60.90997647
 
 <a id="nuc_elastic_scattering"></a>
 
-#### Neutron energy and lab angle after an elastic collision — `nuc_elastic_scattering`
+#### Neutron energy and lab angle after an elastic collision, `nuc_elastic_scattering`
 
 The energy of a neutron after elastic scattering from a nucleus of mass ratio A through a stated centre-of-mass angle, the energy ratio, the scattering angle in the laboratory and the lethargy gained.
 
@@ -1743,13 +1703,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `A` | in | mass of the nucleus in neutron masses (mass number; 1 for hydrogen) | — |
+| `A` | in | mass of the nucleus in neutron masses (mass number; 1 for hydrogen) | - |
 | `E` | in | neutron energy before the collision | J |
 | `theta` | in | scattering angle in the centre-of-mass frame (deg or rad) | rad |
 | `E_out` | out | neutron energy after the collision | J |
-| `ratio` | out | E'/E | — |
+| `ratio` | out | E'/E | - |
 | `psi` | out | scattering angle in the laboratory frame | rad |
-| `du` | out | lethargy gain ln(E/E') | — |
+| `du` | out | lethargy gain ln(E/E') | - |
 
 **Applies when:** elastic scattering from a nucleus at rest; A >= 1.
 
@@ -1770,7 +1730,7 @@ du = 0.1531649725
 
 <a id="nuc_fuel_cross_sections"></a>
 
-#### Number densities and macroscopic cross sections of UO2 fuel — `nuc_fuel_cross_sections`
+#### Number densities and macroscopic cross sections of UO2 fuel, `nuc_fuel_cross_sections`
 
 Atom densities of U-235, U-238 and oxygen in uranium dioxide of stated density and enrichment, its macroscopic absorption and fission cross sections, eta (neutrons per absorption in the fuel) and the absorption mean free path.
 
@@ -1781,18 +1741,18 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `rho` | in | density of the UO2 (e.g. 10.4 g/cm^3) | kg/m^3 |
-| `w` | in | enrichment: mass fraction of U-235 in the uranium | — |
+| `w` | in | enrichment: mass fraction of U-235 in the uranium | - |
 | `sigma_a5` | in | U-235 absorption cross section (barns) | m^2 |
 | `sigma_f5` | in | U-235 fission cross section (barns) | m^2 |
 | `sigma_a8` | in | U-238 absorption cross section (barns) | m^2 |
 | `sigma_aO` | in | oxygen absorption cross section (barns) | m^2 |
-| `nu` | in | neutrons per fission of U-235 | — |
+| `nu` | in | neutrons per fission of U-235 | - |
 | `N5` | out | U-235 atoms per volume | 1/m^3 |
 | `N8` | out | U-238 atoms per volume | 1/m^3 |
 | `NO` | out | oxygen atoms per volume | 1/m^3 |
 | `Sigma_a` | out | macroscopic absorption cross section | 1/m |
 | `Sigma_f` | out | macroscopic fission cross section | 1/m |
-| `eta` | out | eta = nu Sigma_f/Sigma_a of the fuel | — |
+| `eta` | out | eta = nu Sigma_f/Sigma_a of the fuel | - |
 | `mfp_a` | out | absorption mean free path 1/Sigma_a | m |
 
 **Applies when:** stoichiometric UO2 with U-235 and U-238 only; atomic masses U-235 235.043928, U-238 238.050787, O 15.999 g/mol.
@@ -1821,7 +1781,7 @@ mfp_a = 0.01851569395 m
 
 <a id="nuc_thermal_neutron_speeds"></a>
 
-#### Speeds and mean energy of thermal neutrons (Maxwell distribution) — `nuc_thermal_neutron_speeds`
+#### Speeds and mean energy of thermal neutrons (Maxwell distribution), `nuc_thermal_neutron_speeds`
 
 The most probable, mean and root-mean-square speeds and the mean kinetic energy of neutrons in thermal equilibrium (Maxwell-Boltzmann distribution) at a stated temperature.
 
@@ -1836,7 +1796,7 @@ $$
 | `v_mean` | out | mean speed | m/s |
 | `v_rms` | out | root-mean-square speed | m/s |
 | `E_mean` | out | mean kinetic energy 3kT/2 | J |
-| `E_mean_eV` | out | mean kinetic energy in eV | — |
+| `E_mean_eV` | out | mean kinetic energy in eV | - |
 
 **Applies when:** Maxwell-Boltzmann distribution of the neutron density; neutron mass 1.67492750056e-27 kg.
 
@@ -1856,7 +1816,7 @@ In the worked example, T = 293.6 K go through the equation above and give v_p = 
 
 <a id="nuc_diffusion_length"></a>
 
-#### Thermal diffusion length and migration length — `nuc_diffusion_length`
+#### Thermal diffusion length and migration length, `nuc_diffusion_length`
 
 The thermal diffusion length L = sqrt(D/Sigma_a) of a medium and, with the Fermi age tau, the migration area M^2 = L^2 + tau and migration length.
 
@@ -1871,7 +1831,7 @@ $$
 | `tau` | in | Fermi age to thermal (cm^2, optional) (optional) | m^2 |
 | `L` | out | diffusion length | m |
 | `L2` | out | diffusion area L^2 | m^2 |
-| `L_cm` | out | diffusion length in cm | — |
+| `L_cm` | out | diffusion length in cm | - |
 | `M2` | out | migration area L^2 + tau | m^2 |
 | `M` | out | migration length | m |
 
@@ -1894,7 +1854,7 @@ In the worked example, D = 0.16 cm, Sigma_a = 0.0197 1/cm go through the equatio
 
 <a id="nuc_control_rod_worth"></a>
 
-#### Integral and differential control-rod worth (sine-squared weighting) — `nuc_control_rod_worth`
+#### Integral and differential control-rod worth (sine-squared weighting), `nuc_control_rod_worth`
 
 The reactivity worth of a control rod inserted to a depth x in a core of height H with a cosine axial flux (first-order perturbation: worth density ~ sin^2), as a fraction of its total worth, and the differential worth at that depth.
 
@@ -1904,14 +1864,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `rho_tot` | in | total worth of the fully inserted rod (absolute, or in pcm, %, dollars or cents) | — |
+| `rho_tot` | in | total worth of the fully inserted rod (absolute, or in pcm, %, dollars or cents) | - |
 | `H` | in | core height | m |
 | `x` | in | insertion depth from the top of the core | m |
-| `beta` | in | delayed-neutron fraction (optional: converts a worth in dollars and reports dollars) (optional) | — |
-| `rho` | out | worth inserted (absolute) | — |
-| `frac` | out | fraction of the total worth | — |
+| `beta` | in | delayed-neutron fraction (optional: converts a worth in dollars and reports dollars) (optional) | - |
+| `rho` | out | worth inserted (absolute) | - |
+| `frac` | out | fraction of the total worth | - |
 | `drho_dx` | out | differential worth at x (reactivity per metre) | 1/m |
-| `rho_dollars` | out | worth in dollars (when beta is given) | — |
+| `rho_dollars` | out | worth in dollars (when beta is given) | - |
 
 **Applies when:** cosine axial flux, flux zero at the core ends; first-order perturbation (small rod).
 
@@ -1931,7 +1891,7 @@ drho_dx = 0.005464480874 1/m
 
 <a id="nuc_power_after_step_one_group"></a>
 
-#### Power after a reactivity step (one delayed group, exact) — `nuc_power_after_step_one_group`
+#### Power after a reactivity step (one delayed group, exact), `nuc_power_after_step_one_group`
 
 The relative power P(t)/P0 a time t after a step reactivity change from steady state, from the exact two-mode solution with one delayed group, with the amplitude of the stable period (the exact prompt jump or drop) and the inverse period.
 
@@ -1941,13 +1901,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `rho` | in | step reactivity (absolute, or in pcm, %, dollars or cents) | — |
-| `beta` | in | delayed-neutron fraction beta | — |
+| `rho` | in | step reactivity (absolute, or in pcm, %, dollars or cents) | - |
+| `beta` | in | delayed-neutron fraction beta | - |
 | `lam` | in | precursor decay constant of the single delayed group (e.g. 0.08 1/s) | 1/s |
 | `Lambda` | in | prompt neutron generation time | s |
 | `t` | in | time after the step | s |
-| `P` | out | relative power P(t)/P0 | — |
-| `A1` | out | amplitude of the stable mode (exact prompt jump or drop) | — |
+| `P` | out | relative power P(t)/P0 | - |
+| `A1` | out | amplitude of the stable mode (exact prompt jump or drop) | - |
 | `omega` | out | inverse stable period | 1/s |
 
 **Applies when:** point kinetics, one delayed group, steady state before the step; rho < beta, rho != 0.
@@ -1970,7 +1930,7 @@ omega = 0.01452050027 1/s
 
 <a id="nuc_power_after_step_six_group"></a>
 
-#### Power after a reactivity step (six delayed groups, exact) — `nuc_power_after_step_six_group`
+#### Power after a reactivity step (six delayed groups, exact), `nuc_power_after_step_six_group`
 
 The relative power P(t)/P0 a time t after a step reactivity change from steady state with six (or any number up to eight) delayed-neutron groups, from all the inhour roots and their residues, and the stable period.
 
@@ -1980,12 +1940,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `rho` | in | step reactivity (absolute, or in pcm, %, dollars or cents) | — |
-| `beta` | in | delayed-neutron fraction of each group | — |
-| `lam` | in | decay constant of each group, in 1/s | — |
+| `rho` | in | step reactivity (absolute, or in pcm, %, dollars or cents) | - |
+| `beta` | in | delayed-neutron fraction of each group | - |
+| `lam` | in | decay constant of each group, in 1/s | - |
 | `Lambda` | in | prompt neutron generation time | s |
 | `t` | in | time after the step | s |
-| `P` | out | relative power P(t)/P0 | — |
+| `P` | out | relative power P(t)/P0 | - |
 | `omega` | out | inverse stable period | 1/s |
 | `T` | out | stable period | s |
 
@@ -2007,7 +1967,7 @@ T = 54.96402127 s
 
 <a id="nuc_reactivity_from_period"></a>
 
-#### Reactivity from a measured stable period or doubling time (inhour) — `nuc_reactivity_from_period`
+#### Reactivity from a measured stable period or doubling time (inhour), `nuc_reactivity_from_period`
 
 The reactivity, in absolute units, dollars and pcm, that produces a measured stable period (or doubling time) with stated delayed-neutron data, from the inhour equation.
 
@@ -2017,14 +1977,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `beta` | in | delayed-neutron fraction of each group | — |
-| `lam` | in | decay constant of each group, in 1/s | — |
+| `beta` | in | delayed-neutron fraction of each group | - |
+| `lam` | in | decay constant of each group, in 1/s | - |
 | `Lambda` | in | prompt neutron generation time | s |
 | `T` | in | stable period (give this or T_d; negative for falling power) (optional) | s |
 | `T_d` | in | doubling time (give this or T) (optional) | s |
-| `rho` | out | reactivity | — |
-| `rho_dollars` | out | reactivity in dollars | — |
-| `rho_pcm` | out | reactivity in pcm | — |
+| `rho` | out | reactivity | - |
+| `rho_dollars` | out | reactivity in dollars | - |
+| `rho_pcm` | out | reactivity in pcm | - |
 
 **Applies when:** point kinetics, asymptotic period; for a negative period: 1/T > -lambda_min.
 
@@ -2043,7 +2003,7 @@ rho_pcm = 94.06257256
 
 <a id="nuc_stable_period_six_group"></a>
 
-#### Stable period and prompt root of the inhour equation (six delayed groups) — `nuc_stable_period_six_group`
+#### Stable period and prompt root of the inhour equation (six delayed groups), `nuc_stable_period_six_group`
 
 The stable reactor period, inverse period and doubling time after a step reactivity change with six (or any number up to eight) delayed groups, and the prompt (most negative) root that sets the prompt jump's time constant.
 
@@ -2053,9 +2013,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `rho` | in | step reactivity (absolute, or in pcm, %, dollars or cents) | — |
-| `beta` | in | delayed-neutron fraction of each group | — |
-| `lam` | in | decay constant of each group, in 1/s | — |
+| `rho` | in | step reactivity (absolute, or in pcm, %, dollars or cents) | - |
+| `beta` | in | delayed-neutron fraction of each group | - |
+| `lam` | in | decay constant of each group, in 1/s | - |
 | `Lambda` | in | prompt neutron generation time | s |
 | `omega` | out | inverse stable period (largest root) | 1/s |
 | `T` | out | stable period | s |
@@ -2080,7 +2040,7 @@ omega_p = -110.5229924 1/s
 
 <a id="nuc_reactor_period_one_group"></a>
 
-#### Stable reactor period after a reactivity step (one delayed group) — `nuc_reactor_period_one_group`
+#### Stable reactor period after a reactivity step (one delayed group), `nuc_reactor_period_one_group`
 
 The stable (asymptotic) period, inverse period and doubling time of a reactor after a step reactivity change, with one effective delayed-neutron group (the stable root of the inhour equation).
 
@@ -2090,8 +2050,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `rho` | in | step reactivity (absolute, or in pcm, %, dollars or cents) | — |
-| `beta` | in | delayed-neutron fraction beta | — |
+| `rho` | in | step reactivity (absolute, or in pcm, %, dollars or cents) | - |
+| `beta` | in | delayed-neutron fraction beta | - |
 | `lam` | in | precursor decay constant of the single delayed group (e.g. 0.08 1/s) | 1/s |
 | `Lambda` | in | prompt neutron generation time | s |
 | `omega` | out | inverse stable period (largest inhour root) | 1/s |
@@ -2119,7 +2079,7 @@ T_d = 47.73576444 s
 
 <a id="nuc_inverse_multiplication"></a>
 
-#### Approach to criticality: inverse multiplication (1/M) extrapolation — `nuc_inverse_multiplication`
+#### Approach to criticality: inverse multiplication (1/M) extrapolation, `nuc_inverse_multiplication`
 
 Predict the critical loading (fuel elements, kg, rod position) from count rates measured as fuel is added, by extrapolating the inverse multiplication 1/M = C_0/C to zero: least-squares line through all points and the line through the last two.
 
@@ -2129,12 +2089,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | loadings (fuel elements, kg or any consistent measure), first = reference | — |
-| `C` | in | count rates at those loadings (any consistent unit) | — |
-| `x_crit` | out | predicted critical loading (least-squares line through all points) | — |
-| `slope` | out | slope of 1/M per unit loading | — |
-| `x_crit_last2` | out | predicted critical loading from the last two points | — |
-| `inv_M_last` | out | 1/M at the last loading | — |
+| `x` | in | loadings (fuel elements, kg or any consistent measure), first = reference | - |
+| `C` | in | count rates at those loadings (any consistent unit) | - |
+| `x_crit` | out | predicted critical loading (least-squares line through all points) | - |
+| `slope` | out | slope of 1/M per unit loading | - |
+| `x_crit_last2` | out | predicted critical loading from the last two points | - |
+| `inv_M_last` | out | 1/M at the last loading | - |
 
 **Applies when:** 1/M referred to the first count rate; 1/M decreasing with loading; subcritical measurements.
 
@@ -2152,7 +2112,7 @@ inv_M_last = 0.2
 
 <a id="nuc_critical_cylinder"></a>
 
-#### Critical radius of a bare cylindrical reactor of given height (one group) — `nuc_critical_cylinder`
+#### Critical radius of a bare cylindrical reactor of given height (one group), `nuc_critical_cylinder`
 
 The critical radius of a bare homogeneous cylinder of stated height in one-group diffusion theory, with its extrapolated radius and the physical volume.
 
@@ -2165,7 +2125,7 @@ $$
 | `D` | in | diffusion coefficient (a length, e.g. cm) | m |
 | `Sigma_a` | in | macroscopic absorption cross section | 1/m |
 | `nuSigma_f` | in | nu times the macroscopic fission cross section | 1/m |
-| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | — |
+| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | - |
 | `H` | in | physical height of the cylinder | m |
 | `R` | out | critical physical radius | m |
 | `R_ext` | out | critical extrapolated radius | m |
@@ -2191,7 +2151,7 @@ V = 0.02255490966 m^3
 
 <a id="nuc_critical_sphere"></a>
 
-#### Critical radius of a bare spherical reactor (one group) — `nuc_critical_sphere`
+#### Critical radius of a bare spherical reactor (one group), `nuc_critical_sphere`
 
 The critical radius (physical and extrapolated) and volume of a bare homogeneous spherical reactor in one-group diffusion theory.
 
@@ -2204,7 +2164,7 @@ $$
 | `D` | in | diffusion coefficient (a length, e.g. cm) | m |
 | `Sigma_a` | in | macroscopic absorption cross section | 1/m |
 | `nuSigma_f` | in | nu times the macroscopic fission cross section | 1/m |
-| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | — |
+| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | - |
 | `R` | out | critical physical radius | m |
 | `R_ext` | out | critical extrapolated radius | m |
 | `V` | out | critical physical volume | m^3 |
@@ -2228,7 +2188,7 @@ V = 0.01497052629 m^3
 
 <a id="nuc_critical_slab"></a>
 
-#### Critical thickness of a bare slab reactor (one group) — `nuc_critical_slab`
+#### Critical thickness of a bare slab reactor (one group), `nuc_critical_slab`
 
 The critical thickness of an infinite bare slab of multiplying material in one-group diffusion theory, the extrapolated thickness and the material buckling.
 
@@ -2241,7 +2201,7 @@ $$
 | `D` | in | diffusion coefficient (a length, e.g. cm) | m |
 | `Sigma_a` | in | macroscopic absorption cross section | 1/m |
 | `nuSigma_f` | in | nu times the macroscopic fission cross section | 1/m |
-| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | — |
+| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | - |
 | `a` | out | critical physical thickness | m |
 | `a_ext` | out | critical extrapolated thickness | m |
 
@@ -2263,7 +2223,7 @@ a_ext = 0.1720721163 m
 
 <a id="nuc_reflected_slab_critical"></a>
 
-#### Critical thickness of a reflected slab reactor and reflector savings (one group) — `nuc_reflected_slab_critical`
+#### Critical thickness of a reflected slab reactor and reflector savings (one group), `nuc_reflected_slab_critical`
 
 The critical core thickness of a slab reactor with a reflector of stated thickness on both faces (one-group diffusion in core and reflector) and the reflector savings compared with the bare core.
 
@@ -2279,7 +2239,7 @@ $$
 | `D_r` | in | reflector diffusion coefficient | m |
 | `Sigma_ar` | in | reflector absorption cross section | 1/m |
 | `T_r` | in | reflector thickness on each face | m |
-| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | — |
+| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | - |
 | `a` | out | critical core thickness | m |
 | `delta` | out | reflector savings per face (bare extrapolated half-thickness minus reflected half-thickness) | m |
 
@@ -2304,7 +2264,7 @@ delta = 0.06800294117 m
 
 <a id="nuc_critical_cuboid"></a>
 
-#### Critical third side of a bare rectangular reactor (one group) — `nuc_critical_cuboid`
+#### Critical third side of a bare rectangular reactor (one group), `nuc_critical_cuboid`
 
 The third side that makes a bare rectangular parallelepiped of two stated sides critical in one-group diffusion theory, its extrapolated value and the physical volume.
 
@@ -2317,7 +2277,7 @@ $$
 | `D` | in | diffusion coefficient (a length, e.g. cm) | m |
 | `Sigma_a` | in | macroscopic absorption cross section | 1/m |
 | `nuSigma_f` | in | nu times the macroscopic fission cross section | 1/m |
-| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | — |
+| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | - |
 | `a` | in | first physical side | m |
 | `b` | in | second physical side | m |
 | `c` | out | critical physical third side | m |
@@ -2345,7 +2305,7 @@ V = 0.05319534036 m^3
 
 <a id="nuc_decay_heat_power"></a>
 
-#### Decay heat after shutdown (Way-Wigner) — `nuc_decay_heat_power`
+#### Decay heat after shutdown (Way-Wigner): `nuc_decay_heat_power`
 
 The fission-product decay power a time t after shutdown of a reactor that ran at constant power for an operating time T, by the Way-Wigner correlation.
 
@@ -2359,7 +2319,7 @@ $$
 | `T_op` | in | operating time at that power | s |
 | `t` | in | time after shutdown (10 s to about 1e8 s) | s |
 | `P_d` | out | decay power | W |
-| `ratio` | out | decay power / operating power | — |
+| `ratio` | out | decay power / operating power | - |
 
 **Applies when:** constant power before shutdown; 10 s <= t <= 1e8 s.
 
@@ -2378,7 +2338,7 @@ ratio = 0.01012518032
 
 <a id="nuc_decay_heat_energy"></a>
 
-#### Decay heat energy released between two times after shutdown — `nuc_decay_heat_energy`
+#### Decay heat energy released between two times after shutdown, `nuc_decay_heat_energy`
 
 The total fission-product decay energy released between two times after shutdown (the Way-Wigner power integrated), and the mean decay power over that interval.
 
@@ -2393,7 +2353,7 @@ $$
 | `t1` | in | start of the interval after shutdown | s |
 | `t2` | in | end of the interval after shutdown | s |
 | `E` | out | decay energy released | J |
-| `E_MWh` | out | the same energy in MWh | — |
+| `E_MWh` | out | the same energy in MWh | - |
 | `P_mean` | out | mean decay power over the interval | W |
 
 **Applies when:** 10 s <= t1 < t2 <= 1e8 s; constant power before shutdown.
@@ -2415,7 +2375,7 @@ P_mean = 18101121.63 W
 
 <a id="nuc_xenon_equilibrium"></a>
 
-#### Equilibrium iodine-135 and xenon-135 concentrations — `nuc_xenon_equilibrium`
+#### Equilibrium iodine-135 and xenon-135 concentrations, `nuc_xenon_equilibrium`
 
 The equilibrium I-135 and Xe-135 atom densities in fuel operating at a steady flux, the xenon absorptions per fission (its poisoning strength) and the flux at which xenon burn-out equals its decay.
 
@@ -2427,12 +2387,12 @@ $$
 |---|---|---|---|
 | `Sigma_f` | in | macroscopic fission cross section of the fuel | 1/m |
 | `phi` | in | thermal flux during operation | 1/(m^2*s) |
-| `gamma_I` | in | cumulative fission yield of I-135 (e.g. 0.0639) | — |
-| `gamma_X` | in | direct fission yield of Xe-135 (e.g. 0.00237) | — |
+| `gamma_I` | in | cumulative fission yield of I-135 (e.g. 0.0639) | - |
+| `gamma_X` | in | direct fission yield of Xe-135 (e.g. 0.00237) | - |
 | `sigma_X` | in | Xe-135 absorption cross section (e.g. 2.65e6 b) | m^2 |
 | `I_eq` | out | equilibrium I-135 atoms per volume | 1/m^3 |
 | `X_eq` | out | equilibrium Xe-135 atoms per volume | 1/m^3 |
-| `abs_per_fission` | out | Xe-135 absorptions per fission at equilibrium | — |
+| `abs_per_fission` | out | Xe-135 absorptions per fission at equilibrium | - |
 
 **Applies when:** constant flux; half-lives of I-135 (6.57 h) and Xe-135 (9.14 h) of radioactivedecay 0.6.1; Xe-135m neglected.
 
@@ -2454,7 +2414,7 @@ abs_per_fission = 0.05238826748
 
 <a id="nuc_flux_shape"></a>
 
-#### Fundamental-mode flux shape of a bare reactor at a point — `nuc_flux_shape`
+#### Fundamental-mode flux shape of a bare reactor at a point, `nuc_flux_shape`
 
 The neutron flux at a point of a bare slab, sphere or finite cylinder relative to its maximum at the centre (cosine, sin(x)/x, J0 times cosine) and the geometric buckling, for extrapolated dimensions.
 
@@ -2464,14 +2424,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `geometry` | in | shape: slab (a, x), sphere (R, r) or cylinder (R, H, r, z) | — |
+| `geometry` | in | shape: slab (a, x), sphere (R, r) or cylinder (R, H, r, z) | - |
 | `a` | in | extrapolated slab thickness (optional) | m |
 | `R` | in | extrapolated radius (optional) | m |
 | `H` | in | extrapolated cylinder height (optional) | m |
 | `x` | in | distance from the slab mid-plane (optional) | m |
 | `r` | in | distance from the centre or axis (optional) | m |
 | `z` | in | height above the cylinder mid-plane (optional) | m |
-| `ratio` | out | phi/phi_max at the point | — |
+| `ratio` | out | phi/phi_max at the point | - |
 | `B2` | out | geometric buckling | 1/m^2 |
 
 **Applies when:** fundamental mode of a bare homogeneous reactor; extrapolated dimensions; the point inside the reactor.
@@ -2493,7 +2453,7 @@ B2 = 3.666927584 1/m^2
 
 <a id="nuc_bare_reactor_keff"></a>
 
-#### k-effective and geometric buckling of a bare reactor (one group) — `nuc_bare_reactor_keff`
+#### k-effective and geometric buckling of a bare reactor (one group), `nuc_bare_reactor_keff`
 
 The geometric buckling of a bare homogeneous slab, sphere, cylinder or rectangular reactor of stated size and its effective multiplication factor in one-group diffusion theory, with the non-leakage probability and the reactivity.
 
@@ -2506,17 +2466,17 @@ $$
 | `D` | in | diffusion coefficient (a length, e.g. cm) | m |
 | `Sigma_a` | in | macroscopic absorption cross section | 1/m |
 | `nuSigma_f` | in | nu times the macroscopic fission cross section | 1/m |
-| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | — |
-| `geometry` | in | bare reactor shape: slab (a), sphere (R), cylinder (R, H) or cuboid (a, b, c) | — |
+| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | - |
+| `geometry` | in | bare reactor shape: slab (a), sphere (R), cylinder (R, H) or cuboid (a, b, c) | - |
 | `a` | in | slab thickness or first side of a cuboid (optional) | m |
 | `b` | in | second side of a cuboid (optional) | m |
 | `c` | in | third side of a cuboid (optional) | m |
 | `R` | in | radius of a sphere or cylinder (optional) | m |
 | `H` | in | height of a cylinder (optional) | m |
 | `B2` | out | geometric buckling (extrapolated dimensions) | 1/m^2 |
-| `k_eff` | out | effective multiplication factor | — |
-| `P_NL` | out | non-leakage probability 1/(1 + L^2 B^2) | — |
-| `rho` | out | reactivity (k - 1)/k | — |
+| `k_eff` | out | effective multiplication factor | - |
+| `P_NL` | out | non-leakage probability 1/(1 + L^2 B^2) | - |
+| `rho` | out | reactivity (k - 1)/k | - |
 
 **Applies when:** one-group diffusion; bare homogeneous reactor; the dimensions of the stated geometry only.
 
@@ -2531,8 +2491,8 @@ rho = -0.08808151501
   Sigma_a = 15 1/m
   nuSigma_f = 18 1/m
   R = 0.12 m
-  geometry = sphere
   extrapolation = 2.13D
+  geometry = sphere
   assumes: one-group diffusion; bare homogeneous reactor; the dimensions of the stated geometry only
 ```
 
@@ -2540,7 +2500,7 @@ rho = -0.08808151501
 
 <a id="nuc_two_group_bare_keff"></a>
 
-#### k-effective of a bare reactor in two-group diffusion theory — `nuc_two_group_bare_keff`
+#### k-effective of a bare reactor in two-group diffusion theory, `nuc_two_group_bare_keff`
 
 The effective and infinite multiplication factors of a bare homogeneous reactor in two-group (fast and thermal) diffusion theory, with fission in both groups and downscatter from fast to thermal, and the thermal-to-fast flux ratio of the fundamental mode.
 
@@ -2550,7 +2510,7 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `geometry` | in | bare reactor shape: slab (a), sphere (R), cylinder (R, H) or cuboid (a, b, c) | — |
+| `geometry` | in | bare reactor shape: slab (a), sphere (R), cylinder (R, H) or cuboid (a, b, c) | - |
 | `D1` | in | fast-group diffusion coefficient | m |
 | `D2` | in | thermal-group diffusion coefficient | m |
 | `Sigma_a1` | in | fast-group absorption cross section | 1/m |
@@ -2564,9 +2524,9 @@ $$
 | `R` | in | radius of a sphere or cylinder (extrapolated) (optional) | m |
 | `H` | in | height of a cylinder (extrapolated) (optional) | m |
 | `B2` | out | geometric buckling | 1/m^2 |
-| `k_eff` | out | effective multiplication factor | — |
-| `k_inf` | out | infinite multiplication factor | — |
-| `flux_ratio` | out | thermal/fast flux ratio of the fundamental mode | — |
+| `k_eff` | out | effective multiplication factor | - |
+| `k_inf` | out | infinite multiplication factor | - |
+| `flux_ratio` | out | thermal/fast flux ratio of the fundamental mode | - |
 
 **Applies when:** two-group diffusion, no upscatter; all fission neutrons born fast; extrapolated dimensions.
 
@@ -2594,7 +2554,7 @@ flux_ratio = 0.2247170941
 
 <a id="nuc_critical_cylinder_minimum_volume"></a>
 
-#### Minimum-volume critical bare cylinder (one group) — `nuc_critical_cylinder_minimum_volume`
+#### Minimum-volume critical bare cylinder (one group), `nuc_critical_cylinder_minimum_volume`
 
 The radius and height of the bare cylindrical reactor that is critical with the smallest volume (extrapolated height-to-diameter ratio 0.924), and that volume.
 
@@ -2607,11 +2567,11 @@ $$
 | `D` | in | diffusion coefficient (a length, e.g. cm) | m |
 | `Sigma_a` | in | macroscopic absorption cross section | 1/m |
 | `nuSigma_f` | in | nu times the macroscopic fission cross section | 1/m |
-| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | — |
+| `extrapolation` | in | extrapolation distance added at each free surface: none, 2D or 2.13D (= 0.71 transport mean free paths) | - |
 | `R` | out | physical radius | m |
 | `H` | out | physical height | m |
 | `V_ext` | out | minimum critical volume (extrapolated dimensions) | m^3 |
-| `HD` | out | extrapolated height/diameter | — |
+| `HD` | out | extrapolated height/diameter | - |
 
 **Applies when:** one-group diffusion; k_inf > 1.
 
@@ -2633,7 +2593,7 @@ HD = 0.9237432886
 
 <a id="nuc_six_factor_formula"></a>
 
-#### Multiplication factor by the four- and six-factor formulas — `nuc_six_factor_formula`
+#### Multiplication factor by the four- and six-factor formulas, `nuc_six_factor_formula`
 
 k_inf = eta f p eps (four-factor formula) and, with the fast and thermal non-leakage probabilities, k_eff = k_inf P_FNL P_TNL (six-factor formula), with the reactivity (k - 1)/k.
 
@@ -2643,16 +2603,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `eta` | in | reproduction factor eta | — |
-| `f` | in | thermal utilization f | — |
-| `p` | in | resonance escape probability p | — |
-| `eps` | in | fast fission factor epsilon | — |
-| `P_FNL` | in | fast non-leakage probability (optional) (optional) | — |
-| `P_TNL` | in | thermal non-leakage probability (optional) (optional) | — |
-| `k_inf` | out | infinite multiplication factor | — |
-| `k_eff` | out | effective multiplication factor (k_inf without leakage factors) | — |
-| `P_NL` | out | total non-leakage probability | — |
-| `rho` | out | reactivity (k_eff - 1)/k_eff | — |
+| `eta` | in | reproduction factor eta | - |
+| `f` | in | thermal utilization f | - |
+| `p` | in | resonance escape probability p | - |
+| `eps` | in | fast fission factor epsilon | - |
+| `P_FNL` | in | fast non-leakage probability (optional) (optional) | - |
+| `P_TNL` | in | thermal non-leakage probability (optional) (optional) | - |
+| `k_inf` | out | infinite multiplication factor | - |
+| `k_eff` | out | effective multiplication factor (k_inf without leakage factors) | - |
+| `P_NL` | out | total non-leakage probability | - |
+| `rho` | out | reactivity (k_eff - 1)/k_eff | - |
 
 **Applies when:** 0 < f, p, P_FNL, P_TNL <= 1; missing non-leakage factors are taken as 1 (an infinite medium).
 
@@ -2674,7 +2634,7 @@ rho = 0.221902886
 
 <a id="nuc_power_from_reaction_rate"></a>
 
-#### Power density and power from the fission reaction rate — `nuc_power_from_reaction_rate`
+#### Power density and power from the fission reaction rate, `nuc_power_from_reaction_rate`
 
 The fission reaction rate density R = N sigma_f phi, the power density q''' = E_f N sigma_f phi and, with a volume, the power, from the fissile number density, the fission cross section, the flux and the energy per fission.
 
@@ -2691,9 +2651,9 @@ $$
 | `V` | in | volume (optional, for the power) (optional) | m^3 |
 | `R` | out | fission rate density (1/(m^3 s)) | 1/(m^3*s) |
 | `q` | out | power density | W/m^3 |
-| `q_MW_m3` | out | power density in MW/m^3 | — |
+| `q_MW_m3` | out | power density in MW/m^3 | - |
 | `P` | out | power E_f N sigma phi V | W |
-| `P_MW` | out | power in MW | — |
+| `P_MW` | out | power in MW | - |
 
 **Applies when:** one-group cross section and flux; uniform over the volume.
 
@@ -2714,7 +2674,7 @@ In the worked example, E_f = 200 MeV, N = 1e+21 1/cm^3, sigma = 5.826e-26 m^2, p
 
 <a id="nuc_core_power_from_flux"></a>
 
-#### Reactor power from the peak flux (or peak flux from power) of a bare core — `nuc_core_power_from_flux`
+#### Reactor power from the peak flux (or peak flux from power) of a bare core, `nuc_core_power_from_flux`
 
 The thermal power of a bare homogeneous sphere, cylinder or rectangular core from its peak thermal flux (or the peak flux from the power), with the average flux, the peak-to-average ratio and the volume, for the fundamental-mode flux shape.
 
@@ -2724,7 +2684,7 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `geometry` | in | core shape: sphere (R), cylinder (R, H) or cuboid (a, b, c) | — |
+| `geometry` | in | core shape: sphere (R), cylinder (R, H) or cuboid (a, b, c) | - |
 | `Sigma_f` | in | macroscopic fission cross section | 1/m |
 | `E_f` | in | recoverable energy per fission (e.g. 200 MeV) | J |
 | `phi_max` | in | peak (centre) thermal flux (give this or P) (optional) | 1/(m^2*s) |
@@ -2737,7 +2697,7 @@ $$
 | `P` | out | thermal power | W |
 | `phi_max` | out | peak flux | 1/(m^2*s) |
 | `phi_avg` | out | volume-average flux | 1/(m^2*s) |
-| `peaking` | out | peak-to-average flux ratio | — |
+| `peaking` | out | peak-to-average flux ratio | - |
 
 **Applies when:** fundamental-mode flux of a bare homogeneous core; extrapolated dimensions taken as the core size; uniform Sigma_f.
 
@@ -2761,7 +2721,7 @@ peaking = 3.638167546
 
 <a id="nuc_samarium"></a>
 
-#### Samarium-149 poisoning: equilibrium and after shutdown — `nuc_samarium`
+#### Samarium-149 poisoning: equilibrium and after shutdown, `nuc_samarium`
 
 The equilibrium Pm-149 and Sm-149 atom densities during operation (Sm-149 is independent of the flux), the Sm-149 level reached after shutdown when all the promethium has decayed, and (optionally) the level a time t after shutdown.
 
@@ -2773,13 +2733,13 @@ $$
 |---|---|---|---|
 | `Sigma_f` | in | macroscopic fission cross section | 1/m |
 | `phi` | in | thermal flux during operation | 1/(m^2*s) |
-| `gamma_Pm` | in | fission yield of Pm-149 (e.g. 0.0113) | — |
+| `gamma_Pm` | in | fission yield of Pm-149 (e.g. 0.0113) | - |
 | `sigma_Sm` | in | Sm-149 absorption cross section (e.g. 40800 b) | m^2 |
 | `t` | in | time after shutdown (optional) (optional) | s |
 | `Pm_eq` | out | equilibrium Pm-149 | 1/m^3 |
 | `Sm_eq` | out | equilibrium Sm-149 | 1/m^3 |
 | `Sm_max` | out | Sm-149 after all Pm-149 has decayed | 1/m^3 |
-| `max_ratio` | out | Sm_max/Sm_eq | — |
+| `max_ratio` | out | Sm_max/Sm_eq | - |
 | `Sm_t` | out | Sm-149 at t after shutdown (when t is given) | 1/m^3 |
 
 **Applies when:** constant flux before shutdown; Pm-149 half-life of radioactivedecay 0.6.1 (53.08 h); Pm-149 absorption neglected.
@@ -2802,7 +2762,7 @@ max_ratio = 1.337434413
 
 <a id="nuc_depletion_constant_flux"></a>
 
-#### U-235 depletion and energy released at constant flux — `nuc_depletion_constant_flux`
+#### U-235 depletion and energy released at constant flux, `nuc_depletion_constant_flux`
 
 How much of an initial mass of U-235 remains after irradiation at a constant flux, the fraction burnt, the fission energy released (J and MWd) and the power at the start and at the end.
 
@@ -2819,9 +2779,9 @@ $$
 | `t` | in | irradiation time | s |
 | `E_f` | in | recoverable energy per fission (e.g. 200 MeV) | J |
 | `m` | out | U-235 mass remaining | kg |
-| `burnt` | out | fraction of U-235 consumed | — |
+| `burnt` | out | fraction of U-235 consumed | - |
 | `E` | out | fission energy released | J |
-| `E_MWd` | out | energy released in MWd | — |
+| `E_MWd` | out | energy released in MWd | - |
 | `P_t` | out | fission power at t | W |
 
 **Applies when:** constant flux, one group; U-235 only (no breeding); M(U-235) = 235.043928 g/mol.
@@ -2847,7 +2807,7 @@ P_t = 753140.4958 W
 
 <a id="nuc_constant_power_depletion"></a>
 
-#### U-235 depletion at constant power — `nuc_constant_power_depletion`
+#### U-235 depletion at constant power: `nuc_constant_power_depletion`
 
 How much of an initial mass of U-235 remains after operation at a constant power (the flux rising as the fuel is consumed), the fraction burnt, the mass consumed and the factor by which the flux has risen.
 
@@ -2864,10 +2824,10 @@ $$
 | `sigma_a` | in | U-235 absorption cross section (barns) | m^2 |
 | `sigma_f` | in | U-235 fission cross section (barns) | m^2 |
 | `m` | out | U-235 mass remaining | kg |
-| `burnt` | out | fraction of U-235 consumed | — |
+| `burnt` | out | fraction of U-235 consumed | - |
 | `consumed` | out | U-235 mass consumed | kg |
-| `flux_ratio` | out | flux at t over the initial flux (N0/N) | — |
-| `fissions` | out | number of fissions P t/E_f | — |
+| `flux_ratio` | out | flux at t over the initial flux (N0/N) | - |
+| `fissions` | out | number of fissions P t/E_f | - |
 
 **Applies when:** constant power, one group; U-235 only (no breeding); M(U-235) = 235.043928 g/mol.
 
@@ -2892,7 +2852,7 @@ fissions = 2.954505702e+25
 
 <a id="nuc_xenon_after_shutdown"></a>
 
-#### Xenon-135 after shutdown: concentration and peak — `nuc_xenon_after_shutdown`
+#### Xenon-135 after shutdown: concentration and peak, `nuc_xenon_after_shutdown`
 
 The Xe-135 and I-135 atom densities a time t after shutdown from equilibrium operation, the xenon relative to its equilibrium value, and the time and height of the post-shutdown xenon peak (none at low flux).
 
@@ -2904,14 +2864,14 @@ $$
 |---|---|---|---|
 | `Sigma_f` | in | macroscopic fission cross section of the fuel | 1/m |
 | `phi` | in | thermal flux during operation | 1/(m^2*s) |
-| `gamma_I` | in | cumulative fission yield of I-135 (e.g. 0.0639) | — |
-| `gamma_X` | in | direct fission yield of Xe-135 (e.g. 0.00237) | — |
+| `gamma_I` | in | cumulative fission yield of I-135 (e.g. 0.0639) | - |
+| `gamma_X` | in | direct fission yield of Xe-135 (e.g. 0.00237) | - |
 | `sigma_X` | in | Xe-135 absorption cross section (e.g. 2.65e6 b) | m^2 |
 | `t` | in | time after shutdown | s |
 | `X` | out | Xe-135 atoms per volume at t | 1/m^3 |
-| `ratio` | out | X(t)/X_eq | — |
+| `ratio` | out | X(t)/X_eq | - |
 | `t_peak` | out | time of the xenon peak after shutdown (0 when xenon only falls) | s |
-| `peak_ratio` | out | peak xenon / equilibrium xenon | — |
+| `peak_ratio` | out | peak xenon / equilibrium xenon | - |
 | `I` | out | I-135 atoms per volume at t | 1/m^3 |
 
 **Applies when:** equilibrium before shutdown; no flux after shutdown.
@@ -2939,7 +2899,7 @@ I = 2.277591284e+21 1/m^3
 
 <a id="nuc_half_value_layer"></a>
 
-#### Half-value and tenth-value layers — `nuc_half_value_layer`
+#### Half-value and tenth-value layers: `nuc_half_value_layer`
 
 The half-value layer ln 2/mu, tenth-value layer ln 10/mu and mean free path 1/mu of a narrow beam in an absorber of linear attenuation coefficient mu, and with a thickness the transmission and number of half-value layers.
 
@@ -2954,10 +2914,10 @@ $$
 | `HVL` | out | half-value layer | m |
 | `TVL` | out | tenth-value layer | m |
 | `mfp` | out | mean free path 1/mu | m |
-| `HVL_cm` | out | half-value layer in cm | — |
-| `TVL_cm` | out | tenth-value layer in cm | — |
-| `transmission` | out | narrow-beam transmission exp(-mu x) | — |
-| `n_HVL` | out | thickness in half-value layers | — |
+| `HVL_cm` | out | half-value layer in cm | - |
+| `TVL_cm` | out | tenth-value layer in cm | - |
+| `transmission` | out | narrow-beam transmission exp(-mu x) | - |
+| `n_HVL` | out | thickness in half-value layers | - |
 
 **Applies when:** narrow beam (no buildup); mu > 0.
 
@@ -2979,7 +2939,7 @@ TVL_cm = 3.510038252
 
 <a id="nuc_accumulated_dose_decaying_source"></a>
 
-#### Dose accumulated near a decaying source — `nuc_accumulated_dose_decaying_source`
+#### Dose accumulated near a decaying source: `nuc_accumulated_dose_decaying_source`
 
 The dose accumulated over an exposure time when the dose rate falls with the source's half-life, the dose if the exposure lasted until complete decay, and the mean dose rate.
 
@@ -2994,7 +2954,7 @@ $$
 | `t` | in | exposure time | s |
 | `td` | in | delay from the reference time to the start (0 when omitted) (optional) | s |
 | `D` | out | dose accumulated | J/kg |
-| `D_mSv` | out | dose in mSv (or mGy) | — |
+| `D_mSv` | out | dose in mSv (or mGy) | - |
 | `D_inf` | out | dose until complete decay | J/kg |
 | `H_mean` | out | mean dose rate during the exposure | J/(kg*s) |
 
@@ -3017,7 +2977,7 @@ H_mean = 1.947583547e-07 J/(kg*s)
 
 <a id="nuc_point_source_dose_rate"></a>
 
-#### Dose rate from a shielded point gamma source with buildup — `nuc_point_source_dose_rate`
+#### Dose rate from a shielded point gamma source with buildup, `nuc_point_source_dose_rate`
 
 The dose rate at a distance from a point gamma source of stated dose-rate constant, behind a slab shield, with the buildup factor in the stated form (none, linear or Taylor), plus the buildup factor and the transmission.
 
@@ -3032,14 +2992,14 @@ $$
 | `r` | in | source-to-point distance | m |
 | `mu` | in | linear attenuation coefficient of the shield | 1/m |
 | `x` | in | shield thickness (0 for none) | m |
-| `buildup` | in | buildup form: none (B = 1), linear (B = 1 + mu x) or taylor | — |
-| `A1` | in | Taylor buildup parameter A1 (only with buildup = taylor) (optional) | — |
-| `alpha1` | in | Taylor buildup parameter alpha1 (only with buildup = taylor) (optional) | — |
-| `alpha2` | in | Taylor buildup parameter alpha2 (only with buildup = taylor) (optional) | — |
+| `buildup` | in | buildup form: none (B = 1), linear (B = 1 + mu x) or taylor | - |
+| `A1` | in | Taylor buildup parameter A1 (only with buildup = taylor) (optional) | - |
+| `alpha1` | in | Taylor buildup parameter alpha1 (only with buildup = taylor) (optional) | - |
+| `alpha2` | in | Taylor buildup parameter alpha2 (only with buildup = taylor) (optional) | - |
 | `H_dot` | out | dose rate (same quantity as Gamma: Sv/s, Gy/s) | J/(kg*s) |
-| `H_uSv_h` | out | dose rate in uSv/h (or uGy/h) | — |
-| `B` | out | buildup factor | — |
-| `T` | out | transmission B e^(-mu x) | — |
+| `H_uSv_h` | out | dose rate in uSv/h (or uGy/h) | - |
+| `B` | out | buildup factor | - |
+| `T` | out | transmission B e^(-mu x) | - |
 
 **Applies when:** point isotropic source; shield between source and point (x < r); Taylor parameters only with the Taylor form.
 
@@ -3063,7 +3023,7 @@ T = 0.8593362895
 
 <a id="nuc_transit_dose"></a>
 
-#### Dose received passing a point source — `nuc_transit_dose`
+#### Dose received passing a point source: `nuc_transit_dose`
 
 The dose received by a person or detector moving at constant speed along a straight path past an unshielded point source, from the closest distance, the speed and the path length (centred on the closest approach).
 
@@ -3079,8 +3039,8 @@ $$
 | `v` | in | speed along the path | m/s |
 | `L` | in | length of the path, centred on the point of closest approach | m |
 | `D` | out | dose received (Sv or Gy, as Gamma) | J/kg |
-| `D_uSv` | out | dose in uSv (or uGy) | — |
-| `frac` | out | fraction of the dose of an infinitely long path | — |
+| `D_uSv` | out | dose in uSv (or uGy) | - |
+| `frac` | out | fraction of the dose of an infinitely long path | - |
 
 **Applies when:** unshielded point source; straight path at constant speed.
 
@@ -3102,7 +3062,7 @@ frac = 0.8743340836
 
 <a id="nuc_klein_nishina"></a>
 
-#### Klein-Nishina Compton cross sections per electron — `nuc_klein_nishina`
+#### Klein-Nishina Compton cross sections per electron, `nuc_klein_nishina`
 
 The total Compton (Klein-Nishina) cross section per electron for a photon energy, the energy-transfer cross section and the mean kinetic energy given to the recoil electron.
 
@@ -3114,7 +3074,7 @@ $$
 |---|---|---|---|
 | `E` | in | photon energy (10 keV to 100 MeV) | J |
 | `sigma` | out | Klein-Nishina cross section per electron | m^2 |
-| `sigma_b` | out | the same in barns per electron | — |
+| `sigma_b` | out | the same in barns per electron | - |
 | `sigma_tr` | out | energy-transfer cross section per electron | m^2 |
 | `T_mean` | out | mean kinetic energy of the Compton electron (MeV) | MeV |
 
@@ -3135,7 +3095,7 @@ T_mean = 0.252635264 MeV
 
 <a id="nuc_attenuation_coefficient_fit"></a>
 
-#### Linear attenuation coefficient from narrow-beam transmission measurements — `nuc_attenuation_coefficient_fit`
+#### Linear attenuation coefficient from narrow-beam transmission measurements, `nuc_attenuation_coefficient_fit`
 
 The linear attenuation coefficient of an absorber from intensities measured behind several thicknesses (least-squares fit of ln I against x), with the half- and tenth-value layers and the fitted unattenuated intensity.
 
@@ -3145,12 +3105,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | absorber thicknesses, in cm | — |
-| `I` | in | measured intensities or count rates (any consistent unit) | — |
+| `x` | in | absorber thicknesses, in cm | - |
+| `I` | in | measured intensities or count rates (any consistent unit) | - |
 | `mu` | out | fitted linear attenuation coefficient | 1/m |
 | `HVL` | out | half-value layer | m |
 | `TVL` | out | tenth-value layer | m |
-| `I0` | out | fitted intensity with no absorber | — |
+| `I0` | out | fitted intensity with no absorber | - |
 
 **Applies when:** narrow-beam geometry (no buildup); background already subtracted; unweighted least squares of ln I.
 
@@ -3168,7 +3128,7 @@ I0 = 1000.021917
 
 <a id="nuc_multilayer_transmission"></a>
 
-#### Narrow-beam transmission through a multilayer shield — `nuc_multilayer_transmission`
+#### Narrow-beam transmission through a multilayer shield, `nuc_multilayer_transmission`
 
 The uncollided (narrow-beam) transmission through several shield layers, the total optical thickness, its value in half-value layers, the attenuation factor and (optionally) the dose rate behind the shield.
 
@@ -3178,13 +3138,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `mu` | in | linear attenuation coefficient of each layer, in 1/cm | — |
-| `x` | in | thickness of each layer, in cm | — |
+| `mu` | in | linear attenuation coefficient of each layer, in 1/cm | - |
+| `x` | in | thickness of each layer, in cm | - |
 | `H0` | in | uncollided dose rate in front of the shield (optional) (optional) | J/(kg*s) |
-| `T` | out | uncollided transmission | — |
-| `tau` | out | total optical thickness sum mu_i x_i | — |
-| `n_hvl` | out | thickness in half-value layers | — |
-| `attenuation` | out | attenuation factor 1/T | — |
+| `T` | out | uncollided transmission | - |
+| `tau` | out | total optical thickness sum mu_i x_i | - |
+| `n_hvl` | out | thickness in half-value layers | - |
+| `attenuation` | out | attenuation factor 1/T | - |
 | `H` | out | uncollided dose rate behind the shield (when H0 is given) | J/(kg*s) |
 
 **Applies when:** narrow beam (no buildup); layers perpendicular to the beam.
@@ -3203,7 +3163,7 @@ attenuation = 2321.572415
 
 <a id="nuc_shield_thickness_for_dose_rate"></a>
 
-#### Shield thickness for a target dose rate (point source, buildup) — `nuc_shield_thickness_for_dose_rate`
+#### Shield thickness for a target dose rate (point source, buildup), `nuc_shield_thickness_for_dose_rate`
 
 The slab thickness that brings the dose rate from a point gamma source down to a target value, with no buildup or the linear buildup form B = 1 + mu x (the root of the attenuation equation).
 
@@ -3218,10 +3178,10 @@ $$
 | `r` | in | source-to-point distance | m |
 | `mu` | in | linear attenuation coefficient of the shield | 1/m |
 | `H_target` | in | target dose rate (e.g. uSv/h) | J/(kg*s) |
-| `buildup` | in | buildup form: none (B = 1) or linear (B = 1 + mu x) | — |
+| `buildup` | in | buildup form: none (B = 1) or linear (B = 1 + mu x) | - |
 | `x` | out | required shield thickness | m |
-| `n_mfp` | out | thickness in mean free paths | — |
-| `B` | out | buildup factor at that thickness | — |
+| `n_mfp` | out | thickness in mean free paths | - |
+| `B` | out | buildup factor at that thickness | - |
 
 **Applies when:** target below the unshielded dose rate; the shield fits between source and point.
 
@@ -3244,7 +3204,7 @@ B = 13.03970291
 
 <a id="nuc_stay_time_decaying_source"></a>
 
-#### Stay time to a dose limit near a decaying source — `nuc_stay_time_decaying_source`
+#### Stay time to a dose limit near a decaying source, `nuc_stay_time_decaying_source`
 
 How long one can stay at a place where the dose rate decays with the source's half-life before receiving a stated dose, compared with the stay time if the rate were constant.
 
@@ -3258,7 +3218,7 @@ $$
 | `T_half` | in | half-life of the source | s |
 | `D_lim` | in | dose limit for the stay | J/kg |
 | `t_stay` | out | allowed stay time | s |
-| `frac` | out | dose limit as a fraction of the dose until complete decay | — |
+| `frac` | out | dose limit as a fraction of the dose until complete decay | - |
 
 **Applies when:** D_lim < H0 T_half/ln 2 (otherwise the limit is never reached).
 
@@ -3277,7 +3237,7 @@ frac = 0.1894362341
 
 <a id="nuc_line_source_flux"></a>
 
-#### Uncollided flux from a shielded line source (Sievert integral) — `nuc_line_source_flux`
+#### Uncollided flux from a shielded line source (Sievert integral), `nuc_line_source_flux`
 
 The uncollided photon flux at a point at perpendicular distance h from a straight line source (a pipe, a wire) running from y1 to y2 along the line, behind a slab shield parallel to the line, with the unshielded flux and the transmission.
 
@@ -3295,7 +3255,7 @@ $$
 | `t` | in | shield thickness (0 for none) | m |
 | `phi` | out | uncollided flux at the point | 1/(m^2*s) |
 | `phi0` | out | flux without the shield | 1/(m^2*s) |
-| `T` | out | transmission phi/phi0 | — |
+| `T` | out | transmission phi/phi0 | - |
 
 **Applies when:** isotropic line source in vacuum; slab shield parallel to the line (t < h); no buildup.
 
@@ -3318,7 +3278,7 @@ T = 0.2844763792
 
 <a id="nuc_disk_source_flux"></a>
 
-#### Uncollided flux on the axis of a shielded disk source — `nuc_disk_source_flux`
+#### Uncollided flux on the axis of a shielded disk source, `nuc_disk_source_flux`
 
 The uncollided flux on the axis of a uniform disk source (a contaminated floor patch, a tank bottom) at distance h, behind a slab shield parallel to the disk, with the unshielded flux and the transmission.
 
@@ -3335,7 +3295,7 @@ $$
 | `t` | in | shield thickness (0 for none) | m |
 | `phi` | out | uncollided flux on the axis | 1/(m^2*s) |
 | `phi0` | out | flux without the shield | 1/(m^2*s) |
-| `T` | out | transmission phi/phi0 | — |
+| `T` | out | transmission phi/phi0 | - |
 
 **Applies when:** uniform isotropic disk source; slab shield parallel to the disk (t < h); no buildup.
 
@@ -3359,7 +3319,7 @@ T = 0.4711549497
 
 <a id="nuc_channel_coolant_temperature"></a>
 
-#### Coolant temperature along a channel with a chopped-cosine power shape — `nuc_channel_coolant_temperature`
+#### Coolant temperature along a channel with a chopped-cosine power shape, `nuc_channel_coolant_temperature`
 
 The bulk coolant temperature at a height z (from the core mid-plane) in a heated channel whose linear heat rate follows a chopped cosine, the outlet temperature and the channel's total power.
 
@@ -3402,7 +3362,7 @@ Q = 108524.0356 W
 
 <a id="nuc_centreline_temperature_variable_k"></a>
 
-#### Fuel centreline temperature with temperature-dependent conductivity — `nuc_centreline_temperature_variable_k`
+#### Fuel centreline temperature with temperature-dependent conductivity, `nuc_centreline_temperature_variable_k`
 
 The centreline temperature of a cylindrical fuel pellet at a stated linear heat rate and surface temperature when its conductivity varies as k = 1/(A + B T) (the usual form for UO2), through the conductivity integral, with the conductivities at the surface and the centre.
 
@@ -3441,7 +3401,7 @@ k_0 = 2.296843555 W/(m*K)
 
 <a id="nuc_fuel_rod_temperatures"></a>
 
-#### Fuel-rod radial temperatures: centreline, pellet surface and cladding — `nuc_fuel_rod_temperatures`
+#### Fuel-rod radial temperatures: centreline, pellet surface and cladding, `nuc_fuel_rod_temperatures`
 
 The temperatures at the fuel centreline, the pellet surface and the cladding inner and outer surfaces of a cylindrical fuel rod at a stated linear heat rate, from the coolant temperature through the film, cladding, gap and pellet (constant conductivities).
 
@@ -3486,7 +3446,7 @@ T_ci = 627.6706051 K
 
 <a id="nuc_max_clad_temperature"></a>
 
-#### Location and value of the maximum cladding surface temperature — `nuc_max_clad_temperature`
+#### Location and value of the maximum cladding surface temperature, `nuc_max_clad_temperature`
 
 Where along a channel with a chopped-cosine power shape the cladding surface is hottest (above the mid-plane, because the coolant warms up), its temperature there and the coolant outlet temperature.
 
@@ -3529,4 +3489,4 @@ T_out = 630.7721428 K
 
 **What the worked example means:** This calculation finds the hottest point on the fuel rod's cladding. Using the coolant inlet temperature, mass flow rate, and power distribution, it determines that the peak temperature reaches 651.707 K. This maximum occurs at a vertical position of 0.845823 m relative to the core center. The result highlights where thermal stress is greatest, which is critical for ensuring structural integrity during operation.
 
-Questions and reports: support@ai999x.com. AI999X — The Future Is Self-Improving.
+Questions and reports: support@ai999x.com. AI999X, The Future Is Self-Improving.

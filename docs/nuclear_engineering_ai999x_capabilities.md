@@ -191,7 +191,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 
 <a id="nuc_specific_activity"></a>
 
-### Activity and specific activity of a mass of a radionuclide — `nuc_specific_activity`
+### Activity and specific activity of a mass of a radionuclide, `nuc_specific_activity`
 
 The activity of a stated mass of a named radionuclide, its specific activity (activity per unit mass) and the number of atoms, from its tabulated half-life and atomic mass.
 
@@ -250,7 +250,7 @@ nuclear_engineering_ai999x.solve('nuc_specific_activity', nuclide='Cs-137', m=1e
 
 <a id="nuc_mass_for_activity"></a>
 
-### Mass and number of atoms of a radionuclide with a given activity — `nuc_mass_for_activity`
+### Mass and number of atoms of a radionuclide with a given activity, `nuc_mass_for_activity`
 
 The mass and the number of atoms of a named radionuclide that has a stated activity (how much material a source of that strength contains).
 
@@ -300,7 +300,7 @@ nuclear_engineering_ai999x.solve('nuc_mass_for_activity', nuclide='Am-241', A=37
 
 <a id="nuc_chain_activity"></a>
 
-### Activity of a radionuclide and its progeny after a decay time — `nuc_chain_activity`
+### Activity of a radionuclide and its progeny after a decay time, `nuc_chain_activity`
 
 Starting from a pure parent of stated activity, the activities of the parent, of its first daughter and of the whole chain (all radioactive progeny) after a time t, with the real branching fractions (Sr-90/Y-90, $Mo-99/Tc-99m$, $Cs-137/Ba-137m$, $Ge-68/Ga-68$, ...).
 
@@ -362,7 +362,7 @@ nuclear_engineering_ai999x.solve('nuc_chain_activity', nuclide='Cs-137', A0=1000
 
 <a id="nuc_three_member_chain"></a>
 
-### Three-member decay chain with initial activities (Bateman) — `nuc_three_member_chain`
+### Three-member decay chain with initial activities (Bateman), `nuc_three_member_chain`
 
 Activities of the three radioactive members of a chain 1 -> 2 -> 3 after a time t, from their half-lives and the initial activity of every member (the daughters need not start at zero).
 
@@ -395,9 +395,9 @@ $$
 
 *A three-member decay chain (half-lives 100 s → 10 s → 1 s) with the activities the package computes at t = 50 s from a pure parent of 1000 Bq: parent 707.107 Bq, daughter 750.952 Bq, granddaughter 755.03 Bq, total 2213.09 Bq.*
 
-![Activities of the three members (parent / daughter / granddaughter) at five times, each from the package — the daughters overtake the parent and then decay with it in transient equilibrium: t = 10 s: 933](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-three-member-chain-bars.svg)
+![Activities of the three members (parent / daughter / granddaughter) at five times, each from the package, the daughters overtake the parent and then decay with it in transient equilibrium: t = 10 s: 933](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/figures/nuc-three-member-chain-bars.svg)
 
-*Activities of the three members (parent / daughter / granddaughter) at five times, each from the package — the daughters overtake the parent and then decay with it in transient equilibrium: t = 10 s: 933.033 / 481.148 / 430.001 Bq; t = 50 s: 707.107 / 750.952 / 755.03 Bq; t = 100 s: 500 / 554.47 / 559.962 Bq; t = 200 s: 250 / 277.777 / 280.582 Bq; t = 400 s: 62.5 / 69.4444 / 70.1459 Bq.*
+*Activities of the three members (parent / daughter / granddaughter) at five times, each from the package, the daughters overtake the parent and then decay with it in transient equilibrium: t = 10 s: 933.033 / 481.148 / 430.001 Bq; t = 50 s: 707.107 / 750.952 / 755.03 Bq; t = 100 s: 500 / 554.47 / 559.962 Bq; t = 200 s: 250 / 277.777 / 280.582 Bq; t = 400 s: 62.5 / 69.4444 / 70.1459 Bq.*
 
 ![A three-member decay chain (half-lives 100](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-three-member-chain-chain)
 
@@ -429,7 +429,7 @@ nuclear_engineering_ai999x.solve('nuc_three_member_chain', T1=3600.0, T2=7200.0,
 
 <a id="nuc_daughter_max_activity_time"></a>
 
-### Time of maximum daughter activity — `nuc_daughter_max_activity_time`
+### Time of maximum daughter activity: `nuc_daughter_max_activity_time`
 
 When the activity of a radioactive daughter, growing from a pure parent, reaches its maximum, and how large it is then (it equals the parent's activity at that moment).
 
@@ -483,7 +483,7 @@ nuclear_engineering_ai999x.solve('nuc_daughter_max_activity_time', T_P=10.0, T_D
 
 <a id="nuc_equilibrium_ratio"></a>
 
-### Transient and secular equilibrium: activity ratio and approach — `nuc_equilibrium_ratio`
+### Transient and secular equilibrium: activity ratio and approach, `nuc_equilibrium_ratio`
 
 The daughter-to-parent activity and atom ratios once equilibrium is reached (transient; close to 1 in secular equilibrium) and the time after which the activity ratio is within 1 % of it, starting from pure parent.
 
@@ -536,7 +536,7 @@ nuclear_engineering_ai999x.solve('nuc_equilibrium_ratio', T_P=908523901.8432001,
 
 <a id="nuc_generator_daughter_activity"></a>
 
-### Radionuclide generator: daughter activity after elution (with branching) — `nuc_generator_daughter_activity`
+### Radionuclide generator: daughter activity after elution (with branching), `nuc_generator_daughter_activity`
 
 The daughter activity available in a generator (Mo-99/Tc-99m, $Ge-68/Ga-68$, $Sr-82/Rb-82$ ...) a time t after the last complete elution, with the branching fraction to the daughter, plus when the daughter activity peaks and its peak value.
 
@@ -599,7 +599,7 @@ nuclear_engineering_ai999x.solve('nuc_generator_daughter_activity', A_P0=1000000
 
 <a id="nuc_counts_during_decay"></a>
 
-### Counts recorded from a decaying source (decay during counting) — `nuc_counts_during_decay`
+### Counts recorded from a decaying source (decay during counting), `nuc_counts_during_decay`
 
 The expected number of counts recorded from a source that decays during the count, the mean activity during the count and the decay-correction factor that converts the mean activity to the activity at the start of counting.
 
@@ -651,7 +651,7 @@ nuclear_engineering_ai999x.solve('nuc_counts_during_decay', A0=37000.0, T_half=6
 
 <a id="nuc_effective_half_life"></a>
 
-### Effective half-life (physical and biological removal) — `nuc_effective_half_life`
+### Effective half-life (physical and biological removal), `nuc_effective_half_life`
 
 The effective half-life of a radionuclide in the body or another system that removes it biologically while it decays, the effective decay constant and (with the initial activity) the total number of decays.
 
@@ -704,7 +704,7 @@ nuclear_engineering_ai999x.solve('nuc_effective_half_life', T_p=21654.0, T_b=864
 
 <a id="nuc_activation_activity"></a>
 
-### Neutron activation: activity after irradiation and decay — `nuc_activation_activity`
+### Neutron activation: activity after irradiation and decay, `nuc_activation_activity`
 
 The activity induced in a target by a neutron flux: at the end of irradiation, after a decay time, at saturation, and the saturation fraction reached (target depletion neglected).
 
@@ -763,7 +763,7 @@ nuclear_engineering_ai999x.solve('nuc_activation_activity', m=0.0001, M=0.02698,
 
 <a id="nuc_activation_with_burnup"></a>
 
-### Activation with target depletion and product burn-up — `nuc_activation_with_burnup`
+### Activation with target depletion and product burn-up, `nuc_activation_with_burnup`
 
 The product activity when a high flux both depletes the target nuclide and burns up the product by its own absorption, the fraction of target left, and the time and value of the maximum product activity.
 
@@ -816,7 +816,7 @@ nuclear_engineering_ai999x.solve('nuc_activation_with_burnup', N_T0=1e+20, sigma
 
 <a id="nuc_irradiation_time_for_saturation"></a>
 
-### Irradiation time to reach a fraction of saturation activity — `nuc_irradiation_time_for_saturation`
+### Irradiation time to reach a fraction of saturation activity, `nuc_irradiation_time_for_saturation`
 
 How long a target must be irradiated (constant flux) for the induced activity to reach a stated fraction of its saturation value, in time and in product half-lives.
 
@@ -867,7 +867,7 @@ nuclear_engineering_ai999x.solve('nuc_irradiation_time_for_saturation', T_half=1
 
 <a id="nuc_decay_curve_fit"></a>
 
-### Half-life from a measured decay curve (weighted log-linear fit) — `nuc_decay_curve_fit`
+### Half-life from a measured decay curve (weighted log-linear fit), `nuc_decay_curve_fit`
 
 The decay constant, half-life, initial count and the standard error of the half-life from counts measured at several times (equal counting intervals), by a Poisson-weighted least-squares fit of ln C against t.
 
@@ -919,7 +919,7 @@ nuclear_engineering_ai999x.solve('nuc_decay_curve_fit', t=[0.0, 10.0, 20.0, 30.0
 
 <a id="nuc_two_component_decay_fit"></a>
 
-### Two-component decay curve: amplitudes of two known half-lives — `nuc_two_component_decay_fit`
+### Two-component decay curve: amplitudes of two known half-lives, `nuc_two_component_decay_fit`
 
 Resolve a decay curve that is the sum of two radionuclides of known half-lives into the initial count of each component (Poisson-weighted linear least squares).
 
@@ -974,7 +974,7 @@ nuclear_engineering_ai999x.solve('nuc_two_component_decay_fit', t=[0.0, 5.0, 10.
 
 <a id="nuc_decay_heat_power"></a>
 
-### Decay heat after shutdown (Way-Wigner) — `nuc_decay_heat_power`
+### Decay heat after shutdown (Way-Wigner): `nuc_decay_heat_power`
 
 The fission-product decay power a time t after shutdown of a reactor that ran at constant power for an operating time T, by the Way-Wigner correlation.
 
@@ -1023,7 +1023,7 @@ nuclear_engineering_ai999x.solve('nuc_decay_heat_power', P0=100000000.0, T_op=25
 
 <a id="nuc_decay_heat_energy"></a>
 
-### Decay heat energy released between two times after shutdown — `nuc_decay_heat_energy`
+### Decay heat energy released between two times after shutdown, `nuc_decay_heat_energy`
 
 The total fission-product decay energy released between two times after shutdown (the Way-Wigner power integrated), and the mean decay power over that interval.
 
@@ -1073,7 +1073,7 @@ nuclear_engineering_ai999x.solve('nuc_decay_heat_energy', P0=100000000.0, T_op=2
 
 <a id="nuc_committed_dose_retention"></a>
 
-### Committed equivalent dose to an organ from an intake (retention compartments) — `nuc_committed_dose_retention`
+### Committed equivalent dose to an organ from an intake (retention compartments), `nuc_committed_dose_retention`
 
 The number of decays in an organ over the commitment period after an intake retained in exponential compartments, and the committed equivalent dose from the energy absorbed per decay, the radiation weighting factor and the organ mass.
 
@@ -1128,7 +1128,7 @@ nuclear_engineering_ai999x.solve('nuc_committed_dose_retention', I=1000.0, f=[0.
 
 <a id="nuc_point_source_dose_rate"></a>
 
-### Dose rate from a shielded point gamma source with buildup — `nuc_point_source_dose_rate`
+### Dose rate from a shielded point gamma source with buildup, `nuc_point_source_dose_rate`
 
 The dose rate at a distance from a point gamma source of stated dose-rate constant, behind a slab shield, with the buildup factor in the stated form (none, linear or Taylor), plus the buildup factor and the transmission.
 
@@ -1196,7 +1196,7 @@ nuclear_engineering_ai999x.solve('nuc_point_source_dose_rate', Gamma=2.575e-17, 
 
 <a id="nuc_shield_thickness_for_dose_rate"></a>
 
-### Shield thickness for a target dose rate (point source, buildup) — `nuc_shield_thickness_for_dose_rate`
+### Shield thickness for a target dose rate (point source, buildup), `nuc_shield_thickness_for_dose_rate`
 
 The slab thickness that brings the dose rate from a point gamma source down to a target value, with no buildup or the linear buildup form $B = 1 + mu$ x (the root of the attenuation equation).
 
@@ -1253,7 +1253,7 @@ nuclear_engineering_ai999x.solve('nuc_shield_thickness_for_dose_rate', Gamma=9.7
 
 <a id="nuc_multilayer_transmission"></a>
 
-### Narrow-beam transmission through a multilayer shield — `nuc_multilayer_transmission`
+### Narrow-beam transmission through a multilayer shield, `nuc_multilayer_transmission`
 
 The uncollided (narrow-beam) transmission through several shield layers, the total optical thickness, its value in half-value layers, the attenuation factor and (optionally) the dose rate behind the shield.
 
@@ -1307,7 +1307,7 @@ nuclear_engineering_ai999x.solve('nuc_multilayer_transmission', mu=[1.2, 0.2, 0.
 
 <a id="nuc_line_source_flux"></a>
 
-### Uncollided flux from a shielded line source (Sievert integral) — `nuc_line_source_flux`
+### Uncollided flux from a shielded line source (Sievert integral), `nuc_line_source_flux`
 
 The uncollided photon flux at a point at perpendicular distance h from a straight line source (a pipe, a wire) running from y1 to y2 along the line, behind a slab shield parallel to the line, with the unshielded flux and the transmission.
 
@@ -1363,7 +1363,7 @@ nuclear_engineering_ai999x.solve('nuc_line_source_flux', S_L=5000000000.0, h=2.0
 
 <a id="nuc_disk_source_flux"></a>
 
-### Uncollided flux on the axis of a shielded disk source — `nuc_disk_source_flux`
+### Uncollided flux on the axis of a shielded disk source, `nuc_disk_source_flux`
 
 The uncollided flux on the axis of a uniform disk source (a contaminated floor patch, a tank bottom) at distance h, behind a slab shield parallel to the disk, with the unshielded flux and the transmission.
 
@@ -1418,7 +1418,7 @@ nuclear_engineering_ai999x.solve('nuc_disk_source_flux', S_A=1000000.0, R=2.0, h
 
 <a id="nuc_transit_dose"></a>
 
-### Dose received passing a point source — `nuc_transit_dose`
+### Dose received passing a point source: `nuc_transit_dose`
 
 The dose received by a person or detector moving at constant speed along a straight path past an unshielded point source, from the closest distance, the speed and the path length (centred on the closest approach).
 
@@ -1469,7 +1469,7 @@ nuclear_engineering_ai999x.solve('nuc_transit_dose', Gamma=2.575e-17, A=10000000
 
 <a id="nuc_accumulated_dose_decaying_source"></a>
 
-### Dose accumulated near a decaying source — `nuc_accumulated_dose_decaying_source`
+### Dose accumulated near a decaying source: `nuc_accumulated_dose_decaying_source`
 
 The dose accumulated over an exposure time when the dose rate falls with the source's half-life, the dose if the exposure lasted until complete decay, and the mean dose rate.
 
@@ -1520,7 +1520,7 @@ nuclear_engineering_ai999x.solve('nuc_accumulated_dose_decaying_source', H0=1.38
 
 <a id="nuc_stay_time_decaying_source"></a>
 
-### Stay time to a dose limit near a decaying source — `nuc_stay_time_decaying_source`
+### Stay time to a dose limit near a decaying source, `nuc_stay_time_decaying_source`
 
 How long one can stay at a place where the dose rate decays with the source's half-life before receiving a stated dose, compared with the stay time if the rate were constant.
 
@@ -1569,7 +1569,7 @@ nuclear_engineering_ai999x.solve('nuc_stay_time_decaying_source', H0=2.777777777
 
 <a id="nuc_klein_nishina"></a>
 
-### Klein-Nishina Compton cross sections per electron — `nuc_klein_nishina`
+### Klein-Nishina Compton cross sections per electron, `nuc_klein_nishina`
 
 The total Compton (Klein-Nishina) cross section per electron for a photon energy, the energy-transfer cross section and the mean kinetic energy given to the recoil electron.
 
@@ -1618,7 +1618,7 @@ nuclear_engineering_ai999x.solve('nuc_klein_nishina', E=2.0027207925000002e-13)
 
 <a id="nuc_compton_edge"></a>
 
-### Compton edge and backscatter peak of a gamma line — `nuc_compton_edge`
+### Compton edge and backscatter peak of a gamma line, `nuc_compton_edge`
 
 Where a gamma line's Compton edge (maximum electron energy) and backscatter peak (energy of a photon scattered through 180 degrees) appear in a detector's spectrum.
 
@@ -1668,7 +1668,7 @@ nuclear_engineering_ai999x.solve('nuc_compton_edge', E=2.1340992764880002e-13)
 
 <a id="nuc_dead_time_nonparalyzable"></a>
 
-### Dead-time correction, non-paralyzable detector — `nuc_dead_time_nonparalyzable`
+### Dead-time correction, non-paralyzable detector, `nuc_dead_time_nonparalyzable`
 
 The true event rate from the observed count rate of a non-paralyzable (non-extendable) detector with a stated dead time, the fraction of events lost and the correction factor.
 
@@ -1721,7 +1721,7 @@ nuclear_engineering_ai999x.solve('nuc_dead_time_nonparalyzable', m=16666.6666666
 
 <a id="nuc_dead_time_paralyzable"></a>
 
-### Dead-time correction, paralyzable detector — `nuc_dead_time_paralyzable`
+### Dead-time correction, paralyzable detector, `nuc_dead_time_paralyzable`
 
 The true event rate from the observed count rate of a paralyzable (extendable) detector, on the stated branch of the rate curve (below or above the maximum), with the fraction lost and the largest observable count rate.
 
@@ -1775,7 +1775,7 @@ nuclear_engineering_ai999x.solve('nuc_dead_time_paralyzable', m=50000.0, tau=5e-
 
 <a id="nuc_count_time_split"></a>
 
-### Optimal division of counting time between sample and background — `nuc_count_time_split`
+### Optimal division of counting time between sample and background, `nuc_count_time_split`
 
 How to split a fixed total counting time between the sample (gross) count and the background count to minimise the standard deviation of the net count rate, and that minimum standard deviation.
 
@@ -1825,7 +1825,7 @@ nuclear_engineering_ai999x.solve('nuc_count_time_split', T=600.0, Rg=10.0, Rb=0.
 
 <a id="nuc_count_time_for_precision"></a>
 
-### Counting time for a target precision of the net count rate — `nuc_count_time_for_precision`
+### Counting time for a target precision of the net count rate, `nuc_count_time_for_precision`
 
 The total counting time (optimally split between sample and background) needed for the net count rate to have a stated relative standard deviation, and the two counting times.
 
@@ -1874,7 +1874,7 @@ nuclear_engineering_ai999x.solve('nuc_count_time_for_precision', Rg=5.0, Rb=1.0,
 
 <a id="nuc_solid_angle_on_axis"></a>
 
-### Solid angle and geometric efficiency of a disk detector (source on axis) — `nuc_solid_angle_on_axis`
+### Solid angle and geometric efficiency of a disk detector (source on axis), `nuc_solid_angle_on_axis`
 
 The solid angle subtended by a circular detector face (or aperture) at a point source on its axis and the geometric efficiency (fraction of isotropic emissions that hit it).
 
@@ -1925,7 +1925,7 @@ nuclear_engineering_ai999x.solve('nuc_solid_angle_on_axis', d=0.01, a=0.01)
 
 <a id="nuc_solid_angle_off_axis"></a>
 
-### Solid angle of a disk detector for an off-axis point source — `nuc_solid_angle_off_axis`
+### Solid angle of a disk detector for an off-axis point source, `nuc_solid_angle_off_axis`
 
 The solid angle subtended by a circular detector face at a point source displaced sideways from its axis, and the geometric efficiency.
 
@@ -1977,7 +1977,7 @@ nuclear_engineering_ai999x.solve('nuc_solid_angle_off_axis', d=0.05, a=0.025, rh
 
 <a id="nuc_detector_efficiency_point_source"></a>
 
-### Total and intrinsic efficiency of a slab detector for a point source on axis — `nuc_detector_efficiency_point_source`
+### Total and intrinsic efficiency of a slab detector for a point source on axis, `nuc_detector_efficiency_point_source`
 
 The total detection efficiency of a flat detector of given thickness and attenuation coefficient for a point source on its axis (every photon entering the front face crosses the thickness along its slant path), the geometric efficiency and the intrinsic efficiency.
 
@@ -2031,7 +2031,7 @@ nuclear_engineering_ai999x.solve('nuc_detector_efficiency_point_source', d=0.02,
 
 <a id="nuc_inverse_multiplication"></a>
 
-### Approach to criticality: inverse multiplication (1/M) extrapolation — `nuc_inverse_multiplication`
+### Approach to criticality: inverse multiplication (1/M) extrapolation, `nuc_inverse_multiplication`
 
 Predict the critical loading (fuel elements, kg, rod position) from count rates measured as fuel is added, by extrapolating the inverse multiplication $1/M = C_0/C$ to zero: least-squares line through all points and the line through the last two.
 
@@ -2080,7 +2080,7 @@ nuclear_engineering_ai999x.solve('nuc_inverse_multiplication', x=[10.0, 30.0, 50
 
 <a id="nuc_elastic_scattering"></a>
 
-### Neutron energy and lab angle after an elastic collision — `nuc_elastic_scattering`
+### Neutron energy and lab angle after an elastic collision, `nuc_elastic_scattering`
 
 The energy of a neutron after elastic scattering from a nucleus of mass ratio A through a stated centre-of-mass angle, the energy ratio, the scattering angle in the laboratory and the lethargy gained.
 
@@ -2130,7 +2130,7 @@ nuclear_engineering_ai999x.solve('nuc_elastic_scattering', A=1.0, E=1.6021766339
 
 <a id="nuc_logarithmic_energy_decrement"></a>
 
-### Average logarithmic energy decrement and mean scattering cosine — `nuc_logarithmic_energy_decrement`
+### Average logarithmic energy decrement and mean scattering cosine, `nuc_logarithmic_energy_decrement`
 
 For elastic scattering from a nucleus of mass ratio A (isotropic in the centre of mass): the minimum energy ratio alpha, the average logarithmic energy loss per collision xi and the average cosine of the laboratory scattering angle.
 
@@ -2184,7 +2184,7 @@ nuclear_engineering_ai999x.solve('nuc_logarithmic_energy_decrement', A=2.0)
 
 <a id="nuc_collisions_to_thermalize"></a>
 
-### Average number of collisions to slow a neutron down — `nuc_collisions_to_thermalize`
+### Average number of collisions to slow a neutron down, `nuc_collisions_to_thermalize`
 
 The average number of elastic collisions with nuclei of mass ratio A needed to slow a neutron from E0 to Ef (for example from 2 MeV to 0.025 eV), from the lethargy change and xi.
 
@@ -2236,7 +2236,7 @@ nuclear_engineering_ai999x.solve('nuc_collisions_to_thermalize', A=1.0, E0=3.204
 
 <a id="nuc_moderator_mixture"></a>
 
-### Moderating power and ratio of a compound moderator — `nuc_moderator_mixture`
+### Moderating power and ratio of a compound moderator, `nuc_moderator_mixture`
 
 The macroscopic scattering and absorption cross sections of a compound moderator (water, heavy water, graphite, beryllium oxide, ...), its average logarithmic energy decrement (weighted by scattering), moderating power and moderating ratio.
 
@@ -2288,7 +2288,7 @@ nuclear_engineering_ai999x.solve('nuc_moderator_mixture', n=[1.0], A=[12.0], sig
 
 <a id="nuc_maxwellian_average_cross_section"></a>
 
-### Maxwellian-averaged 1/v cross section — `nuc_maxwellian_average_cross_section`
+### Maxwellian-averaged 1/v cross section: `nuc_maxwellian_average_cross_section`
 
 The effective thermal cross section of a $1/v$ absorber averaged over a Maxwellian neutron flux at a stated neutron temperature, from its tabulated 2200 m/s value.
 
@@ -2340,7 +2340,7 @@ nuclear_engineering_ai999x.solve('nuc_maxwellian_average_cross_section', sigma0=
 
 <a id="nuc_fuel_cross_sections"></a>
 
-### Number densities and macroscopic cross sections of UO2 fuel — `nuc_fuel_cross_sections`
+### Number densities and macroscopic cross sections of UO2 fuel, `nuc_fuel_cross_sections`
 
 Atom densities of $U-235$, $U-238$ and oxygen in uranium dioxide of stated density and enrichment, its macroscopic absorption and fission cross sections, eta (neutrons per absorption in the fuel) and the absorption mean free path.
 
@@ -2397,7 +2397,7 @@ nuclear_engineering_ai999x.solve('nuc_fuel_cross_sections', rho=10970.0, w=0.007
 
 <a id="nuc_critical_slab"></a>
 
-### Critical thickness of a bare slab reactor (one group) — `nuc_critical_slab`
+### Critical thickness of a bare slab reactor (one group), `nuc_critical_slab`
 
 The critical thickness of an infinite bare slab of multiplying material in one-group diffusion theory, the extrapolated thickness and the material buckling.
 
@@ -2452,7 +2452,7 @@ nuclear_engineering_ai999x.solve('nuc_critical_slab', D=0.009, Sigma_a=15.0, nuS
 
 <a id="nuc_critical_sphere"></a>
 
-### Critical radius of a bare spherical reactor (one group) — `nuc_critical_sphere`
+### Critical radius of a bare spherical reactor (one group), `nuc_critical_sphere`
 
 The critical radius (physical and extrapolated) and volume of a bare homogeneous spherical reactor in one-group diffusion theory.
 
@@ -2506,7 +2506,7 @@ nuclear_engineering_ai999x.solve('nuc_critical_sphere', D=0.01, Sigma_a=10.0, nu
 
 <a id="nuc_critical_cylinder"></a>
 
-### Critical radius of a bare cylindrical reactor of given height (one group) — `nuc_critical_cylinder`
+### Critical radius of a bare cylindrical reactor of given height (one group), `nuc_critical_cylinder`
 
 The critical radius of a bare homogeneous cylinder of stated height in one-group diffusion theory, with its extrapolated radius and the physical volume.
 
@@ -2562,7 +2562,7 @@ nuclear_engineering_ai999x.solve('nuc_critical_cylinder', D=0.01, Sigma_a=10.0, 
 
 <a id="nuc_critical_cylinder_minimum_volume"></a>
 
-### Minimum-volume critical bare cylinder (one group) — `nuc_critical_cylinder_minimum_volume`
+### Minimum-volume critical bare cylinder (one group), `nuc_critical_cylinder_minimum_volume`
 
 The radius and height of the bare cylindrical reactor that is critical with the smallest volume (extrapolated height-to-diameter ratio 0.924), and that volume.
 
@@ -2617,7 +2617,7 @@ nuclear_engineering_ai999x.solve('nuc_critical_cylinder_minimum_volume', D=0.01,
 
 <a id="nuc_critical_cuboid"></a>
 
-### Critical third side of a bare rectangular reactor (one group) — `nuc_critical_cuboid`
+### Critical third side of a bare rectangular reactor (one group), `nuc_critical_cuboid`
 
 The third side that makes a bare rectangular parallelepiped of two stated sides critical in one-group diffusion theory, its extrapolated value and the physical volume.
 
@@ -2673,7 +2673,7 @@ nuclear_engineering_ai999x.solve('nuc_critical_cuboid', D=0.01, Sigma_a=10.0, nu
 
 <a id="nuc_bare_reactor_keff"></a>
 
-### k-effective and geometric buckling of a bare reactor (one group) — `nuc_bare_reactor_keff`
+### k-effective and geometric buckling of a bare reactor (one group), `nuc_bare_reactor_keff`
 
 The geometric buckling of a bare homogeneous slab, sphere, cylinder or rectangular reactor of stated size and its effective multiplication factor in one-group diffusion theory, with the non-leakage probability and the reactivity.
 
@@ -2736,7 +2736,7 @@ nuclear_engineering_ai999x.solve('nuc_bare_reactor_keff', D=0.01, Sigma_a=10.0, 
 
 <a id="nuc_two_group_bare_keff"></a>
 
-### k-effective of a bare reactor in two-group diffusion theory — `nuc_two_group_bare_keff`
+### k-effective of a bare reactor in two-group diffusion theory, `nuc_two_group_bare_keff`
 
 The effective and infinite multiplication factors of a bare homogeneous reactor in two-group (fast and thermal) diffusion theory, with fission in both groups and downscatter from fast to thermal, and the thermal-to-fast flux ratio of the fundamental mode.
 
@@ -2796,7 +2796,7 @@ nuclear_engineering_ai999x.solve('nuc_two_group_bare_keff', geometry='sphere', D
 
 <a id="nuc_reflected_slab_critical"></a>
 
-### Critical thickness of a reflected slab reactor and reflector savings (one group) — `nuc_reflected_slab_critical`
+### Critical thickness of a reflected slab reactor and reflector savings (one group), `nuc_reflected_slab_critical`
 
 The critical core thickness of a slab reactor with a reflector of stated thickness on both faces (one-group diffusion in core and reflector) and the reflector savings compared with the bare core.
 
@@ -2852,7 +2852,7 @@ nuclear_engineering_ai999x.solve('nuc_reflected_slab_critical', D_c=0.01, Sigma_
 
 <a id="nuc_exponential_pile"></a>
 
-### Diffusion length from an exponential pile measurement — `nuc_exponential_pile`
+### Diffusion length from an exponential pile measurement, `nuc_exponential_pile`
 
 The thermal diffusion length of a moderator from fluxes measured along the axis of an exponential pile (a source at the bottom of a prism of extrapolated sides a and b): least-squares relaxation constant gamma, then L from $\gamma^{2} = 1/L^{2} + (pi/a)^{2} + (pi/b)^{2.}$
 
@@ -2906,7 +2906,7 @@ nuclear_engineering_ai999x.solve('nuc_exponential_pile', z=[30.0, 50.0, 70.0], p
 
 <a id="nuc_plane_source_slab_flux"></a>
 
-### Flux from a plane neutron source at the centre of a slab — `nuc_plane_source_slab_flux`
+### Flux from a plane neutron source at the centre of a slab, `nuc_plane_source_slab_flux`
 
 The one-group thermal flux at a position in a non-multiplying slab of stated (extrapolated) thickness with a plane source of neutrons at its mid-plane, the flux at the source plane and the fraction of neutrons that leak from the two faces.
 
@@ -2957,7 +2957,7 @@ nuclear_engineering_ai999x.solve('nuc_plane_source_slab_flux', S=10000000000.0, 
 
 <a id="nuc_point_source_sphere_flux"></a>
 
-### Flux from a point neutron source at the centre of a sphere — `nuc_point_source_sphere_flux`
+### Flux from a point neutron source at the centre of a sphere, `nuc_point_source_sphere_flux`
 
 The one-group thermal flux at a radius in a non-multiplying sphere (extrapolated radius R) with an isotropic point source at its centre, the fraction of neutrons that leak out, and the flux the same source would give in an infinite medium.
 
@@ -3008,7 +3008,7 @@ nuclear_engineering_ai999x.solve('nuc_point_source_sphere_flux', S=10000000.0, D
 
 <a id="nuc_flux_shape"></a>
 
-### Fundamental-mode flux shape of a bare reactor at a point — `nuc_flux_shape`
+### Fundamental-mode flux shape of a bare reactor at a point, `nuc_flux_shape`
 
 The neutron flux at a point of a bare slab, sphere or finite cylinder relative to its maximum at the centre (cosine, sin(x)/x, J0 times cosine) and the geometric buckling, for extrapolated dimensions.
 
@@ -3037,7 +3037,7 @@ $$
 
 ![A bare cylindrical core of extrapolated radius 1](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-flux-shape-geometry)
 
-*A bare cylindrical core of extrapolated radius 1.5 m and height 3 m (the worked example) in a half axial section (axis dashed), shaded by φ/φmax from the package's flux-shape capability on a 10 × 14 grid of (r, z) — the fundamental mode J₀ radially and cosine axially. Marked: the worked example's point r = 0.75 m, z = 0.5 m, where the package returns φ/φmax = 0.580176; buckling 3.66693 1/m².*
+*A bare cylindrical core of extrapolated radius 1.5 m and height 3 m (the worked example) in a half axial section (axis dashed), shaded by φ/φmax from the package's flux-shape capability on a 10 × 14 grid of (r, z), the fundamental mode J₀ radially and cosine axially. Marked: the worked example's point r = 0.75 m, z = 0.5 m, where the package returns φ/φmax = 0.580176; buckling 3.66693 1/m².*
 
 ![ratio (phi/phi_max at the point) against R (extrapolated radius) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-flux-shape-curve)
 
@@ -3070,7 +3070,7 @@ nuclear_engineering_ai999x.solve('nuc_flux_shape', geometry='sphere', R=0.5, r=0
 
 <a id="nuc_core_power_from_flux"></a>
 
-### Reactor power from the peak flux (or peak flux from power) of a bare core — `nuc_core_power_from_flux`
+### Reactor power from the peak flux (or peak flux from power) of a bare core, `nuc_core_power_from_flux`
 
 The thermal power of a bare homogeneous sphere, cylinder or rectangular core from its peak thermal flux (or the peak flux from the power), with the average flux, the peak-to-average ratio and the volume, for the fundamental-mode flux shape.
 
@@ -3104,7 +3104,7 @@ $$
 
 ![A bare cylindrical core of extrapolated radius 1](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-core-power-from-flux-geometry)
 
-*A bare cylindrical core of extrapolated radius 1.7 m and height 3.7 m (the worked example) in a half axial section (axis dashed), shaded by φ/φmax from the package's flux-shape capability on a 10 × 14 grid of (r, z) — the fundamental mode J₀ radially and cosine axially. Marked: the peak flux 1.0000e+17 /(m²·s) at the centre and, from the package, power P = 5.91748e+06 W, volume-average flux 2.7486e+16 /(m²·s), peaking factor 3.63817 (Σf = 0.2 1/m, 3.2044e-11 J per fission).*
+*A bare cylindrical core of extrapolated radius 1.7 m and height 3.7 m (the worked example) in a half axial section (axis dashed), shaded by φ/φmax from the package's flux-shape capability on a 10 × 14 grid of (r, z), the fundamental mode J₀ radially and cosine axially. Marked: the peak flux 1.0000e+17 /(m²·s) at the centre and, from the package, power P = 5.91748e+06 W, volume-average flux 2.7486e+16 /(m²·s), peaking factor 3.63817 (Σf = 0.2 1/m, 3.2044e-11 J per fission).*
 
 ![P (thermal power) against R (extrapolated radius) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-core-power-from-flux-curve)
 
@@ -3132,7 +3132,7 @@ nuclear_engineering_ai999x.solve('nuc_core_power_from_flux', geometry='sphere', 
 
 <a id="nuc_reactor_period_one_group"></a>
 
-### Stable reactor period after a reactivity step (one delayed group) — `nuc_reactor_period_one_group`
+### Stable reactor period after a reactivity step (one delayed group), `nuc_reactor_period_one_group`
 
 The stable (asymptotic) period, inverse period and doubling time of a reactor after a step reactivity change, with one effective delayed-neutron group (the stable root of the inhour equation).
 
@@ -3184,7 +3184,7 @@ nuclear_engineering_ai999x.solve('nuc_reactor_period_one_group', rho=-0.0065, be
 
 <a id="nuc_power_after_step_one_group"></a>
 
-### Power after a reactivity step (one delayed group, exact) — `nuc_power_after_step_one_group`
+### Power after a reactivity step (one delayed group, exact), `nuc_power_after_step_one_group`
 
 The relative power P(t)/P0 a time t after a step reactivity change from steady state, from the exact two-mode solution with one delayed group, with the amplitude of the stable period (the exact prompt jump or drop) and the inverse period.
 
@@ -3235,7 +3235,7 @@ nuclear_engineering_ai999x.solve('nuc_power_after_step_one_group', rho=-0.0065, 
 
 <a id="nuc_power_after_step_six_group"></a>
 
-### Power after a reactivity step (six delayed groups, exact) — `nuc_power_after_step_six_group`
+### Power after a reactivity step (six delayed groups, exact), `nuc_power_after_step_six_group`
 
 The relative power P(t)/P0 a time t after a step reactivity change from steady state with six (or any number up to eight) delayed-neutron groups, from all the inhour roots and their residues, and the stable period.
 
@@ -3291,7 +3291,7 @@ nuclear_engineering_ai999x.solve('nuc_power_after_step_six_group', rho=-0.006502
 
 <a id="nuc_stable_period_six_group"></a>
 
-### Stable period and prompt root of the inhour equation (six delayed groups) — `nuc_stable_period_six_group`
+### Stable period and prompt root of the inhour equation (six delayed groups), `nuc_stable_period_six_group`
 
 The stable reactor period, inverse period and doubling time after a step reactivity change with six (or any number up to eight) delayed groups, and the prompt (most negative) root that sets the prompt jump's time constant.
 
@@ -3342,7 +3342,7 @@ nuclear_engineering_ai999x.solve('nuc_stable_period_six_group', rho=0.003251, be
 
 <a id="nuc_reactivity_from_period"></a>
 
-### Reactivity from a measured stable period or doubling time (inhour) — `nuc_reactivity_from_period`
+### Reactivity from a measured stable period or doubling time (inhour), `nuc_reactivity_from_period`
 
 The reactivity, in absolute units, dollars and pcm, that produces a measured stable period (or doubling time) with stated delayed-neutron data, from the inhour equation.
 
@@ -3398,7 +3398,7 @@ nuclear_engineering_ai999x.solve('nuc_reactivity_from_period', beta=[0.0065], la
 
 <a id="nuc_control_rod_worth"></a>
 
-### Integral and differential control-rod worth (sine-squared weighting) — `nuc_control_rod_worth`
+### Integral and differential control-rod worth (sine-squared weighting), `nuc_control_rod_worth`
 
 The reactivity worth of a control rod inserted to a depth x in a core of height H with a cosine axial flux (first-order perturbation: worth density ~ sin^2), as a fraction of its total worth, and the differential worth at that depth.
 
@@ -3426,7 +3426,7 @@ $$
 
 ![Integral worth of a control rod in a core of height 3](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-control-rod-worth-curve)
 
-*Integral worth of a control rod in a core of height 3.66 m with total worth 0.01 (the worked example): the reactivity inserted against insertion depth, 40 runs of the package — the S-curve, steepest at mid-core. Marked: at x = 1.83 m, ρ = 0.005 (0.5 of the total), with the tangent of the package's differential worth 0.00546448 per metre.*
+*Integral worth of a control rod in a core of height 3.66 m with total worth 0.01 (the worked example): the reactivity inserted against insertion depth, 40 runs of the package, the S-curve, steepest at mid-core. Marked: at x = 1.83 m, ρ = 0.005 (0.5 of the total), with the tangent of the package's differential worth 0.00546448 per metre.*
 
 ![rho (worth inserted (absolute)) against H (core height) from 1](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-control-rod-worth-curve-2)
 
@@ -3453,7 +3453,7 @@ nuclear_engineering_ai999x.solve('nuc_control_rod_worth', rho_tot=0.013, H=1.0, 
 
 <a id="nuc_xenon_equilibrium"></a>
 
-### Equilibrium iodine-135 and xenon-135 concentrations — `nuc_xenon_equilibrium`
+### Equilibrium iodine-135 and xenon-135 concentrations, `nuc_xenon_equilibrium`
 
 The equilibrium $I-135$ and $Xe-135$ atom densities in fuel operating at a steady flux, the xenon absorptions per fission (its poisoning strength) and the flux at which xenon burn-out equals its decay.
 
@@ -3504,7 +3504,7 @@ nuclear_engineering_ai999x.solve('nuc_xenon_equilibrium', Sigma_f=10.0, phi=1e+1
 
 <a id="nuc_xenon_after_shutdown"></a>
 
-### Xenon-135 after shutdown: concentration and peak — `nuc_xenon_after_shutdown`
+### Xenon-135 after shutdown: concentration and peak, `nuc_xenon_after_shutdown`
 
 The $Xe-135$ and $I-135$ atom densities a time t after shutdown from equilibrium operation, the xenon relative to its equilibrium value, and the time and height of the post-shutdown xenon peak (none at low flux).
 
@@ -3562,7 +3562,7 @@ nuclear_engineering_ai999x.solve('nuc_xenon_after_shutdown', Sigma_f=10.0, phi=1
 
 <a id="nuc_samarium"></a>
 
-### Samarium-149 poisoning: equilibrium and after shutdown — `nuc_samarium`
+### Samarium-149 poisoning: equilibrium and after shutdown, `nuc_samarium`
 
 The equilibrium $Pm-149$ and $Sm-149$ atom densities during operation (Sm-149 is independent of the flux), the $Sm-149$ level reached after shutdown when all the promethium has decayed, and (optionally) the level a time t after shutdown.
 
@@ -3615,7 +3615,7 @@ nuclear_engineering_ai999x.solve('nuc_samarium', Sigma_f=10.0, phi=3e+17, gamma_
 
 <a id="nuc_depletion_constant_flux"></a>
 
-### U-235 depletion and energy released at constant flux — `nuc_depletion_constant_flux`
+### U-235 depletion and energy released at constant flux, `nuc_depletion_constant_flux`
 
 How much of an initial mass of $U-235$ remains after irradiation at a constant flux, the fraction burnt, the fission energy released (J and MWd) and the power at the start and at the end.
 
@@ -3669,7 +3669,7 @@ nuclear_engineering_ai999x.solve('nuc_depletion_constant_flux', m0=0.001, sigma_
 
 <a id="nuc_enrichment_swu"></a>
 
-### Uranium enrichment: feed, tails and separative work (SWU) — `nuc_enrichment_swu`
+### Uranium enrichment: feed, tails and separative work (SWU), `nuc_enrichment_swu`
 
 The natural-uranium feed and tails masses and the separative work (kg SWU) needed to produce a mass of enriched uranium from stated product, feed and tails assays, per kg of product too.
 
@@ -3726,7 +3726,7 @@ nuclear_engineering_ai999x.solve('nuc_enrichment_swu', x_p=0.2, x_f=0.00711, x_w
 
 <a id="nuc_fuel_rod_temperatures"></a>
 
-### Fuel-rod radial temperatures: centreline, pellet surface and cladding — `nuc_fuel_rod_temperatures`
+### Fuel-rod radial temperatures: centreline, pellet surface and cladding, `nuc_fuel_rod_temperatures`
 
 The temperatures at the fuel centreline, the pellet surface and the cladding inner and outer surfaces of a cylindrical fuel rod at a stated linear heat rate, from the coolant temperature through the film, cladding, gap and pellet (constant conductivities).
 
@@ -3784,7 +3784,7 @@ nuclear_engineering_ai999x.solve('nuc_fuel_rod_temperatures', q_lin=40000.0, R_f
 
 <a id="nuc_centreline_temperature_variable_k"></a>
 
-### Fuel centreline temperature with temperature-dependent conductivity — `nuc_centreline_temperature_variable_k`
+### Fuel centreline temperature with temperature-dependent conductivity, `nuc_centreline_temperature_variable_k`
 
 The centreline temperature of a cylindrical fuel pellet at a stated linear heat rate and surface temperature when its conductivity varies as k = 1/(A + B T) (the usual form for UO2), through the conductivity integral, with the conductivities at the surface and the centre.
 
@@ -3835,7 +3835,7 @@ nuclear_engineering_ai999x.solve('nuc_centreline_temperature_variable_k', q_lin=
 
 <a id="nuc_channel_coolant_temperature"></a>
 
-### Coolant temperature along a channel with a chopped-cosine power shape — `nuc_channel_coolant_temperature`
+### Coolant temperature along a channel with a chopped-cosine power shape, `nuc_channel_coolant_temperature`
 
 The bulk coolant temperature at a height z (from the core mid-plane) in a heated channel whose linear heat rate follows a chopped cosine, the outlet temperature and the channel's total power.
 
@@ -3892,7 +3892,7 @@ nuclear_engineering_ai999x.solve('nuc_channel_coolant_temperature', q0=30000.0, 
 
 <a id="nuc_max_clad_temperature"></a>
 
-### Location and value of the maximum cladding surface temperature — `nuc_max_clad_temperature`
+### Location and value of the maximum cladding surface temperature, `nuc_max_clad_temperature`
 
 Where along a channel with a chopped-cosine power shape the cladding surface is hottest (above the mid-plane, because the coolant warms up), its temperature there and the coolant outlet temperature.
 
@@ -3950,7 +3950,7 @@ nuclear_engineering_ai999x.solve('nuc_max_clad_temperature', q0=30000.0, H=2.0, 
 
 <a id="nuc_thermal_neutron_speeds"></a>
 
-### Speeds and mean energy of thermal neutrons (Maxwell distribution) — `nuc_thermal_neutron_speeds`
+### Speeds and mean energy of thermal neutrons (Maxwell distribution), `nuc_thermal_neutron_speeds`
 
 The most probable, mean and root-mean-square speeds and the mean kinetic energy of neutrons in thermal equilibrium (Maxwell-Boltzmann distribution) at a stated temperature.
 
@@ -3999,7 +3999,7 @@ nuclear_engineering_ai999x.solve('nuc_thermal_neutron_speeds', T=600.0)
 
 <a id="nuc_attenuation_coefficient_fit"></a>
 
-### Linear attenuation coefficient from narrow-beam transmission measurements — `nuc_attenuation_coefficient_fit`
+### Linear attenuation coefficient from narrow-beam transmission measurements, `nuc_attenuation_coefficient_fit`
 
 The linear attenuation coefficient of an absorber from intensities measured behind several thicknesses (least-squares fit of ln I against x), with the half- and tenth-value layers and the fitted unattenuated intensity.
 
@@ -4053,7 +4053,7 @@ nuclear_engineering_ai999x.solve('nuc_attenuation_coefficient_fit', x=[0.0, 5.0,
 
 <a id="nuc_count_rate_point_source"></a>
 
-### Expected count rate from a point source on a detector's axis — `nuc_count_rate_point_source`
+### Expected count rate from a point source on a detector's axis, `nuc_count_rate_point_source`
 
 The count rate a detector of stated intrinsic efficiency records from a point source on its axis, from the activity, the emission probability per decay and the geometric efficiency of the detector face.
 
@@ -4108,7 +4108,7 @@ nuclear_engineering_ai999x.solve('nuc_count_rate_point_source', A=100000.0, y=1.
 
 <a id="nuc_flux_from_foil_activation"></a>
 
-### Neutron flux from a measured foil activation — `nuc_flux_from_foil_activation`
+### Neutron flux from a measured foil activation, `nuc_flux_from_foil_activation`
 
 The neutron flux that irradiated an activation foil, from the foil's measured activity a decay time after an irradiation of known length, its mass, molar mass, isotopic abundance and activation cross section; with the saturation activity and the reaction rate per atom.
 
@@ -4162,7 +4162,7 @@ nuclear_engineering_ai999x.solve('nuc_flux_from_foil_activation', A_d=500.0, m=0
 
 <a id="nuc_effective_dose"></a>
 
-### Effective dose from organ equivalent doses and tissue weighting factors — `nuc_effective_dose`
+### Effective dose from organ equivalent doses and tissue weighting factors, `nuc_effective_dose`
 
 The effective dose E = sum w_T H_T from the equivalent doses of the irradiated tissues and their tissue weighting factors (stated; ICRP 103: 0.12 for red marrow, colon, lung, stomach, breast and the remainder, 0.08 gonads, 0.04 bladder, oesophagus, liver, thyroid, 0.01 bone surface, brain, salivary glands, skin).
 
@@ -4211,7 +4211,7 @@ nuclear_engineering_ai999x.solve('nuc_effective_dose', H=[3.0, 3.0], w=[0.12, 0.
 
 <a id="nuc_committed_dose_coefficient"></a>
 
-### Committed effective dose from a dose coefficient — `nuc_committed_dose_coefficient`
+### Committed effective dose from a dose coefficient, `nuc_committed_dose_coefficient`
 
 The committed effective dose E(50) = e(50) I of an intake I of a radionuclide with the dose coefficient e(50) (Sv/Bq, from ICRP tables for the route and chemical form).
 
@@ -4264,7 +4264,7 @@ nuclear_engineering_ai999x.solve('nuc_committed_dose_coefficient', I=37000.0, e=
 
 <a id="nuc_power_from_reaction_rate"></a>
 
-### Power density and power from the fission reaction rate — `nuc_power_from_reaction_rate`
+### Power density and power from the fission reaction rate, `nuc_power_from_reaction_rate`
 
 The fission reaction rate density $R = N$ sigma_f phi, the power density q''' = E_f N sigma_f phi and, with a volume, the power, from the fissile number density, the fission cross section, the flux and the energy per fission.
 
@@ -4318,7 +4318,7 @@ nuclear_engineering_ai999x.solve('nuc_power_from_reaction_rate', E_f=3.204353268
 
 <a id="nuc_six_factor_formula"></a>
 
-### Multiplication factor by the four- and six-factor formulas — `nuc_six_factor_formula`
+### Multiplication factor by the four- and six-factor formulas, `nuc_six_factor_formula`
 
 k_inf = eta f p eps (four-factor formula) and, with the fast and thermal non-leakage probabilities, k_eff = k_inf P_FNL P_TNL (six-factor formula), with the reactivity $(k - 1)/k.$
 
@@ -4376,7 +4376,7 @@ nuclear_engineering_ai999x.solve('nuc_six_factor_formula', eta=1.65, f=0.9, p=0.
 
 <a id="nuc_diffusion_length"></a>
 
-### Thermal diffusion length and migration length — `nuc_diffusion_length`
+### Thermal diffusion length and migration length, `nuc_diffusion_length`
 
 The thermal diffusion length $L = sqrt$(D/Sigma_a) of a medium and, with the Fermi age tau, the migration area $M^{2} = L^{2} + \tau$ and migration length.
 
@@ -4432,7 +4432,7 @@ nuclear_engineering_ai999x.solve('nuc_diffusion_length', D=0.0084, Sigma_a=0.032
 
 <a id="nuc_currie_detection_limits"></a>
 
-### Currie critical level, detection limit and minimum detectable activity — `nuc_currie_detection_limits`
+### Currie critical level, detection limit and minimum detectable activity, `nuc_currie_detection_limits`
 
 Currie's (1968) decision threshold $L_C = k$ sqrt(2B) and detection limit $L_D = k^{2} + 2$ L_C (net counts, paired blank, $\alpha = \beta = 0.05$, k = 1.645) from the background counts B, and with the counting time, efficiency and emission yield the minimum detectable activity L_D/(eff y t).
 
@@ -4483,7 +4483,7 @@ nuclear_engineering_ai999x.solve('nuc_currie_detection_limits', B=400.0, t=600.0
 
 <a id="nuc_escape_peaks"></a>
 
-### Single and double escape peaks of a gamma ray — `nuc_escape_peaks`
+### Single and double escape peaks of a gamma ray, `nuc_escape_peaks`
 
 The energies of the single- and double-escape peaks (E - m_e $c^{2}$ and $E - 2$ m_e c^2) that pair production by a gamma ray above 1.022 MeV produces in a detector.
 
@@ -4536,7 +4536,7 @@ nuclear_engineering_ai999x.solve('nuc_escape_peaks', E=2.1349003648050002e-13)
 
 <a id="nuc_half_value_layer"></a>
 
-### Half-value and tenth-value layers — `nuc_half_value_layer`
+### Half-value and tenth-value layers: `nuc_half_value_layer`
 
 The half-value layer ln $2/mu$, tenth-value layer ln $10/mu$ and mean free path $1/mu$ of a narrow beam in an absorber of linear attenuation coefficient mu, and with a thickness the transmission and number of half-value layers.
 
@@ -4593,7 +4593,7 @@ nuclear_engineering_ai999x.solve('nuc_half_value_layer', mu=14.9, x=0.3)
 
 <a id="nuc_radiation_unit_conversion"></a>
 
-### Radiation unit conversion (Bq and Ci, Gy and rad, Sv and rem) — `nuc_radiation_unit_conversion`
+### Radiation unit conversion (Bq and Ci, Gy and rad, Sv and rem), `nuc_radiation_unit_conversion`
 
 An activity, absorbed dose or equivalent dose written in any of the SI or traditional units, expressed in both systems (1 $Ci = 3.7e10$ Bq, 1 rad = 0.01 Gy, 1 rem = 0.01 Sv).
 
@@ -4647,7 +4647,7 @@ nuclear_engineering_ai999x.solve('nuc_radiation_unit_conversion', H=0.05)
 
 <a id="nuc_constant_power_depletion"></a>
 
-### U-235 depletion at constant power — `nuc_constant_power_depletion`
+### U-235 depletion at constant power: `nuc_constant_power_depletion`
 
 How much of an initial mass of $U-235$ remains after operation at a constant power (the flux rising as the fuel is consumed), the fraction burnt, the mass consumed and the factor by which the flux has risen.
 
