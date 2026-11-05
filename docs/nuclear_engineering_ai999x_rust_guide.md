@@ -1,6 +1,6 @@
 # nuclear-engineering: the Nuclear Engineering program — user guide
 
-**nuclear-engineering-ai999x 1.0.3**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**nuclear-engineering-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Nuclear Engineering covers radioactive decay and decay chains, binding energy, reactor physics basics, radiation shielding and attenuation, and dosimetry. This guide is about `nuclear-engineering`, the model as a self-contained program for Windows and Linux: 83 capabilities in 10 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/nuclear-engineering-ai999x/); the Python package (`pip install nuclear-engineering-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -2531,8 +2531,8 @@ rho = -0.08808151501
   Sigma_a = 15 1/m
   nuSigma_f = 18 1/m
   R = 0.12 m
-  extrapolation = 2.13D
   geometry = sphere
+  extrapolation = 2.13D
   assumes: one-group diffusion; bare homogeneous reactor; the dimensions of the stated geometry only
 ```
 

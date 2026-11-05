@@ -21,7 +21,7 @@ figcaption{font-size:9pt;color:#555}
 .pb{page-break-after:always}
 </style></head><body>
 <h1>nuclear-engineering: the Nuclear Engineering program — user guide</h1>
-<p><strong>nuclear-engineering-ai999x 1.0.3</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
+<p><strong>nuclear-engineering-ai999x 1.1.0</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
 <p>Nuclear Engineering covers radioactive decay and decay chains, binding energy, reactor physics basics, radiation shielding and attenuation, and dosimetry. This guide is about <code>nuclear-engineering</code>, the model as a self-contained program for Windows and Linux: 83 capabilities in 10 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model&#x27;s page (https://www.ai999x.com/models/nuclear-engineering-ai999x/); the Python package (<code>pip install nuclear-engineering-ai999x</code>) has its own guide. Every command output printed here is what the program printed.</p>
 <h2>Contents</h2>
 <ul><li>1. Get it: desktop app, command line, browser, Python</li><li>2. Quick start</li><li>3. Writing inputs</li><li>4. Outcomes and exit codes</li><li>5. Scripts and agents: batch and JSON</li><li>6. Figures</li><li>7. In a web page or Node.js: WebAssembly</li><li>8. Every capability</li></ul>
@@ -1133,8 +1133,8 @@ rho = -0.08808151501
   Sigma_a = 15 1/m
   nuSigma_f = 18 1/m
   R = 0.12 m
-  extrapolation = 2.13D
   geometry = sphere
+  extrapolation = 2.13D
   assumes: one-group diffusion; bare homogeneous reactor; the dimensions of the stated geometry only</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the effective multiplication factor and geometric buckling for a bare homogeneous reactor using one-group diffusion theory. By combining material properties like the diffusion coefficient and absorption cross section with the physical dimensions of the shape, it computes the leakage probability. The resulting multiplication factor of 0.919049 indicates whether the system is subcritical, critical, or supercritical based on the balance between production and loss terms.</p>
 <h4 id="nuc_two_group_bare_keff">k-effective of a bare reactor in two-group diffusion theory — <code>nuc_two_group_bare_keff</code></h4>
