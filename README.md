@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/AI999X/nuclear-engineering-ai999x/actions/workflows/ci.yml/badge.svg)](https://github.com/AI999X/nuclear-engineering-ai999x/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/nuclear-engineering-ai999x)](https://pypi.org/project/nuclear-engineering-ai999x/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/AI999X/nuclear-engineering-ai999x)
 
-**[Install](https://pypi.org/project/nuclear-engineering-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/nuclear-engineering-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/nuclear-engineering-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
+**[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/nuclear-engineering-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/nuclear-engineering-ai999x/)** · **[Guides](https://huggingface.co/AI999X/nuclear-engineering-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/nuclear-engineering-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
 License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.3
 
@@ -12,7 +12,308 @@ nuclear-engineering-ai999x is an offline, deterministic Python solver that answe
 
 **nuclear-engineering-ai999x** is a compact, deterministic nuclear engineering engine for Python. It reads a question in plain English (or a typed call), picks a certified nuclear engineering capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions — or an honest refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
-[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green)
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green) ![Rust](https://img.shields.io/badge/Rust-Windows%20%7C%20Linux%20%7C%20WebAssembly-orange)
+
+**Run it your way.** nuclear-engineering-ai999x comes as the AI999X desktop app and as the command-line program `nuclear-engineering` for Windows and Linux, runs in your browser as WebAssembly, and installs as a Python package. The desktop app, the command line and the browser run the same compiled Rust program on your own device: offline, no Python needed.
+
+## Get it
+
+| Way to run it | For | Get it |
+|---|---|---|
+| **AI999X Nuclear Engineering desktop app** 1.2.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-nuclear-engineering-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-nuclear-engineering-1.2.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.2.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-linux-x86_64.tar.gz) |
+| **Command line** (`nuclear-engineering`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) |
+| **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/nuclear-engineering-ai999x/#try) |
+| **Python** | Python 3.10+ | `pip install nuclear-engineering-ai999x` |
+
+Checksums: [SHA256SUMS](https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS) · every version: [https://www.ai999x.com/downloads/desktop/latest/](https://www.ai999x.com/downloads/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+
+## Rust versions
+
+Nuclear Engineering also comes as native programs compiled from Rust, version 1.2.0 of the AI999X desktop app and command line: they run offline on your computer and need no Python. Each file is in this repository's `rust/` folder, on the [GitHub release v1.0.3](https://github.com/AI999X/nuclear-engineering-ai999x/releases/tag/v1.0.3) and on the website.
+
+| Program | System | File | Size | Download | Use |
+|---|---|---|---|---|---|
+| Desktop app (Nuclear Engineering) | Windows x86-64 | `ai999x-nuclear-engineering-1.2.0-windows-x86_64.zip` | 7.5 MB | [Hub](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/rust/ai999x-nuclear-engineering-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/nuclear-engineering-ai999x/releases/download/v1.0.3/ai999x-nuclear-engineering-1.2.0-windows-x86_64.zip) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-nuclear-engineering-1.2.0-windows-x86_64.zip) | unzip, then double-click `ai999x-nuclear-engineering.exe` (no installer) |
+| Desktop app (Nuclear Engineering) | Linux x86-64 | `ai999x-nuclear-engineering-1.2.0-linux-x86_64.tar.gz` | 8.4 MB | [Hub](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/rust/ai999x-nuclear-engineering-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/nuclear-engineering-ai999x/releases/download/v1.0.3/ai999x-nuclear-engineering-1.2.0-linux-x86_64.tar.gz) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-nuclear-engineering-1.2.0-linux-x86_64.tar.gz) | extract, then run `./ai999x-nuclear-engineering` (X11 or Wayland desktop) |
+| Command line (`nuclear-engineering`) | Windows x86-64 | `ai999x-nuclear-engineering-cli-1.2.0-windows-x86_64.zip` | 3.1 MB | [Hub](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/rust/ai999x-nuclear-engineering-cli-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/nuclear-engineering-ai999x/releases/download/v1.0.3/ai999x-nuclear-engineering-cli-1.2.0-windows-x86_64.zip) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) | unzip, then `nuclear-engineering.exe ask "<question>"` or `nuclear-engineering.exe solve <capability> name=value` |
+| Command line (`nuclear-engineering`) | Linux x86-64 | `ai999x-nuclear-engineering-cli-1.2.0-linux-x86_64.tar.gz` | 3.1 MB | [Hub](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/rust/ai999x-nuclear-engineering-cli-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/nuclear-engineering-ai999x/releases/download/v1.0.3/ai999x-nuclear-engineering-cli-1.2.0-linux-x86_64.tar.gz) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) | extract, then `./nuclear-engineering ask "<question>"` or `./nuclear-engineering solve <capability> name=value` |
+
+The command-line archive holds `nuclear-engineering` with a README of its commands and examples, the licence and the notice. Checksums: [`rust/SHA256SUMS`](https://huggingface.co/AI999X/nuclear-engineering-ai999x/resolve/main/rust/SHA256SUMS) (`sha256sum -c SHA256SUMS`).
+
+## Quick start
+
+### Desktop app
+
+Download **AI999X Nuclear Engineering** for your system (above), unpack it and start it; type a question in words or pick a capability, fill in the form and press Compute. Figures and an explanation of the answer appear beside it. The AI999X desktop app has the same, with Nuclear Engineering among all AI999X models.
+
+Linux, from a terminal:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-nuclear-engineering-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+tar xzf ai999x-nuclear-engineering-1.2.0-linux-x86_64.tar.gz
+./ai999x-nuclear-engineering-1.2.0-linux-x86_64/ai999x-nuclear-engineering
+```
+
+### Command line
+
+Linux:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.2.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.2.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+nuclear-engineering --version
+```
+
+Windows (PowerShell):
+
+```powershell
+$F = "ai999x-cli-1.2.0-windows-x86_64.zip"
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/$F" -OutFile $F
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS" -OutFile SHA256SUMS
+(Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
+Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.2.0-windows-x86_64"; $env:Path += ";$D"
+[Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
+nuclear-engineering --version
+```
+
+Every command below was run as shown; the text under it is what the program printed.
+
+**Ask in words** — Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+
+```console
+$ nuclear-engineering ask "Specific activity: nuclide = Co-60, m = 1 g"
+Read as: Activity and specific activity of a mass of a radionuclide
+A = 4.18689443e+13 1/s
+A_Ci = 1131.593089
+a = 4.18689443e+16 1/(kg*s)
+a_Ci_per_g = 1131.593089
+N = 1.004798494e+22
+  by: Activity and specific activity of a mass of a radionuclide  (N = m N_A / M, A = lambda N with lambda = ln 2 / T_half)
+  m = 0.001 kg
+  nuclide = Co-60
+  assumes: the nuclide is in the table (ICRP-107 half-lives, radioactivedecay 0.6.1); m > 0
+```
+
+**What a capability needs** — The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+
+```console
+$ nuclear-engineering info nuc_specific_activity
+Activity and specific activity of a mass of a radionuclide
+  N = m N_A / M, A = lambda N with lambda = ln 2 / T_half
+  in   nuclide  the radionuclide, written like Co-60, Cs-137, Tc-99m, U-235 (choice) [1]
+  in   m        mass of the radionuclide (the pure nuclide, not the compound) [kg]
+  out  A        activity (Bq) [1/s]
+  out  A_Ci     activity in curies [1]
+  out  a        specific activity (Bq/kg) [1/(kg*s)]
+  out  a_Ci_per_g specific activity in Ci/g [1]
+  out  N        number of atoms [1]
+```
+
+**Solve** — Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+
+```console
+$ nuclear-engineering solve nuc_specific_activity nuclide=Co-60 "m=1 g"
+A = 4.18689443e+13 1/s
+A_Ci = 1131.593089
+a = 4.18689443e+16 1/(kg*s)
+a_Ci_per_g = 1131.593089
+N = 1.004798494e+22
+  by: Activity and specific activity of a mass of a radionuclide  (N = m N_A / M, A = lambda N with lambda = ln 2 / T_half)
+  m = 0.001 kg
+  nuclide = Co-60
+  assumes: the nuclide is in the table (ICRP-107 half-lives, radioactivedecay 0.6.1); m > 0
+```
+
+**Draw the figures** — The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
+
+```console
+$ nuclear-engineering figures nuc_specific_activity nuclide=Co-60 "m=1 g" --out .
+[
+  {
+    "slug": "nuc-specific-activity-live-1",
+    "title": "Activity (Bq) as mass of the radionuclide (the pure nuclide, not... varies",
+    "caption": "Activity (Bq) as m runs from 0.25 to 1.75 g, every other input as you entered it (41 solutions). Marked: your m = 1 g gives A = 4.187e+13. Your inputs: nuclide = Co-60, m = 1 g.",
+    "file": "./nuc-specific-activity-live-1.svg"
+  },
+  {
+    "slug": "nuc-specific-activity-live-2",
+    "title": "The computed values side by side",
+    "caption": "Every answer of one unit for your inputs: A_Ci (activity in curies) = 1132; a_Ci_per_g (specific activity in Ci/g) = 1132; N (number of atoms) = 1.005e+22. Your inputs: nuclide = Co-60, m = 1 g.",
+    "file": "./nuc-specific-activity-live-2.svg"
+  }
+]
+```
+
+**Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | nuclear-engineering batch
+
+`cases.jsonl`:
+
+```json
+{"key": "nuc_specific_activity", "inputs": {"nuclide": "Co-60", "m": "1 g"}}
+{"key": "nuc_point_source_dose_rate", "inputs": {"Gamma": "3.51e-13 (J/kg)*m^2/((1/s)*h)", "A": "3.7e+11 (1/s)", "r": "2 m", "mu": "0.0656 1/cm", "x": "10 cm", "buildup": "linear"}}
+```
+
+```console
+$ nuclear-engineering batch < cases.jsonl
+{"outcome":"SOLVED","message":"","value":41868944303400.0,"unit":"1/s","solved_for":"A","si":[["m",0.001]],"values":[["A",41868944303400.0,"1/s"],["A_Ci",1131.59308928,""],["a",4.18689443034e+16,"1/(kg*s)"],["a_Ci_per_g",1131.59308928,""],["N",1.00479849416e+22,""]],"target":"A","phrase":"activity (Bq)","assumptions":["the nuclide is in the table (ICRP-107 half-lives, radioactivedecay 0.6.1)","m > 0"],"name":"Activity and specific activity of a mass of a radionuclide","equation":"N = m N_A / M, A = lambda N with lambda = ln 2 / T_half"}
+{"outcome":"SOLVED","message":"","value":7.75013916132e-6,"unit":"J/(kg*s)","solved_for":"H_dot","si":[["Gamma",9.750000000000001e-17],["A",370000000000.0],["r",2.0],["mu",6.5600000000000005],["x",0.1]],"values":[["H_dot",7.75013916132e-6,"J/(kg*s)"],["H_uSv_h",27900.5009807,""],["B",1.656,""],["T",0.859336289543,""]],"target":"H_dot","phrase":"dose rate (same quantity as Gamma: Sv/s, Gy/s)","assumptions":["point isotropic source","shield between source and point (x < r)","Taylor parameters only with the Taylor form"],"name":"Dose rate from a shielded point gamma source with buildup","equation":"H = Gamma A B(mu x) e^(-mu x) / r^2; B = 1, 1 + mu x, or A1 e^(-alpha1 mu x) + (1 - A1) e^(-alpha2 mu x)"}
+```
+
+### In your browser
+
+Open [Nuclear Engineering on ai999x.com](https://www.ai999x.com/models/nuclear-engineering-ai999x/#try), choose a capability and press **Compute**: the model runs on your own device as WebAssembly; nothing is sent anywhere. Change any input (any unit of the right kind) and the answer, its explanation and the figures follow.
+
+In your own page: `nuclear_engineering_ai999x.wasm` and the loader `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js).
+
+### Python
+
+```bash
+pip install nuclear-engineering-ai999x
+```
+
+## Worked examples in every form
+
+The same worked example from the command line, from Python and in the browser. Each command-line output is what the program printed.
+
+### Activation with target depletion and product burn-up
+
+The product activity when a high flux both depletes the target nuclide and burns up the product by its own absorption, the fraction of target left, and the time and value of the maximum product activity.
+
+Command line:
+
+```console
+$ nuclear-engineering solve nuc_activation_with_burnup N_T0=1e+22 "sigma_T=3.718e-27 m^2" "sigma_P=2e-28 m^2" "phi=1e+14 1/(cm^2*s)" "T_half=166346024.4 s" "t=31557600 s"
+A_P = 4.303591319e+12 1/s
+f_T = 0.8892906498
+t_max = 247907988.5 s
+A_max = 1.41140119e+13 1/s
+  by: Activation with target depletion and product burn-up  (dN_T/dt = -sigma_T phi N_T, dN_P/dt = sigma_T phi N_T - (lambda + sigma_P phi) N_P: N_P = N_T0 sigma_T phi (e^(-a t) - e^(-b t))/(b - a) (40 digits))
+  N_T0 = 1e+22
+  sigma_T = 3.718e-27 m^2
+  sigma_P = 2e-28 m^2
+  phi = 1e+18 1/(m^2*s)
+  T_half = 166346024.4 s
+  t = 31557600 s
+  assumes: constant flux; removal rates sigma_T phi and lambda + sigma_P phi differ
+```
+
+Python:
+
+```python
+import nuclear_engineering_ai999x as m
+
+a = m.solve("nuc_activation_with_burnup", N_T0="1e+22", sigma_T="3.718e-27 m^2", sigma_P="2e-28 m^2", phi="1e+14 1/(cm^2*s)", T_half="166346024.4 s", t="31557600 s")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/nuclear-engineering-ai999x/#cap-nuc_activation_with_burnup) and press **Compute in your browser**.
+
+### Activity and specific activity of a mass of a radionuclide
+
+The activity of a stated mass of a named radionuclide, its specific activity (activity per unit mass) and the number of atoms, from its tabulated half-life and atomic mass.
+
+Command line:
+
+```console
+$ nuclear-engineering solve nuc_specific_activity nuclide=Co-60 "m=1 g"
+A = 4.18689443e+13 1/s
+A_Ci = 1131.593089
+a = 4.18689443e+16 1/(kg*s)
+a_Ci_per_g = 1131.593089
+N = 1.004798494e+22
+  by: Activity and specific activity of a mass of a radionuclide  (N = m N_A / M, A = lambda N with lambda = ln 2 / T_half)
+  m = 0.001 kg
+  nuclide = Co-60
+  assumes: the nuclide is in the table (ICRP-107 half-lives, radioactivedecay 0.6.1); m > 0
+```
+
+Python:
+
+```python
+import nuclear_engineering_ai999x as m
+
+a = m.solve("nuc_specific_activity", nuclide="Co-60", m="1 g")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/nuclear-engineering-ai999x/#cap-nuc_specific_activity) and press **Compute in your browser**.
+
+_What this means:_ This calculation finds the total decay rate of a pure sample. Starting with a mass of 1 g, the number of atoms follows from the atomic mass and is then multiplied by the decay constant derived from the half-life. The result is an activity of 4.18689e+13 1/s and a specific activity of 4.18689e+16 1/(kg*s).
+
+### Activity of a radionuclide and its progeny after a decay time
+
+Starting from a pure parent of stated activity, the activities of the parent, of its first daughter and of the whole chain (all radioactive progeny) after a time t, with the real branching fractions (Sr-90/Y-90, Mo-99/Tc-99m, Cs-137/Ba-137m, Ge-68/Ga-68, ...).
+
+Command line:
+
+```console
+$ nuclear-engineering solve nuc_chain_activity nuclide=Mo-99 "A0=3.7e+10 (1/s)" "t=86400 s"
+A_parent = 2.874992172e+10 1/s
+A_daughter = 2.550612488e+10 1/s
+A_total = 5.425604681e+10 1/s
+ratio = 0.8871719766
+  by: Activity of a radionuclide and its progeny after a decay time  (Bateman solution of the whole chain (every branch), evaluated with 40-digit arithmetic)
+  A0 = 3.7e+10 1/s
+  t = 86400 s
+  nuclide = Mo-99
+  assumes: pure parent at t = 0; t >= 0; branching fractions and half-lives of radioactivedecay 0.6.1
+```
+
+Python:
+
+```python
+import nuclear_engineering_ai999x as m
+
+a = m.solve("nuc_chain_activity", nuclide="Mo-99", A0="3.7e+10 (1/s)", t="86400 s")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/nuclear-engineering-ai999x/#cap-nuc_chain_activity) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the activities of a radionuclide and its progeny after a specific decay time. Starting with an initial parent activity of 3.7e+10 (1/s), the model uses the Bateman solution to compute the remaining parent activity, which is now 2.87499e+10 1/s, and the grown-in activity of the first daughter, now 2.55061e+10 1/s. The total activity for all radioactive members in the chain is reported as 5.4256e+10 1/s, while the ratio of daughter to parent activity is given by 0.887172. These values reflect the natural decay kinetics without external removal or production.
+
+### Irradiation time to reach a fraction of saturation activity
+
+How long a target must be irradiated (constant flux) for the induced activity to reach a stated fraction of its saturation value, in time and in product half-lives.
+
+Command line:
+
+```console
+$ nuclear-engineering solve nuc_irradiation_time_for_saturation "T_half=15 h" f=0.9
+t_irr = 179384.1171 s
+n_half = 3.321928095
+  by: Irradiation time to reach a fraction of saturation activity  (1 - e^(-lambda t) = f -> t = -ln(1 - f)/lambda)
+  T_half = 54000 s
+  f = 0.9
+  assumes: constant flux; 0 < f < 1
+```
+
+Python:
+
+```python
+import nuclear_engineering_ai999x as m
+
+a = m.solve("nuc_irradiation_time_for_saturation", T_half="15 h", f="0.9")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/nuclear-engineering-ai999x/#cap-nuc_irradiation_time_for_saturation) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the precise duration a target must be exposed to a constant neutron flux to achieve a specific fraction of its maximum possible induced activity. Given a product half-life of 15 h and a desired saturation fraction of 0.9, the required irradiation time is computed as 179384 s. This result indicates that the process takes 3.32193 half-lives, providing engineers with a clear schedule for production planning while accounting for the exponential approach to saturation limits.
+
+## Documentation
+
+- **Rust user guide** — the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/nuclear-engineering-ai999x/blob/main/docs/nuclear_engineering_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/nuclear-engineering-ai999x/blob/main/docs/nuclear_engineering_ai999x_rust_guide.md)
+- **Python guide** — every capability with a Python example: [PDF](https://huggingface.co/AI999X/nuclear-engineering-ai999x/blob/main/docs/nuclear_engineering_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/nuclear-engineering-ai999x/blob/main/docs/nuclear_engineering_ai999x_capabilities.md)
+- **Desktop app & command line** — downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
+- **Model page** — compute in your browser, every capability explained: https://www.ai999x.com/models/nuclear-engineering-ai999x/
 
 ## Highlights
 
@@ -20,6 +321,7 @@ nuclear-engineering-ai999x is an offline, deterministic Python solver that answe
 - **Zero wrong answers by design.** Seven explicit outcomes — SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR — never a silent guess. Every one of its 554 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
+- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `nuclear-engineering` command line for Windows and Linux, and WebAssembly on the model page — no Python, no network.
 - **Small and portable.** Pure Python (sympy, mpmath); identical answers on Windows and Linux (Python 3.10, 3.11, 3.12, 3.13, 3.14).
 - **Coverage:** radioactive decay chains and activity, radiation shielding and dosimetry, detectors and counting, neutron physics, reactor criticality and kinetics, fission-product poisons, fuel depletion and enrichment, and fuel-rod heat transfer.
 
@@ -38,7 +340,7 @@ nuclear-engineering-ai999x is an offline, deterministic Python solver that answe
 | Creator / engineer | Ibnul Jaif Farabi |
 | Organization | AI999X |
 
-## Quickstart
+## Python quick start
 
 ```bash
 pip install nuclear-engineering-ai999x
@@ -61,7 +363,7 @@ nuclear_engineering.ask("Who created you?").message
 # -> nuclear-engineering-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `nuclear-engineering-ai999x "<question>"`, `nuclear-engineering-ai999x --capabilities`. The outputs above were produced by running this exact code on nuclear-engineering-ai999x 1.0.3.
+The Python package also installs a Python command, `nuclear-engineering-ai999x "<question>"`; for the native program use `nuclear-engineering` (above). The outputs above were produced by running this exact code on nuclear-engineering-ai999x 1.0.3.
 
 ## Find the right capability, and draw it
 
@@ -83,7 +385,7 @@ nuclear_engineering.search("Solve x^2 - 5x + 6 = 0", k=2)
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
 
-## Worked examples
+## Python worked examples, with their steps
 
 Each question was put to `nuclear-engineering-ai999x`; the answer is the one it returned, with the steps it took.
 

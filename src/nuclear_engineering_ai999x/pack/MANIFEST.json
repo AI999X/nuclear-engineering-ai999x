@@ -1,5 +1,5 @@
 {
- "package": "1.0.3",
+ "package": "1.1.0",
  "pack": "1.0.1",
  "knowledge_db": null,
  "files": {
@@ -9,10 +9,10 @@
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
   "capabilities/procedures.py": "bc26478631127ce372bde6a052d03bf8883e02fe9708eaca3f8ec1ced58f6c64",
   "capabilities/procedures_certified.json": "c15178295534fa3c912f151a38492a47b4d57b25fb8727e252b734313f37cb7b",
-  "nuclear_engineering_knowledge_public.sqlite": "9dbfeab5ad8d7295b566ed8701645e5dcbc18951e96b85aa6545abe28a16d9f7",
+  "nuclear_engineering_knowledge_public.sqlite": "150a80b130c10887255ae93eb57b53d45a7b1db1d850b8f892acef04c0155430",
   "search/encoder.int8.onnx": "521452d928a72da4d241b1835ab0f46b0e81ff58ffff0367b9a7029bd129fbd9",
   "search/tokenizer.json": "b2f2deb461e6ad672b8e42aac29773e7a9be77d582cdf58808113ea43fda565e",
-  "search/index.json": "d8f81d9706c9a0efa7d9643bcec3d39a6c3500766ce0f44937d85ad90f772507",
+  "search/index.json": "cbd28f9d940abc33d3bfd4a61beed818eda670deffcfe40b46845d84423f9ef9",
   "reader/reader.int8.onnx": "ecee16f238097a01129c8c071809cc24d3edb25c7d73ca29bd5c383981ca0c33",
   "reader/tokenizer.json": "a54ec88bce54ad97ea91cd47911b41025e80d47e13af62d47cf5758a65ba8387",
   "reader/labels.json": "328c9073146573ae8e9890ac487d5a4cfe6914fef45fb0047633ac580f8fff80"
@@ -26,11 +26,13 @@
   "derivations.py",
   "engine.py",
   "explain.py",
+  "explanations.py",
   "expr.py",
   "formula_solver.py",
   "identity.py",
   "inputs.py",
   "knowledge_store.py",
+  "native.py",
   "pack.py",
   "planner.py",
   "policy.py",
