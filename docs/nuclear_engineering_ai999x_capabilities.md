@@ -629,7 +629,7 @@ $$
 
 ![N (expected counts) against tc (counting time) from 360 s to 36000 s on a logarithmic axis](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-counts-during-decay-curve)
 
-*N (expected counts) against tc (counting time) from 360 s to 36000 s on a logarithmic axis. One curve for each value of A0 (activity at the reference time): 100000 1/s, 50000 1/s, 200000 1/s. Other inputs as in the worked example: T_half = 6586.2 s, eff = 0.2, y = 0.967. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, tc = 3600 s, N = 5.7954e+07.*
+*N (expected counts) against tc (counting time) from 360 s to 36000 s on a logarithmic axis. One curve for each value of A0 (activity at the reference time): 100000 1/s, 50000 1/s, 200000 1/s. Other inputs as in the worked example: T_half = 6586.2 s, eff = 0.2, y = 0.9670000000000001. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, tc = 3600 s, N = 5.7954e+07.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_counts_during_decay', A0=100000.0, T_half=6586.2, tc=3600.0, eff=0.2, y=0.967)
@@ -741,7 +741,7 @@ $$
 
 ![A_eoi (activity at the end of irradiation) against M (molar mass of the target element) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-activation-activity-curve-2)
 
-*A_eoi (activity at the end of irradiation) against M (molar mass of the target element) from 0.0294666 kg/mol to 0.0883998 kg/mol. One curve for each value of m (mass of the target element): 0.001 kg, 0.0005 kg, 0.002 kg. Other inputs as in the worked example: theta = 1.0, sigma = 3.718e-27 m^2, phi = 1e+17 1/(m^2*s), T_half = 166346024.445504 s, t_irr = 2592000.0 s. 31 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, M = 0.0589332 kg/mol, A_eoi = 4.0814e+10 1/s.*
+*A_eoi (activity at the end of irradiation) against M (molar mass of the target element) from 0.0294666 kg/mol to 0.0883998 kg/mol. One curve for each value of m (mass of the target element): 0.001 kg, 0.0005 kg, 0.002 kg. Other inputs as in the worked example: theta = 1.0, sigma = 3.7179999999999996e-27 m^2, phi = 1e+17 1/(m^2*s), T_half = 166346024.445504 s, t_irr = 2592000.0 s. 31 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, M = 0.0589332 kg/mol, A_eoi = 4.0814e+10 1/s.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_activation_activity', m=0.001, M=0.058933195, theta=1.0, sigma=3.718e-27, phi=1e+17, T_half=166346024.445504, t_irr=2592000.0)
@@ -794,7 +794,7 @@ $$
 
 ![A_P (product activity at t) against t (irradiation time) from 3](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-activation-with-burnup-curve)
 
-*A_P (product activity at t) against t (irradiation time) from 3.15576e+06 s to 3.1558e+08 s on a logarithmic axis. One curve for each value of N_T0 (initial number of target atoms): 1.0000e+22, 5.0000e+21, 2.0000e+22. Other inputs as in the worked example: sigma_T = 3.718e-27 m^2, sigma_P = 2e-28 m^2, phi = 1e+18 1/(m^2*s), T_half = 166346024.445504 s. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, t = 3.1558e+07 s, A_P = 4.3036e+12 1/s.*
+*A_P (product activity at t) against t (irradiation time) from 3.15576e+06 s to 3.1558e+08 s on a logarithmic axis. One curve for each value of N_T0 (initial number of target atoms): 1.0000e+22, 5.0000e+21, 2.0000e+22. Other inputs as in the worked example: sigma_T = 3.7179999999999996e-27 m^2, sigma_P = 2e-28 m^2, phi = 1e+18 1/(m^2*s), T_half = 166346024.445504 s. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, t = 3.1558e+07 s, A_P = 4.3036e+12 1/s.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_activation_with_burnup', N_T0=1e+22, sigma_T=3.718e-27, sigma_P=2e-28, phi=1e+18, T_half=166346024.445504, t=31557600.0)
@@ -1106,7 +1106,7 @@ $$
 
 ![H (committed equivalent dose (Sv)) against T_p (physical half-life) from 69298](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-committed-dose-retention-curve)
 
-*H (committed equivalent dose (Sv)) against T_p (physical half-life) from 69298.8 s to 6.92988e+06 s on a logarithmic axis. One curve for each value of I (activity taken into the organ (intake reaching it)): 1e+06 1/s, 500000 1/s, 2e+06 1/s. Other inputs as in the worked example: f = [0.3], Tb = [80.0], t_unit = d, E = 2.8839179412000003e-14 J, w_R = 1.0, m = 0.02 kg, tau = 1577880000.0 s. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, T_p = 692988 s, H = 0.393079 J/kg.*
+*H (committed equivalent dose (Sv)) against T_p (physical half-life) from 69298.8 s to 6.92988e+06 s on a logarithmic axis. One curve for each value of I (activity taken into the organ (intake reaching it)): 1e+06 1/s, 500000 1/s, 2e+06 1/s. Other inputs as in the worked example: f = [0.3], Tb = [80.0], t_unit = d, E = 2.8839179412e-14 J, w_R = 1.0, m = 0.02 kg, tau = 1577880000.0 s. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, T_p = 692988 s, H = 0.393079 J/kg.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_committed_dose_retention', I=1000000.0, f=[0.3], Tb=[80.0], t_unit='d', T_p=692988.48, E=2.8839179412000003e-14, w_R=1.0, m=0.02, tau=1577880000.0)
@@ -1166,7 +1166,7 @@ $$
 
 ![H_dot (dose rate (same quantity as Gamma: Sv/s, Gy/s)) against r (source-to-point distance) from 1 m to 3 m](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-point-source-dose-rate-curve)
 
-*H_dot (dose rate (same quantity as Gamma: Sv/s, Gy/s)) against r (source-to-point distance) from 1 m to 3 m. One curve for each value of Gamma (dose-rate constant of the nuclide (e.g. uSv*m^2/(MBq*h))): 9.7500e-17 J*m^2/kg, 4.8750e-17 J*m^2/kg, 1.9500e-16 J*m^2/kg. Other inputs as in the worked example: A = 370000000000.0 1/s, mu = 6.56 1/m, x = 0.1 m, buildup = linear. 31 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, r = 2 m, H_dot = 7.7501e-06 J/(kg*s).*
+*H_dot (dose rate (same quantity as Gamma: Sv/s, Gy/s)) against r (source-to-point distance) from 1 m to 3 m. One curve for each value of Gamma (dose-rate constant of the nuclide (e.g. uSv*m^2/(MBq*h))): 9.7500e-17 J*m^2/kg, 4.8750e-17 J*m^2/kg, 1.9500e-16 J*m^2/kg. Other inputs as in the worked example: A = 370000000000.0 1/s, mu = 6.5600000000000005 1/m, x = 0.1 m, buildup = linear. 31 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, r = 2 m, H_dot = 7.7501e-06 J/(kg*s).*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_point_source_dose_rate', Gamma=9.750000000000001e-17, A=370000000000.0, r=2.0, mu=6.56, x=0.1, buildup='linear')
@@ -1230,7 +1230,7 @@ $$
 
 ![x (required shield thickness) against mu (linear attenuation coefficient of the shield) from 32](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-shield-thickness-for-dose-rate-curve-2)
 
-*x (required shield thickness) against mu (linear attenuation coefficient of the shield) from 32.8 1/m to 98.4 1/m. One curve for each value of r (source-to-point distance): 2 m, 1 m, 4 m. Other inputs as in the worked example: Gamma = 9.750000000000001e-17 J*m^2/kg, A = 370000000000.0 1/s, H_target = 6.944444444444445e-10 J/(kg*s), buildup = linear. 31 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, mu = 65.6 1/m, x = 0.183532 m.*
+*x (required shield thickness) against mu (linear attenuation coefficient of the shield) from 32.8 1/m to 98.4 1/m. One curve for each value of r (source-to-point distance): 2 m, 1 m, 4 m. Other inputs as in the worked example: Gamma = 9.75e-17 J*m^2/kg, A = 370000000000.0 1/s, H_target = 6.944444444444444e-10 J/(kg*s), buildup = linear. 31 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, mu = 65.6 1/m, x = 0.183532 m.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_shield_thickness_for_dose_rate', Gamma=9.750000000000001e-17, A=370000000000.0, r=2.0, mu=65.6, H_target=6.944444444444445e-10, buildup='linear')
@@ -2009,7 +2009,7 @@ $$
 
 ![eff (total efficiency (interacting photons per emitted photon)) against d (source-to-face distance) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-detector-efficiency-point-source-curve)
 
-*eff (total efficiency (interacting photons per emitted photon)) against d (source-to-face distance) from 0.01 m to 1 m on a logarithmic axis, logarithmic output axis. One curve for each value of a (radius of the detector face): 0.0381 m, 0.01905 m, 0.0762 m. Other inputs as in the worked example: t = 0.0762 m, mu = 28.0 1/m. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, d = 0.1 m, eff = 0.0291542.*
+*eff (total efficiency (interacting photons per emitted photon)) against d (source-to-face distance) from 0.01 m to 1 m on a logarithmic axis, logarithmic output axis. One curve for each value of a (radius of the detector face): 0.0381 m, 0.01905 m, 0.0762 m. Other inputs as in the worked example: t = 0.0762 m, mu = 28.000000000000004 1/m. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, d = 0.1 m, eff = 0.0291542.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_detector_efficiency_point_source', d=0.1, a=0.0381, t=0.0762, mu=28.0)
@@ -2266,7 +2266,7 @@ $$
 
 ![MR (moderating ratio xi Sigma_s/Sigma_a (when Sigma_a > 0)) as value 2 of n (atoms of each element per molecule) moves from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-moderator-mixture-sensitivity)
 
-*MR (moderating ratio xi Sigma_s/Sigma_a (when Sigma_a > 0)) as value 2 of n (atoms of each element per molecule) moves from 0.5 to 2.5, the other values as given ([2.0, 1.0]); 41 runs of nuclear-engineering-ai999x. Other inputs: A = [1.0, 16.0], sigma_s = [20.0, 3.8], sigma_a = [0.332, 0.00019], rho = 1000.0 kg/m^3, M = 0.018015 kg/mol. Marked: the worked example, n[2] = 1, MR = 60.91.*
+*MR (moderating ratio xi Sigma_s/Sigma_a (when Sigma_a > 0)) as value 2 of n (atoms of each element per molecule) moves from 0.5 to 2.5, the other values as given ([2.0, 1.0]); 41 runs of nuclear-engineering-ai999x. Other inputs: A = [1.0, 16.0], sigma_s = [20.0, 3.8], sigma_a = [0.332, 0.00019], rho = 999.9999999999999 kg/m^3, M = 0.018015 kg/mol. Marked: the worked example, n[2] = 1, MR = 60.91.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_moderator_mixture', n=[2.0, 1.0], A=[1.0, 16.0], sigma_s=[20.0, 3.8], sigma_a=[0.332, 0.00019], rho=1000.0, M=0.018015)
@@ -2712,7 +2712,7 @@ $$
 
 ![k_eff (effective multiplication factor) against Sigma_a (macroscopic absorption cross section) from 1](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-bare-reactor-keff-curve)
 
-*k_eff (effective multiplication factor) against Sigma_a (macroscopic absorption cross section) from 1.5 1/m to 150 1/m on a logarithmic axis. One curve for each value of nuSigma_f (nu times the macroscopic fission cross section): 18 1/m, 9 1/m, 36 1/m. Other inputs as in the worked example: D = 0.009 m, extrapolation = 2.13D, geometry = sphere, R = 0.12 m. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, Sigma_a = 15 1/m, k_eff = 0.919049.*
+*k_eff (effective multiplication factor) against Sigma_a (macroscopic absorption cross section) from 1.5 1/m to 150 1/m on a logarithmic axis. One curve for each value of nuSigma_f (nu times the macroscopic fission cross section): 18 1/m, 9 1/m, 36 1/m. Other inputs as in the worked example: D = 0.009000000000000001 m, extrapolation = 2.13D, geometry = sphere, R = 0.12 m. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, Sigma_a = 15 1/m, k_eff = 0.919049.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_bare_reactor_keff', D=0.009, Sigma_a=15.0, nuSigma_f=18.0, extrapolation='2.13D', geometry='sphere', R=0.12)
@@ -2774,7 +2774,7 @@ $$
 
 ![k_eff (effective multiplication factor) against Sigma_a2 (thermal-group absorption cross section) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-two-group-bare-keff-curve)
 
-*k_eff (effective multiplication factor) against Sigma_a2 (thermal-group absorption cross section) from 0.8 1/m to 80 1/m on a logarithmic axis. One curve for each value of nuSigma_f2 (thermal-group nu Sigma_f): 13.5 1/m, 6.75 1/m, 27 1/m. Other inputs as in the worked example: geometry = cylinder, D1 = 0.0143 m, D2 = 0.0037 m, Sigma_a1 = 1.0 1/m, Sigma_12 = 1.8 1/m, nuSigma_f1 = 0.5 1/m, R = 1.7 m, H = 3.7 m. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, Sigma_a2 = 8 1/m, k_eff = 1.24472.*
+*k_eff (effective multiplication factor) against Sigma_a2 (thermal-group absorption cross section) from 0.8 1/m to 80 1/m on a logarithmic axis. One curve for each value of nuSigma_f2 (thermal-group nu Sigma_f): 13.5 1/m, 6.75 1/m, 27 1/m. Other inputs as in the worked example: geometry = cylinder, D1 = 0.0143 m, D2 = 0.0037 m, Sigma_a1 = 1.0 1/m, Sigma_12 = 1.7999999999999998 1/m, nuSigma_f1 = 0.5 1/m, R = 1.7 m, H = 3.7 m. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, Sigma_a2 = 8 1/m, k_eff = 1.24472.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_two_group_bare_keff', geometry='cylinder', D1=0.0143, D2=0.0037, Sigma_a1=1.0, Sigma_12=1.8, Sigma_a2=8.0, nuSigma_f1=0.5, nuSigma_f2=13.5, R=1.7, H=3.7)
@@ -2830,7 +2830,7 @@ $$
 
 ![a (critical core thickness) against T_r (reflector thickness on each face) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-reflected-slab-critical-curve)
 
-*a (critical core thickness) against T_r (reflector thickness on each face) from 0.02 m to 2 m on a logarithmic axis. One curve for each value of nuSigma_fc (core nu Sigma_f): 18 1/m, 36 1/m. Other inputs as in the worked example: D_c = 0.009 m, Sigma_ac = 15.0 1/m, D_r = 0.0016 m, Sigma_ar = 1.97 1/m, extrapolation = 2.13D. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, T_r = 0.2 m, a = 0.0360662 m.*
+*a (critical core thickness) against T_r (reflector thickness on each face) from 0.02 m to 2 m on a logarithmic axis. One curve for each value of nuSigma_fc (core nu Sigma_f): 18 1/m, 36 1/m. Other inputs as in the worked example: D_c = 0.009000000000000001 m, Sigma_ac = 15.0 1/m, D_r = 0.0016 m, Sigma_ar = 1.97 1/m, extrapolation = 2.13D. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, T_r = 0.2 m, a = 0.0360662 m.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_reflected_slab_critical', D_c=0.009, Sigma_ac=15.0, nuSigma_fc=18.0, D_r=0.0016, Sigma_ar=1.97, T_r=0.2, extrapolation='2.13D')
@@ -3109,7 +3109,7 @@ $$
 
 ![P (thermal power) against R (extrapolated radius) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-core-power-from-flux-curve)
 
-*P (thermal power) against R (extrapolated radius) from 0.85 m to 2.55 m. One curve for each value of Sigma_f (macroscopic fission cross section): 0.2 1/m, 0.1 1/m, 0.4 1/m. Other inputs as in the worked example: geometry = cylinder, E_f = 3.204353268e-11 J, phi_max = 1e+17 1/(m^2*s), H = 3.7 m. 31 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, R = 1.7 m, P = 5.91748e+06 W.*
+*P (thermal power) against R (extrapolated radius) from 0.85 m to 2.55 m. One curve for each value of Sigma_f (macroscopic fission cross section): 0.2 1/m, 0.1 1/m, 0.4 1/m. Other inputs as in the worked example: geometry = cylinder, E_f = 3.2043532679999995e-11 J, phi_max = 1e+17 1/(m^2*s), H = 3.7 m. 31 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, R = 1.7 m, P = 5.91748e+06 W.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_core_power_from_flux', geometry='cylinder', Sigma_f=0.2, E_f=3.204353268e-11, phi_max=1e+17, R=1.7, H=3.7)
@@ -3268,7 +3268,7 @@ $$
 
 ![P (relative power P(t)/P0) against t (time after the step) from 1 s to 100 s on a logarithmic axis](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-power-after-step-six-group-curve)
 
-*P (relative power P(t)/P0) against t (time after the step) from 1 s to 100 s on a logarithmic axis. One curve for each value of rho (step reactivity (absolute, or in pcm, %, dollars or cents)): 0.001, 0.0005, 0.002. Other inputs as in the worked example: beta = [0.000215, 0.001424, 0.001274, 0.002568, 0.00…, lam = [0.0124, 0.0305, 0.111, 0.301, 1.14, 3.01], Lambda = 5e-05 s. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, t = 10 s, P = 1.61699.*
+*P (relative power P(t)/P0) against t (time after the step) from 1 s to 100 s on a logarithmic axis. One curve for each value of rho (step reactivity (absolute, or in pcm, %, dollars or cents)): 0.001, 0.0005, 0.002. Other inputs as in the worked example: beta = [0.000215, 0.001424, 0.001274, 0.002568, 0.00…, lam = [0.0124, 0.0305, 0.111, 0.301, 1.14, 3.01], Lambda = 4.9999999999999996e-05 s. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, t = 10 s, P = 1.61699.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_power_after_step_six_group', rho=0.001, beta=[0.000215, 0.001424, 0.001274, 0.002568, 0.000748, 0.000273], lam=[0.0124, 0.0305, 0.111, 0.301, 1.14, 3.01], Lambda=5e-05, t=10.0)
@@ -3320,7 +3320,7 @@ $$
 
 ![T (stable period) against rho (step reactivity (absolute, or in pcm, %, dollars or cents)) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-stable-period-six-group-curve)
 
-*T (stable period) against rho (step reactivity (absolute, or in pcm, %, dollars or cents)) from 0.0001 to 0.01 on a logarithmic axis. Outputs with the same unit drawn together: T_d (doubling time (negative: halving time)). Other inputs as in the worked example: beta = [0.000215, 0.001424, 0.001274, 0.002568, 0.00…, lam = [0.0124, 0.0305, 0.111, 0.301, 1.14, 3.01], Lambda = 5e-05 s. 37 points computed by nuclear-engineering-ai999x; marked: the worked example, rho = 0.001, T = 54.964 s.*
+*T (stable period) against rho (step reactivity (absolute, or in pcm, %, dollars or cents)) from 0.0001 to 0.01 on a logarithmic axis. Outputs with the same unit drawn together: T_d (doubling time (negative: halving time)). Other inputs as in the worked example: beta = [0.000215, 0.001424, 0.001274, 0.002568, 0.00…, lam = [0.0124, 0.0305, 0.111, 0.301, 1.14, 3.01], Lambda = 4.9999999999999996e-05 s. 37 points computed by nuclear-engineering-ai999x; marked: the worked example, rho = 0.001, T = 54.964 s.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_stable_period_six_group', rho=0.001, beta=[0.000215, 0.001424, 0.001274, 0.002568, 0.000748, 0.000273], lam=[0.0124, 0.0305, 0.111, 0.301, 1.14, 3.01], Lambda=5e-05)
@@ -3371,7 +3371,7 @@ $$
 
 ![rho (reactivity) against T (stable period (give this or T_d; negative for falling power)) from 6 s to 600 s on a logarithmic axis](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-reactivity-from-period-curve)
 
-*rho (reactivity) against T (stable period (give this or T_d; negative for falling power)) from 6 s to 600 s on a logarithmic axis. Other inputs as in the worked example: beta = [0.000215, 0.001424, 0.001274, 0.002568, 0.00…, lam = [0.0124, 0.0305, 0.111, 0.301, 1.14, 3.01], Lambda = 5e-05 s. 41 points computed by nuclear-engineering-ai999x; marked: the worked example, T = 60 s, rho = 0.000940626.*
+*rho (reactivity) against T (stable period (give this or T_d; negative for falling power)) from 6 s to 600 s on a logarithmic axis. Other inputs as in the worked example: beta = [0.000215, 0.001424, 0.001274, 0.002568, 0.00…, lam = [0.0124, 0.0305, 0.111, 0.301, 1.14, 3.01], Lambda = 4.9999999999999996e-05 s. 41 points computed by nuclear-engineering-ai999x; marked: the worked example, T = 60 s, rho = 0.000940626.*
 
 ![rho (reactivity) over T (stable period (give this or T_d; negative for falling power)) from 6 s to 600 s and Lambda (prompt neutron generation time) from 2](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-reactivity-from-period-field)
 
@@ -3647,7 +3647,7 @@ $$
 
 ![m (U-235 mass remaining) against phi (neutron flux) from 3](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-depletion-constant-flux-curve)
 
-*m (U-235 mass remaining) against phi (neutron flux) from 3.0000e+16 1/(m^2*s) to 3.0000e+18 1/(m^2*s) on a logarithmic axis. One curve for each value of m0 (initial mass of U-235): 1 kg, 0.5 kg, 2 kg. Other inputs as in the worked example: sigma_a = 6.809e-26 m^2, sigma_f = 5.826e-26 m^2, t = 31557600.0 s, E_f = 3.204353268e-11 J. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, phi = 3.0000e+17 1/(m^2*s), m = 0.524858 kg.*
+*m (U-235 mass remaining) against phi (neutron flux) from 3.0000e+16 1/(m^2*s) to 3.0000e+18 1/(m^2*s) on a logarithmic axis. One curve for each value of m0 (initial mass of U-235): 1 kg, 0.5 kg, 2 kg. Other inputs as in the worked example: sigma_a = 6.809e-26 m^2, sigma_f = 5.826e-26 m^2, t = 31557600.0 s, E_f = 3.2043532679999995e-11 J. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, phi = 3.0000e+17 1/(m^2*s), m = 0.524858 kg.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_depletion_constant_flux', m0=1.0, sigma_a=6.809e-26, sigma_f=5.826e-26, phi=3e+17, t=31557600.0, E_f=3.204353268e-11)
@@ -3762,7 +3762,7 @@ $$
 
 ![T_0 (fuel centreline temperature) against k_f (fuel thermal conductivity) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-fuel-rod-temperatures-curve)
 
-*T_0 (fuel centreline temperature) against k_f (fuel thermal conductivity) from 0.3 W/(m*K) to 30 W/(m*K) on a logarithmic axis. One curve for each value of q_lin (linear heat rate q' (W/m)): 20000 W/m, 10000 W/m, 40000 W/m. Other inputs as in the worked example: R_f = 0.0041 m, h_g = 5000.0 W/(m^2*K), t_c = 0.00057 m, k_c = 15.0 W/(m*K), h = 34000.0 W/(m^2*K), T_cool = 580.0 K. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, k_f = 3 W/(m*K), T_0 = 1313.46 K.*
+*T_0 (fuel centreline temperature) against k_f (fuel thermal conductivity) from 0.3 W/(m*K) to 30 W/(m*K) on a logarithmic axis. One curve for each value of q_lin (linear heat rate q' (W/m)): 20000 W/m, 10000 W/m, 40000 W/m. Other inputs as in the worked example: R_f = 0.0040999999999999995 m, h_g = 5000.0 W/(m^2*K), t_c = 0.00057 m, k_c = 15.0 W/(m*K), h = 34000.0 W/(m^2*K), T_cool = 580.0 K. 41 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, k_f = 3 W/(m*K), T_0 = 1313.46 K.*
 
 ```python
 nuclear_engineering_ai999x.solve('nuc_fuel_rod_temperatures', q_lin=20000.0, R_f=0.0041, k_f=3.0, h_g=5000.0, t_c=0.00057, k_c=15.0, h=34000.0, T_cool=580.0)
