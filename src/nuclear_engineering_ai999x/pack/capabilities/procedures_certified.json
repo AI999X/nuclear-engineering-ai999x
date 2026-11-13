@@ -82,9 +82,10 @@
   "nuc_escape_peaks",
   "nuc_half_value_layer",
   "nuc_radiation_unit_conversion",
-  "nuc_constant_power_depletion"
+  "nuc_constant_power_depletion",
+  "nuc_macroscopic_cross_section"
  ],
- "generated": "2026-10-24",
+ "generated": "2026-11-13",
  "tool": "tools/certify_procedures.py",
  "report": "release/procedure_certification.json",
  "weak_references": {

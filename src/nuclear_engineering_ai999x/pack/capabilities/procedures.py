@@ -5277,3 +5277,70 @@ for _k, _vals in _EXV.items():
     if _k in PROCEDURES:
         for _e, _v in zip(PROCEDURES[_k]["examples"], _vals):
             _e["outputs"].update(_v)
+
+
+# ================================================================================================ core additions (2026-11-12)
+# The opening neutron-interaction calculation for any material (only UO2 fuel had it). The binding energy from a
+# measured mass defect is computed by the chemistry model (chemistry.procedure.nuclear_binding_energy) and the Q value
+# and threshold of a reaction by quantum physics (nuclear_reaction_threshold): they are not duplicated here.
+def macroscopic_cross_section(rho, M, sigma, phi=None):
+    _need(_isnum(rho) and rho > 0, "the density must be positive")
+    _need(_isnum(M) and M > 0, "the molar mass must be positive")
+    _need(_isnum(sigma) and sigma > 0, "the microscopic cross section must be positive")
+    N = rho * NA / M
+    S = N * sigma
+    out = dict(N=N, Sigma=S, Sigma_cm=S / 100.0, mfp=1.0 / S, mfp_cm=100.0 / S)
+    if phi is not None:
+        _need(_isnum(phi) and phi > 0, "the neutron flux must be positive")
+        out["R"] = S * phi
+    return _out(**out)
+
+
+def _ref_macroscopic_cross_section(rho, M, sigma, phi=None):
+    """In cgs units with scipy's Avogadro constant and centi prefix (atoms per cm^3 from g/cm^3 and g/mol, sigma in
+    cm^2); the mean free path as the mean of the exponential flight-length distribution (scipy quad of u e^-u, scaled
+    by 1/Sigma); the reaction rate per cm^3 converted back to SI."""
+    from scipy import constants as sc
+    N_cm3 = (rho / 1000.0) * sc.Avogadro / (M * 1000.0)
+    S_cm = N_cm3 * (sigma / sc.centi ** 2)
+    mfp_cm = _quad(lambda u: u * math.exp(-u), 0.0, math.inf) / S_cm
+    out = {"N": N_cm3 * 1e6, "Sigma": S_cm * 100.0, "Sigma_cm": S_cm, "mfp": mfp_cm / 100.0, "mfp_cm": mfp_cm}
+    if phi is not None:
+        out["R"] = S_cm * (phi / 1e4) * 1e6
+    return out
+
+
+def _wrong_macroscopic_cross_section(rho, M, sigma, phi=None):
+    N = rho * NA / (M * 1000.0)                      # the molar mass taken as if in g/mol a second time
+    S = N * sigma
+    out = dict(N=N, Sigma=S, Sigma_cm=S / 100.0, mfp=1.0 / S, mfp_cm=100.0 / S)
+    if phi is not None:
+        out["R"] = S * phi
+    return _out(**out)
+
+
+_add("nuc_macroscopic_cross_section",
+     name="Macroscopic cross section, mean free path and reaction rate of a material", topic="neutron physics / cross sections",
+     purpose="The number density N = rho N_A / M of the atoms (or molecules) of a material, its macroscopic cross section Sigma = N sigma, the mean free path 1/Sigma and, with a neutron flux, the reaction rate density R = Sigma phi.",
+     inputs=[_phys("rho", "density", "density of the material (e.g. 1.6 g/cm^3)"), _phys("M", "molar_mass", "molar mass of the atom or molecule the cross section refers to (g/mol)"),
+             _phys("sigma", "microscopic_cross_section", "microscopic cross section per atom or molecule (barns)"),
+             _phys("phi", "neutron_flux", "neutron flux (optional, for the reaction rate)", required=False)],
+     outputs=[_o("N", "number_density", "atoms (or molecules) per volume"), _o("Sigma", "macroscopic_cross_section", "macroscopic cross section N sigma"),
+              _o("Sigma_cm", "number", "macroscopic cross section in 1/cm"), _o("mfp", "length", "mean free path 1/Sigma"),
+              _o("mfp_cm", "number", "mean free path in cm"), _o("R", "volumetric_reaction_rate", "reaction rate density Sigma phi (1/(m^3 s))")],
+     primary="Sigma", conditions=["rho, M, sigma > 0", "one nuclide (or one molecule) carrying the stated cross section", "phi > 0 when given"],
+     method="N = rho N_A / M, Sigma = N sigma, lambda = 1/Sigma, R = Sigma phi",
+     latex=r"N = \frac{\rho N_A}{M},\quad \Sigma = N\sigma,\quad \lambda = \frac{1}{\Sigma},\quad R = \Sigma\phi",
+     run=macroscopic_cross_section, reference=_ref_macroscopic_cross_section, wrong=_wrong_macroscopic_cross_section,
+     rand=lambda rng: {"rho": _sig(_lu(rng, 500.0, 20000.0)), "M": _sig(rng.uniform(1.0, 240.0)) / 1000.0, "sigma": _sig(_lu(rng, 1e-3, 1e4)) * BARN,
+                       **({"phi": _sig(_lu(rng, 1e14, 1e19))} if rng.random() < 0.5 else {})},
+     phrases=("Macroscopic cross section", "Mean free path in a material", "Reaction rate in a material"),
+     examples=[_ex({"rho": 1600.0, "M": 0.012011, "sigma": 0.0035e-28},
+                   {"N": 1600.0 * NA / 0.012011, "Sigma": 1600.0 * NA / 0.012011 * 0.0035e-28, "mfp": 1.0 / (1600.0 * NA / 0.012011 * 0.0035e-28)},
+                   written={"rho": "1.6 g/cm^3", "M": "12.011 g/mol", "sigma": "0.0035 b"}),
+               _ex({"rho": 2340.0, "M": 0.01081, "sigma": 767e-28, "phi": 1e17},
+                   {"N": 2340.0 * NA / 0.01081, "Sigma": 2340.0 * NA / 0.01081 * 767e-28, "R": 2340.0 * NA / 0.01081 * 767e-28 * 1e17},
+                   written={"rho": "2.34 g/cm^3", "M": "10.81 g/mol", "sigma": "767 b", "phi": "1e13 1/(cm^2*s)"})],
+     level="beginner",
+     extra_q=[{"q": "Macroscopic cross section: rho = 1.6 g/cm^3, M = 12.011 g/mol, sigma = -0.0035 b", "outcome": "INVALID_INPUT"},
+              {"q": "Macroscopic cross section: rho = 2.34 g/cm^3, M = 10.81 g/mol, sigma = 767 b, phi = 0 1/(cm^2*s)", "outcome": "INVALID_INPUT"}])

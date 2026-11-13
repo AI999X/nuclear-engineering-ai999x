@@ -1,8 +1,8 @@
 # nuclear-engineering: the Nuclear Engineering program, user guide
 
-**nuclear-engineering-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**nuclear-engineering-ai999x 1.6.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
-Nuclear Engineering covers radioactive decay and decay chains, binding energy, reactor physics basics, radiation shielding and attenuation, and dosimetry. This guide is about `nuclear-engineering`, the model as a self-contained program for Windows and Linux: 83 capabilities in 10 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/nuclear-engineering-ai999x/); the Python package (`pip install nuclear-engineering-ai999x`) has its own guide. Every command output printed here is what the program printed.
+Nuclear Engineering covers radioactive decay and decay chains, binding energy, reactor physics basics, radiation shielding and attenuation, and dosimetry. This guide is about `nuclear-engineering`, the model as a self-contained program for Windows and Linux: 84 capabilities in 10 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/nuclear-engineering-ai999x/); the Python package (`pip install nuclear-engineering-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
 ## Contents
 
@@ -17,37 +17,37 @@ Nuclear Engineering covers radioactive decay and decay chains, binding energy, r
 
 ## 1. Get it
 
-Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.6.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Nuclear Engineering | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-nuclear-engineering-1.5.0-windows-x86_64.zip |
-| Desktop app: Nuclear Engineering | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-nuclear-engineering-1.5.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: Nuclear Engineering | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-nuclear-engineering-1.6.0-windows-x86_64.zip |
+| Desktop app: Nuclear Engineering | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-nuclear-engineering-1.6.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Nuclear Engineering in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-nuclear-engineering-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-nuclear-engineering.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Nuclear Engineering in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-nuclear-engineering-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-nuclear-engineering.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-nuclear-engineering-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-nuclear-engineering-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-nuclear-engineering-1.5.0-linux-x86_64.tar.gz
-./ai999x-nuclear-engineering-1.5.0-linux-x86_64/ai999x-nuclear-engineering
+tar xzf ai999x-nuclear-engineering-1.6.0-linux-x86_64.tar.gz
+./ai999x-nuclear-engineering-1.6.0-linux-x86_64/ai999x-nuclear-engineering
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
-./ai999x-1.5.0-linux-x86_64/ai999x
+tar xzf ai999x-1.6.0-linux-x86_64.tar.gz
+./ai999x-1.6.0-linux-x86_64/ai999x
 ```
 
 ### Command line: Linux
@@ -55,11 +55,11 @@ tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
 The bundle holds one program per model; `nuclear-engineering` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.6.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.6.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 nuclear-engineering --version
 ```
 
@@ -68,12 +68,12 @@ nuclear-engineering --version
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.6.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.6.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.6.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 nuclear-engineering --version
 ```
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ nuclear-engineering --version
-nuclear-engineering-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
+nuclear-engineering-ai999x 1.6.0 (Rust build, ax-engine 1.6.0)
 ```
 
 ### 2.2 Ask in words
@@ -148,7 +148,7 @@ nuc_bare_reactor_keff                    k-effective and geometric buckling of a
 nuc_centreline_temperature_variable_k    Fuel centreline temperature with temperature-dependent conductivity
 nuc_chain_activity                       Activity of a radionuclide and its progeny after a decay time
 nuc_channel_coolant_temperature          Coolant temperature along a channel with a chopped-cosine power shape
-… 75 more
+… 76 more
 ```
 
 ### 2.5 What a capability needs
@@ -1442,7 +1442,7 @@ SWU_per_P = 6.871112989
 
 In the worked example, x_p = 0.045, x_f = 0.00711, x_w = 0.0025, P = 1 kg go through the equation above and give F = 9.219088937 kg, W = 8.219088937 kg, SWU = 6.871112989 kg, F_per_P = 9.219088937. It applies only when tails < feed < product assays; value function V(x) = (2x - 1) ln(x/(1 - x)): outside that it says what is wrong instead of returning a number.
 
-### Neutron physics (11)
+### Neutron physics (12)
 
 <a id="nuc_logarithmic_energy_decrement"></a>
 
@@ -1620,6 +1620,47 @@ phi_inf = 1.488561461e+10 1/(m^2*s)
 ```
 
 **What the worked example means:** This calculation determines the one-group thermal neutron flux at a specific distance from an isotropic point source located at the center of a non-multiplying spherical medium. Using the diffusion coefficient, absorption cross section, and extrapolated radius, the model computes the flux value of 1.48856e+10 1/(m^2*s) at radius 10 cm. It also calculates the fraction of neutrons escaping the boundary, which is 8.42667e-07, and provides the reference flux in an infinite medium, 1.48856e+10 1/(m^2*s), to highlight the impact of finite geometry on neutron distribution.
+
+<a id="nuc_macroscopic_cross_section"></a>
+
+#### Macroscopic cross section, mean free path and reaction rate of a material, `nuc_macroscopic_cross_section`
+
+The number density N = rho N_A / M of the atoms (or molecules) of a material, its macroscopic cross section Sigma = N sigma, the mean free path 1/Sigma and, with a neutron flux, the reaction rate density R = Sigma phi.
+
+$$
+N = \frac{\rho N_A}{M},\quad \Sigma = N\sigma,\quad \lambda = \frac{1}{\Sigma},\quad R = \Sigma\phi
+$$
+
+| symbol |  | meaning | SI unit |
+|---|---|---|---|
+| `rho` | in | density of the material (e.g. 1.6 g/cm^3) | kg/m^3 |
+| `M` | in | molar mass of the atom or molecule the cross section refers to (g/mol) | kg/mol |
+| `sigma` | in | microscopic cross section per atom or molecule (barns) | m^2 |
+| `phi` | in | neutron flux (optional, for the reaction rate) (optional) | 1/(m^2*s) |
+| `N` | out | atoms (or molecules) per volume | 1/m^3 |
+| `Sigma` | out | macroscopic cross section N sigma | 1/m |
+| `Sigma_cm` | out | macroscopic cross section in 1/cm | - |
+| `mfp` | out | mean free path 1/Sigma | m |
+| `mfp_cm` | out | mean free path in cm | - |
+| `R` | out | reaction rate density Sigma phi (1/(m^3 s)) | 1/(m^3*s) |
+
+**Applies when:** rho, M, sigma > 0; one nuclide (or one molecule) carrying the stated cross section; phi > 0 when given.
+
+```shell
+$ nuclear-engineering solve nuc_macroscopic_cross_section "rho=1.6 g/cm^3" "M=12.011 g/mol" "sigma=3.5e-31 m^2"
+N = 8.02216736e+28 1/m^3
+Sigma = 0.02807758576 1/m
+Sigma_cm = 0.0002807758576
+mfp = 35.61559774 m
+mfp_cm = 3561.559774
+  by: Macroscopic cross section, mean free path and reaction rate of a material  (N = rho N_A / M, Sigma = N sigma, lambda = 1/Sigma, R = Sigma phi)
+  rho = 1600 kg/m^3
+  M = 0.012011 kg/mol
+  sigma = 3.5e-31 m^2
+  assumes: rho, M, sigma > 0; one nuclide (or one molecule) carrying the stated cross section; phi > 0 when given
+```
+
+In the worked example, rho = 1.6 g/cm^3, M = 12.011 g/mol, sigma = 3.5e-31 m^2 go through the equation above and give N = 8.02216736e+28 1/m^3, Sigma = 0.02807758576 1/m, Sigma_cm = 0.0002807758576, mfp = 35.61559774 m. It applies only when rho, M, sigma > 0; one nuclide (or one molecule) carrying the stated cross section; phi > 0 when given: outside that it says what is wrong instead of returning a number.
 
 <a id="nuc_maxwellian_average_cross_section"></a>
 

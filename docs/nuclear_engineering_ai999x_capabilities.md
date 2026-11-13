@@ -39,7 +39,7 @@ result.show()
 | Dosimetry / internal emitters | [Effective half-life (physical and biological removal)](#nuc_effective_half_life), [Committed equivalent dose to an organ from an intake (retention compartments)](#nuc_committed_dose_retention) |
 | Dosimetry / units | [Radiation unit conversion (Bq and Ci, Gy and rad, Sv and rem)](#nuc_radiation_unit_conversion) |
 | Fuel cycle / enrichment | [Uranium enrichment: feed, tails and separative work (SWU)](#nuc_enrichment_swu) |
-| Neutron physics / cross sections | [Maxwellian-averaged 1/v cross section](#nuc_maxwellian_average_cross_section), [Number densities and macroscopic cross sections of UO2 fuel](#nuc_fuel_cross_sections) |
+| Neutron physics / cross sections | [Maxwellian-averaged 1/v cross section](#nuc_maxwellian_average_cross_section), [Number densities and macroscopic cross sections of UO2 fuel](#nuc_fuel_cross_sections), [Macroscopic cross section, mean free path and reaction rate of a material](#nuc_macroscopic_cross_section) |
 | Neutron physics / diffusion | [Diffusion length from an exponential pile measurement](#nuc_exponential_pile), [Flux from a plane neutron source at the centre of a slab](#nuc_plane_source_slab_flux), [Flux from a point neutron source at the centre of a sphere](#nuc_point_source_sphere_flux), [Thermal diffusion length and migration length](#nuc_diffusion_length) |
 | Neutron physics / moderation | [Neutron energy and lab angle after an elastic collision](#nuc_elastic_scattering), [Average logarithmic energy decrement and mean scattering cosine](#nuc_logarithmic_energy_decrement), [Average number of collisions to slow a neutron down](#nuc_collisions_to_thermalize), [Moderating power and ratio of a compound moderator](#nuc_moderator_mixture) |
 | Neutron physics / thermal neutrons | [Speeds and mean energy of thermal neutrons (Maxwell distribution)](#nuc_thermal_neutron_speeds) |
@@ -188,6 +188,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 | nuc_half_value_layer | Half-value and tenth-value layers | mu, x | HVL, TVL, mfp, HVL_cm, TVL_cm, transmission, n_HVL |
 | nuc_radiation_unit_conversion | Radiation unit conversion (Bq and Ci, Gy and rad, Sv and rem) | A, D, H | SI_value, traditional_value, si_unit, traditional_unit, value_mCi, value_MBq, value_mSv_or_mGy, value_mrem_or_mrad |
 | nuc_constant_power_depletion | U-235 depletion at constant power | m0, P, t, E_f, sigma_a, sigma_f | m, burnt, consumed, flux_ratio, fissions |
+| nuc_macroscopic_cross_section | Macroscopic cross section, mean free path and reaction rate of a material | rho, M, sigma, phi | N, Sigma, Sigma_cm, mfp, mfp_cm, R |
 
 <a id="nuc_specific_activity"></a>
 
@@ -4699,3 +4700,58 @@ nuclear_engineering_ai999x.solve('nuc_constant_power_depletion', m0=1.0, P=10000
 | Depletion at constant power: P = 30 MW, t = 1 y, E_f = 200 MeV, sigma_a = 680.9 b, sigma_f = 582.6 b | NEEDS_INPUT | nuc_constant_power_depletion needs m0 (initial mass of U-235). Example: solve('nuc_constant_power_depletion', m0='100 kg |
 | Depletion at constant power: m0 = 100 kg, P = 30 MW, t = 1 y, E_f = 200 MeV, sigma_a = 680.9 b, sigma_f = 582.6 b, zz = 1 | UNRECOGNIZED_FORMAT | I could not match this question to a documented form, so I will not guess. Every form: nuclear_engineering_ai999x.templa |
 | Depletion at constant power: m0 = 1 kg, P = 3000 MW, t = 1 y, E_f = 200 MeV, sigma_a = 680.9 b, sigma_f = 582.6 b | INVALID_INPUT | U-235 depletion at constant power: the fuel would be used up before t at this power. |
+
+<a id="nuc_macroscopic_cross_section"></a>
+
+### Macroscopic cross section, mean free path and reaction rate of a material, `nuc_macroscopic_cross_section`
+
+The number density $N = \rho$ N_A / M of the atoms (or molecules) of a material, its macroscopic cross section $Sigma = N$ sigma, the mean free path $1/Sigma$ and, with a neutron flux, the reaction rate density $R = Sigma$ phi.
+
+$$
+N = \frac{\rho N_A}{M},\quad \Sigma = N\sigma,\quad \lambda = \frac{1}{\Sigma},\quad R = \Sigma\phi
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `rho` | density of the material (e.g. 1.6 g/cm^3) |  |
+| `M` | molar mass of the atom or molecule the cross section refers to (g/mol) |  |
+| `sigma` | microscopic cross section per atom or molecule (barns) |  |
+| `phi` | neutron flux (optional, for the reaction rate) |  |
+
+| output | meaning |
+|---|---|
+| `N` | atoms (or molecules) per volume |
+| `Sigma` | macroscopic cross section N sigma |
+| `Sigma_cm` | macroscopic cross section in $1/cm$ |
+| `mfp` | mean free path $1/Sigma$ |
+| `mfp_cm` | mean free path in cm |
+| `R` | reaction rate density Sigma phi (1/(m^3 s)) |
+
+- **Method:** $N = \rho$ N_A / M, $Sigma = N$ sigma, $\lambda = 1/Sigma$, $R = Sigma$ phi
+- **Assumes:** rho, M, $\sigma > 0$; one nuclide (or one molecule) carrying the stated cross section; $\phi > 0$ when given
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Sigma (macroscopic cross section N sigma) against M (molar mass of the atom or molecule the cross section refers to (g/mol)) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-macroscopic-cross-section-curve)
+
+*Sigma (macroscopic cross section N sigma) against M (molar mass of the atom or molecule the cross section refers to (g/mol)) from 0.0060055 kg/mol to 0.0180165 kg/mol. One curve for each value of rho (density of the material (e.g. 1.6 g/cm^3)): 1600 kg/m^3, 800 kg/m^3, 3200 kg/m^3. Other inputs as in the worked example: sigma = 3.5e-31 m^2. 31 points per curve computed by nuclear-engineering-ai999x; marked: the worked example, M = 0.012011 kg/mol, Sigma = 0.0280776 1/m.*
+
+```python
+nuclear_engineering_ai999x.solve('nuc_macroscopic_cross_section', rho=1600.0, M=0.012011, sigma=3.5e-31)
+# -> N = 8.02217e+28 1/m^3, Sigma = 0.0280776 1/m, Sigma_cm = 0.000280776, mfp = 35.6156 m, mfp_cm = 3561.56   (SOLVED)
+```
+
+```python
+nuclear_engineering_ai999x.solve('nuc_macroscopic_cross_section', rho=2340.0, M=0.01081, sigma=7.67e-26, phi=1e+17)
+# -> N = 1.30359e+29 1/m^3, Sigma = 9998.54 1/m, Sigma_cm = 99.9854, mfp = 0.000100015 m, mfp_cm = 0.0100015, R = 9.99854e+20 1/(m^3*s)   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Macroscopic cross section: rho = 1.6 g/cm^3, M = 12.011 g/mol, sigma = 0.0035 b | SOLVED | N = 8.02217e+28 1/m^3, Sigma = 0.0280776 1/m, Sigma_cm = 0.000280776, mfp = 35.6156 m, mfp_cm = 3561.56 |
+| Macroscopic cross section: rho = 2.34 g/cm^3, M = 10.81 g/mol, sigma = 767 b, phi = 1e13 1/(cm^2*s) | SOLVED | N = 1.30359e+29 1/m^3, Sigma = 9998.54 1/m, Sigma_cm = 99.9854, mfp = 0.000100015 m, mfp_cm = 0.0100015, R = 9.99854e+20 1/(m^3*s) |
+| Macroscopic cross section: M = 12.011 g/mol, sigma = 0.0035 b | NEEDS_INPUT | nuc_macroscopic_cross_section needs rho (density of the material (e.g. 1.6 g/cm^3)). Example: solve('nuc_macroscopic_cro |
+| Macroscopic cross section: rho = 1.6 g/cm^3, M = 12.011 g/mol, sigma = 0.0035 b, zz = 1 | UNRECOGNIZED_FORMAT | I could not match this question to a documented form, so I will not guess. Every form: nuclear_engineering_ai999x.templa |
+| Macroscopic cross section: rho = 1.6 g/cm^3, M = 12.011 g/mol, sigma = -0.0035 b | INVALID_INPUT | Macroscopic cross section, mean free path and reaction rate of a material: the microscopic cross section must be positiv |
+| Macroscopic cross section: rho = 2.34 g/cm^3, M = 10.81 g/mol, sigma = 767 b, phi = 0 1/(cm^2*s) | INVALID_INPUT | Macroscopic cross section, mean free path and reaction rate of a material: the neutron flux must be positive. |

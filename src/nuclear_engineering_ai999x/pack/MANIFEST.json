@@ -1,5 +1,5 @@
 {
- "package": "1.5.0",
+ "package": "1.6.0",
  "pack": "1.0.1",
  "knowledge_db": null,
  "files": {
@@ -7,8 +7,8 @@
   "dictionary/terms.json": "3781eac9e78cc74a52dfbb7f7c6ecd5f218e2a208be5aad6dabd1094f82ddc60",
   "knowledge/relations.json": "754a0b6e34d34c8218487411a3379a8d28f8bd3201453849d72a55a730bda462",
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
-  "capabilities/procedures.py": "bc26478631127ce372bde6a052d03bf8883e02fe9708eaca3f8ec1ced58f6c64",
-  "capabilities/procedures_certified.json": "c15178295534fa3c912f151a38492a47b4d57b25fb8727e252b734313f37cb7b",
+  "capabilities/procedures.py": "b56cfeedf10094ac5264cac42479dcb587102632eab9ed3f6930788358978421",
+  "capabilities/procedures_certified.json": "718a07b5db28733084f3f741a7ba223a9ffd44d9e56776a917ce55d7c6374f77",
   "nuclear_engineering_knowledge_public.sqlite": "e6aa9bcb57fdafd0073812aac03016c3c3945e9d1d064f073d28d454b4a3e02b"
  },
  "engine": [
