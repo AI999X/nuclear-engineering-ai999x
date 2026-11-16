@@ -1226,7 +1226,7 @@ $$
 
 ![The shield needed for a target dose rate of 6](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-shield-thickness-for-dose-rate-curve)
 
-*The shield needed for a target dose rate of 6.9444e-10 Sv/s at 2.0 m from a source of 3.7000e+11 Bq (μ = 65.6 1/m, linear buildup; the worked example): dose rate against thickness from the package's point-source capability at 41 thicknesses. Marked: the package's thickness x = 18.3532 cm (12.0397 mean free paths, buildup 13.0397), where the curve meets the target.*
+*The shield needed for a target dose rate of 6.9444e-10 Sv/s at 2.0 m from a source of 3.7000e+11 Bq (μ = 65.60000000000001 1/m, linear buildup; the worked example): dose rate against thickness from the package's point-source capability at 41 thicknesses. Marked: the package's thickness x = 18.3532 cm (12.0397 mean free paths, buildup 13.0397), where the curve meets the target.*
 
 ![x (required shield thickness) against mu (linear attenuation coefficient of the shield) from 32](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-shield-thickness-for-dose-rate-curve-2)
 
@@ -2005,7 +2005,7 @@ $$
 
 ![A point source in front of a disk detector, drawn to scale (the worked example: distance 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-detector-efficiency-point-source-geometry)
 
-*A point source in front of a disk detector, drawn to scale (the worked example: distance 0.1 m, face radius 0.0381 m, thickness 0.0762 m (attenuation coefficient 28.0 1/m in the detector)); the shaded cone is the solid angle the detector subtends. Marked, from the package: geometric 0.03276, intrinsic 0.8898, total efficiency 0.02915.*
+*A point source in front of a disk detector, drawn to scale (the worked example: distance 0.1 m, face radius 0.0381 m, thickness 0.0762 m (attenuation coefficient 28.000000000000004 1/m in the detector)); the shaded cone is the solid angle the detector subtends. Marked, from the package: geometric 0.03276, intrinsic 0.8898, total efficiency 0.02915.*
 
 ![eff (total efficiency (interacting photons per emitted photon)) against d (source-to-face distance) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-detector-efficiency-point-source-curve)
 
@@ -2424,7 +2424,7 @@ $$
 
 ![The critical slab of a bare homogeneous reactor (D = 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-critical-slab-geometry)
 
-*The critical slab of a bare homogeneous reactor (D = 0.009, Σa = 15.0, νΣf = 18.0, extrapolation 2.13D; the worked example), drawn to scale: the core with its extrapolated boundary dashed. Marked, from the package: thickness a = 13.37 cm, extrapolated 17.21 cm. Bottom: the flux across the core (radially for a cylinder) from the package's flux-shape capability on the extrapolated dimensions; the shaded band is the physical core.*
+*The critical slab of a bare homogeneous reactor (D = 0.009000000000000001, Σa = 15.0, νΣf = 18.0, extrapolation 2.13D; the worked example), drawn to scale: the core with its extrapolated boundary dashed. Marked, from the package: thickness a = 13.37 cm, extrapolated 17.21 cm. Bottom: the flux across the core (radially for a cylinder) from the package's flux-shape capability on the extrapolated dimensions; the shaded band is the physical core.*
 
 ![a (critical physical thickness) against D (diffusion coefficient (a length, e](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-critical-slab-curve)
 
@@ -2480,7 +2480,7 @@ $$
 
 ![The critical sphere of a bare homogeneous reactor (D = 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-critical-sphere-geometry)
 
-*The critical sphere of a bare homogeneous reactor (D = 0.009, Σa = 15.0, νΣf = 18.0, extrapolation 2.13D; the worked example), drawn to scale: the core with its extrapolated boundary dashed. Marked, from the package: R = 15.29 cm, extrapolated 17.21 cm, V = 14.97 L. Bottom: the flux across the core (radially for a cylinder) from the package's flux-shape capability on the extrapolated dimensions; the shaded band is the physical core.*
+*The critical sphere of a bare homogeneous reactor (D = 0.009000000000000001, Σa = 15.0, νΣf = 18.0, extrapolation 2.13D; the worked example), drawn to scale: the core with its extrapolated boundary dashed. Marked, from the package: R = 15.29 cm, extrapolated 17.21 cm, V = 14.97 L. Bottom: the flux across the core (radially for a cylinder) from the package's flux-shape capability on the extrapolated dimensions; the shaded band is the physical core.*
 
 ![R (critical physical radius) against nuSigma_f (nu times the macroscopic fission cross section) from 9 1/m to 27 1/m](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-critical-sphere-curve)
 
@@ -2535,7 +2535,7 @@ $$
 
 ![The critical cylinder of a bare homogeneous reactor (D = 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-critical-cylinder-geometry)
 
-*The critical cylinder of a bare homogeneous reactor (D = 0.009, Σa = 15.0, νΣf = 18.0, extrapolation 2.13D; the worked example), drawn to scale: the core with its extrapolated boundary dashed. Marked, from the package: R = 11.98 cm for H = 50 cm, V = 22.55 L. Bottom: the flux across the core (radially for a cylinder) from the package's flux-shape capability on the extrapolated dimensions; the shaded band is the physical core.*
+*The critical cylinder of a bare homogeneous reactor (D = 0.009000000000000001, Σa = 15.0, νΣf = 18.0, extrapolation 2.13D; the worked example), drawn to scale: the core with its extrapolated boundary dashed. Marked, from the package: R = 11.98 cm for H = 50 cm, V = 22.55 L. Bottom: the flux across the core (radially for a cylinder) from the package's flux-shape capability on the extrapolated dimensions; the shaded band is the physical core.*
 
 ![R (critical physical radius) against H (physical height of the cylinder) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-critical-cylinder-curve)
 
@@ -2591,7 +2591,7 @@ $$
 
 ![The critical cylinder of a bare homogeneous reactor (D = 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-critical-cylinder-minimum-volume-geometry)
 
-*The critical cylinder of a bare homogeneous reactor (D = 0.009, Σa = 15.0, νΣf = 18.0, extrapolation none; the worked example), drawn to scale: the core with its extrapolated boundary dashed. Marked, from the package: R = 16.13 cm, H = 29.8 cm, H/D = 0.924. Bottom: the flux across the core (radially for a cylinder) from the package's flux-shape capability on the extrapolated dimensions; the shaded band is the physical core.*
+*The critical cylinder of a bare homogeneous reactor (D = 0.009000000000000001, Σa = 15.0, νΣf = 18.0, extrapolation none; the worked example), drawn to scale: the core with its extrapolated boundary dashed. Marked, from the package: R = 16.13 cm, H = 29.8 cm, H/D = 0.924. Bottom: the flux across the core (radially for a cylinder) from the package's flux-shape capability on the extrapolated dimensions; the shaded band is the physical core.*
 
 ![V_ext (minimum critical volume (extrapolated dimensions)) against Sigma_a (macroscopic absorption cross section) from 7](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-critical-cylinder-minimum-volume-curve)
 
@@ -2647,7 +2647,7 @@ $$
 
 ![The critical cuboid of a bare homogeneous reactor (D = 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-critical-cuboid-geometry)
 
-*The critical cuboid of a bare homogeneous reactor (D = 0.009, Σa = 15.0, νΣf = 18.0, extrapolation 2.13D; the worked example), drawn to scale: the core with its extrapolated boundary dashed. Marked, from the package: a = b = 60 cm, critical c = 14.78 cm, V = 53.2 L.*
+*The critical cuboid of a bare homogeneous reactor (D = 0.009000000000000001, Σa = 15.0, νΣf = 18.0, extrapolation 2.13D; the worked example), drawn to scale: the core with its extrapolated boundary dashed. Marked, from the package: a = b = 60 cm, critical c = 14.78 cm, V = 53.2 L.*
 
 ![c (critical physical third side) against nuSigma_f (nu times the macroscopic fission cross section) from 9 1/m to 27 1/m](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-critical-cuboid-curve)
 
@@ -2708,7 +2708,7 @@ $$
 
 ![A bare spherical reactor of radius 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-bare-reactor-keff-geometry)
 
-*A bare spherical reactor of radius 0.12 m (D = 0.009, Σa = 15.0, νΣf = 18.0, extrapolation 2.13D; the worked example), to scale with its extrapolated boundary (R + 2.13 D, derived) dashed, over its flux shape from the package's flux-shape capability. Marked: the package's k_eff = 0.919049, reactivity -0.0880815, non-leakage probability 0.765874, buckling 509.496 1/m².*
+*A bare spherical reactor of radius 0.12 m (D = 0.009000000000000001, Σa = 15.0, νΣf = 18.0, extrapolation 2.13D; the worked example), to scale with its extrapolated boundary (R + 2.13 D, derived) dashed, over its flux shape from the package's flux-shape capability. Marked: the package's k_eff = 0.919049, reactivity -0.0880815, non-leakage probability 0.765874, buckling 509.496 1/m².*
 
 ![k_eff (effective multiplication factor) against Sigma_a (macroscopic absorption cross section) from 1](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-bare-reactor-keff-curve)
 
@@ -2826,7 +2826,7 @@ $$
 
 ![A reflected critical slab (core D = 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-reflected-slab-critical-geometry)
 
-*A reflected critical slab (core D = 0.009, Σa = 15.0, νΣf = 18.0; reflector D = 0.0016, Σa = 1.97, thickness 0.2 m on each face; the worked example), drawn to scale across its thickness. Marked: the package's critical core thickness a = 0.0360662 m and reflector savings δ = 0.0680029 m per face; the bare critical slab of the same core, from its bare-slab capability, is 0.133711 m thick.*
+*A reflected critical slab (core D = 0.009000000000000001, Σa = 15.0, νΣf = 18.0; reflector D = 0.0016, Σa = 1.97, thickness 0.2 m on each face; the worked example), drawn to scale across its thickness. Marked: the package's critical core thickness a = 0.0360662 m and reflector savings δ = 0.0680029 m per face; the bare critical slab of the same core, from its bare-slab capability, is 0.133711 m thick.*
 
 ![a (critical core thickness) against T_r (reflector thickness on each face) from 0](https://www.ai999x.com/?ax_fig=nuclear-engineering-ai999x/nuc-reflected-slab-critical-curve)
 
