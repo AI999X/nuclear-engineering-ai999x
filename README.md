@@ -10,8 +10,8 @@ Nuclear Engineering covers radioactive decay and decay chains, binding energy, r
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-nuclear-engineering-1.6.5-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-nuclear-engineering-1.6.5-linux-x86_64.tar.gz) |
-| **Command line** `nuclear-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-nuclear-engineering-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-nuclear-engineering-1.6.6-linux-x86_64.tar.gz) |
+| **Command line** `nuclear-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/nuclear-engineering-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install nuclear-engineering-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -225,121 +225,6 @@ A1 = 1.181194942
 omega = 0.01452050027 1/s
 ```
 
-## Rust library: 15 examples
-
-The crate `nuclear-engineering-ai999x` (in `rust/` of the GitHub repository) answers a JSON request with `nuclear_engineering_ai999x::solve_json`. Each call below was compiled and run on this release; the comment under it is what it printed. The whole program is `rust/nuclear-engineering/examples/readme.rs`: `cd rust && cargo run --release --example readme -p nuclear-engineering-ai999x`.
-
-```rust
-use serde_json::{json, Value};
-
-fn show(request: Value) {
-    let answer: Value = serde_json::from_str(&nuclear_engineering_ai999x::solve_json(&request.to_string())).unwrap();
-    println!("{}", answer["outcome"].as_str().unwrap_or(""));
-    for v in answer["values"].as_array().into_iter().flatten() {
-        let unit = v[2].as_str().unwrap_or("");
-        let unit = if unit.is_empty() || unit == "1" { String::new() } else { format!(" {unit}") };
-        println!("{} = {}{}", v[0].as_str().unwrap_or(""), v[1], unit);
-    }
-}
-
-show(json!({"key": "nuc_activation_with_burnup", "inputs": {"N_T0": "1e+22", "sigma_T": "3.718e-27 m^2", "sigma_P": "2e-28 m^2", "phi": "1e+14 1/(cm^2*s)", "T_half": "166346024.4 s", "t": "31557600 s"}}));
-// SOLVED
-// A_P = 4303591319410.0 1/s
-// f_T = 0.88929064975
-// t_max = 247907988.467 s
-// A_max = 14114011896900.0 1/s
-
-show(json!({"key": "nuc_compton_edge", "inputs": {"E": "662 keV"}}));
-// SOLVED
-// T_max = 0.477650409375 MeV
-// E_bs = 0.184349590625 MeV
-
-show(json!({"key": "nuc_committed_dose_coefficient", "inputs": {"I": "1000000 (1/s)", "e": "2.2e-08 (J/kg)/(1/s)"}}));
-// SOLVED
-// E = 0.022 J/kg
-// E_mSv = 22.0
-// I_Bq = 1000000.0 1/s
-
-show(json!({"key": "nuc_enrichment_swu", "inputs": {"x_p": "0.045", "x_f": "0.00711", "x_w": "0.0025", "P": "1 kg"}}));
-// SOLVED
-// F = 9.21908893709 kg
-// W = 8.21908893709 kg
-// SWU = 6.87111298932 kg
-// F_per_P = 9.21908893709
-// SWU_per_P = 6.87111298932
-
-show(json!({"key": "nuc_logarithmic_energy_decrement", "inputs": {"A": "12"}}));
-// SOLVED
-// alpha = 0.715976331361
-// xi = 0.157768989823
-// mu_bar = 0.0555555555556
-
-show(json!({"key": "nuc_control_rod_worth", "inputs": {"rho_tot": "0.01", "H": "3.66 m", "x": "1.83 m"}}));
-// SOLVED
-// rho = 0.005
-// frac = 0.5
-// drho_dx = 0.00546448087432 1/m
-
-show(json!({"key": "nuc_inverse_multiplication", "inputs": {"x": [0, 20, 40, 60, 80], "C": [100, 125, 167, 250, 500]}}));
-// SOLVED
-// x_crit = 99.9760479042
-// slope = -0.01
-// x_crit_last2 = 100.0
-// inv_M_last = 0.2
-
-show(json!({"key": "nuc_half_value_layer", "inputs": {"mu": "0.656 1/cm"}}));
-// SOLVED
-// HVL = 0.0105662679963 m
-// TVL = 0.0351003825152 m
-// mfp = 0.015243902439 m
-// HVL_cm = 1.05662679963
-// TVL_cm = 3.51003825152
-
-show(json!({"key": "nuc_accumulated_dose_decaying_source", "inputs": {"H0": "0.001 (J/kg)/h", "T_half": "6586.2 s", "t": "2 h"}}));
-// SOLVED
-// D = 0.00140226015359 J/kg
-// D_mSv = 1.40226015359
-// D_inf = 0.00263941057731 J/kg
-// H_mean = 1.94758354665e-7 J/(kg*s)
-
-show(json!({"key": "nuc_channel_coolant_temperature", "inputs": {"q0": "43 kW/m", "H": "3.66 m", "H_e": "4 m", "m_dot": "0.3 kg/s", "c_p": "5500 J/(kg*K)", "T_in": "565 K", "z": "0 m"}}));
-// SOLVED
-// T = 597.886071405 K
-// T_out = 630.77214281 K
-// Q = 108524.035637 W
-
-show(json!({"key": "nuc_specific_activity", "inputs": {"nuclide": "Co-60", "m": "1 g"}}));
-// SOLVED
-// A = 41868944303400.0 1/s
-// A_Ci = 1131.59308928
-// a = 4.18689443034e+16 1/(kg*s)
-// a_Ci_per_g = 1131.59308928
-// N = 1.00479849416e+22
-
-show(json!({"key": "nuc_count_time_for_precision", "inputs": {"Rg": "100 (1/s)", "Rb": "25 (1/s)", "r": "0.01"}}));
-// SOLVED
-// T = 400.0 s
-// tg = 266.666666667 s
-// tb = 133.333333333 s
-
-show(json!({"key": "nuc_committed_dose_retention", "inputs": {"I": "1000000 (1/s)", "f": [0.3], "Tb": [80], "t_unit": "d", "T_p": "692988.48 s", "E": "0.18 MeV", "w_R": "1", "m": "20 g", "tau": "1577880000 s"}}));
-// SOLVED
-// U = 272600706922.0
-// H = 0.393079034738 J/kg
-// H_mSv = 393.079034738
-
-show(json!({"key": "nuc_collisions_to_thermalize", "inputs": {"A": "12", "E0": "2 MeV", "Ef": "0.025 eV"}}));
-// SOLVED
-// n = 115.342927739
-// xi = 0.157768989823
-
-show(json!({"key": "nuc_power_after_step_one_group", "inputs": {"rho": "0.001", "beta": "0.0065", "lam": "0.08 1/s", "Lambda": "0.0001 s", "t": "10 s"}}));
-// SOLVED
-// P = 1.36578805499
-// A1 = 1.18119494222
-// omega = 0.0145205002736 1/s
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/nuclear-engineering-ai999x/blob/main/docs/nuclear_engineering_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/nuclear-engineering-ai999x/blob/main/docs/nuclear_engineering_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/nuclear-engineering-ai999x/blob/main/docs/nuclear_engineering_ai999x_desktop_guide.md)
@@ -348,7 +233,7 @@ show(json!({"key": "nuc_power_after_step_one_group", "inputs": {"rho": "0.001", 
 
 Every calculation, with its formula, a worked example and its figures: **[Nuclear Engineering on ai999x.com](https://www.ai999x.com/models/nuclear-engineering-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.4 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
