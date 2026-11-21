@@ -10,8 +10,8 @@ Nuclear Engineering covers radioactive decay and decay chains, binding energy, r
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-nuclear-engineering-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-nuclear-engineering-1.6.6-linux-x86_64.tar.gz) |
-| **Command line** `nuclear-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-nuclear-engineering-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-nuclear-engineering-1.6.7-linux-x86_64.tar.gz) |
+| **Command line** `nuclear-engineering` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/nuclear-engineering-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install nuclear-engineering-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -137,94 +137,6 @@ print(a.outcome, a.values)
 # SOLVED {'a': 0.0360662339368, 'delta': 0.0680029411748}
 ```
 
-## Command line: 15 examples
-
-Each command below was run with `nuclear-engineering` of this release; the lines under it are the answer it printed (the full answer goes on with the method, every input in SI units and the conditions it assumes).
-
-```text
-$ nuclear-engineering solve nuc_activation_with_burnup N_T0=1e+22 "sigma_T=3.718e-27 m^2" "sigma_P=2e-28 m^2" "phi=1e+14 1/(cm^2*s)" "T_half=166346024.4 s" "t=31557600 s"
-A_P = 4.303591319e+12 1/s
-f_T = 0.8892906498
-t_max = 247907988.5 s
-A_max = 1.41140119e+13 1/s
-
-$ nuclear-engineering solve nuc_compton_edge "E=662 keV"
-T_max = 0.4776504094 MeV
-E_bs = 0.1843495906 MeV
-
-$ nuclear-engineering solve nuc_committed_dose_coefficient "I=1000000 (1/s)" "e=2.2e-08 (J/kg)/(1/s)"
-E = 0.022 J/kg
-E_mSv = 22
-I_Bq = 1000000 1/s
-
-$ nuclear-engineering solve nuc_enrichment_swu x_p=0.045 x_f=0.00711 x_w=0.0025 "P=1 kg"
-F = 9.219088937 kg
-W = 8.219088937 kg
-SWU = 6.871112989 kg
-F_per_P = 9.219088937
-SWU_per_P = 6.871112989
-
-$ nuclear-engineering solve nuc_logarithmic_energy_decrement A=12
-alpha = 0.7159763314
-xi = 0.1577689898
-mu_bar = 0.05555555556
-
-$ nuclear-engineering solve nuc_control_rod_worth rho_tot=0.01 "H=3.66 m" "x=1.83 m"
-rho = 0.005
-frac = 0.5
-drho_dx = 0.005464480874 1/m
-
-$ nuclear-engineering solve nuc_inverse_multiplication "x=[0, 20, 40, 60, 80]" "C=[100, 125, 167, 250, 500]"
-x_crit = 99.9760479
-slope = -0.01
-x_crit_last2 = 100
-inv_M_last = 0.2
-
-$ nuclear-engineering solve nuc_half_value_layer "mu=0.656 1/cm"
-HVL = 0.010566268 m
-TVL = 0.03510038252 m
-mfp = 0.01524390244 m
-HVL_cm = 1.0566268
-TVL_cm = 3.510038252
-
-$ nuclear-engineering solve nuc_accumulated_dose_decaying_source "H0=0.001 (J/kg)/h" "T_half=6586.2 s" "t=2 h"
-D = 0.001402260154 J/kg
-D_mSv = 1.402260154
-D_inf = 0.002639410577 J/kg
-H_mean = 1.947583547e-07 J/(kg*s)
-
-$ nuclear-engineering solve nuc_channel_coolant_temperature "q0=43 kW/m" "H=3.66 m" "H_e=4 m" "m_dot=0.3 kg/s" "c_p=5500 J/(kg*K)" "T_in=565 K" "z=0 m"
-T = 597.8860714 K
-T_out = 630.7721428 K
-Q = 108524.0356 W
-
-$ nuclear-engineering solve nuc_specific_activity nuclide=Co-60 "m=1 g"
-A = 4.18689443e+13 1/s
-A_Ci = 1131.593089
-a = 4.18689443e+16 1/(kg*s)
-a_Ci_per_g = 1131.593089
-N = 1.004798494e+22
-
-$ nuclear-engineering solve nuc_count_time_for_precision "Rg=100 (1/s)" "Rb=25 (1/s)" r=0.01
-T = 400 s
-tg = 266.6666667 s
-tb = 133.3333333 s
-
-$ nuclear-engineering solve nuc_committed_dose_retention "I=1000000 (1/s)" "f=[0.3]" "Tb=[80]" t_unit=d "T_p=692988.48 s" "E=0.18 MeV" w_R=1 "m=20 g" "tau=1577880000 s"
-U = 2.726007069e+11
-H = 0.3930790347 J/kg
-H_mSv = 393.0790347
-
-$ nuclear-engineering solve nuc_collisions_to_thermalize A=12 "E0=2 MeV" "Ef=0.025 eV"
-n = 115.3429277
-xi = 0.1577689898
-
-$ nuclear-engineering solve nuc_power_after_step_one_group rho=0.001 beta=0.0065 "lam=0.08 1/s" "Lambda=0.0001 s" "t=10 s"
-P = 1.365788055
-A1 = 1.181194942
-omega = 0.01452050027 1/s
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/nuclear-engineering-ai999x/blob/main/docs/nuclear_engineering_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/nuclear-engineering-ai999x/blob/main/docs/nuclear_engineering_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/nuclear-engineering-ai999x/blob/main/docs/nuclear_engineering_ai999x_desktop_guide.md)
@@ -233,13 +145,13 @@ omega = 0.01452050027 1/s
 
 Every calculation, with its formula, a worked example and its figures: **[Nuclear Engineering on ai999x.com](https://www.ai999x.com/models/nuclear-engineering-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.7 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/nuclear-engineering-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.6`; the [GitHub release](https://github.com/AI999X/nuclear-engineering-ai999x/releases/tag/v1.6.6) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/nuclear-engineering-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.7`; the [GitHub release](https://github.com/AI999X/nuclear-engineering-ai999x/releases/tag/v1.6.7) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
 
 ## Build the program from source
 
